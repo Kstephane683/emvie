@@ -269,11 +269,10 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <div class="product__gallery">
 <div class="gallery__main" id="zoom-container">
 
-<img alt="Carich Dentifrice Rafraîchissant à la Menthe" class="gallery__main-img" decoding="async" height="2048" id="main-product-img" loading="eager" src="images/optimisees/carich-dentifrice-menthe_1200w.webp" width="1648">
+<img alt="Carich Dentifrice Rafraîchissant à la Menthe" class="gallery__main-img" decoding="async" height="2048" id="main-product-img" loading="eager" sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px" src="images/optimisees/carich-dentifrice-menthe_1200w.webp" srcset="images/optimisees/carich-dentifrice-menthe_400w.webp 400w, images/optimisees/carich-dentifrice-menthe_800w.webp 800w, images/optimisees/carich-dentifrice-menthe_1200w.webp 1200w" width="1648">
 </div>
-<div class="gallery__thumbs" id="gallery-thumbs"><div class="gallery__thumb" data-src="images/optimisees/carich-dentifrice-menthe-2_1200w.webp"><img src="images/optimisees/carich-dentifrice-menthe-2_1200w.webp" alt="Carich Dentifrice Rafraîchissant à la Menthe - miniature" loading="lazy"></div>
-<div class="gallery__thumb" data-src="images/optimisees/carich-lait-corporel-nourrissant_1200w.webp"><img src="images/optimisees/carich-lait-corporel-nourrissant_1200w.webp" alt="Carich Dentifrice Rafraîchissant à la Menthe - miniature" loading="lazy"></div>
-<div class="gallery__thumb" data-src="images/optimisees/carich-patch-detox-nuit_1200w.webp"><img src="images/optimisees/carich-patch-detox-nuit_1200w.webp" alt="Carich Dentifrice Rafraîchissant à la Menthe - miniature" loading="lazy"></div>
+<div class="gallery__thumbs" id="gallery-thumbs"><div class="gallery__thumb active" data-src="images/optimisees/carich-dentifrice-menthe_1200w.webp" data-srcset="images/optimisees/carich-dentifrice-menthe_400w.webp 400w, images/optimisees/carich-dentifrice-menthe_800w.webp 800w, images/optimisees/carich-dentifrice-menthe_1200w.webp 1200w"><img src="images/optimisees/carich-dentifrice-menthe_1200w.webp" alt="Carich Dentifrice Rafraîchissant à la Menthe - miniature 1" loading="lazy"></div>
+<div class="gallery__thumb" data-src="images/optimisees/carich-dentifrice-menthe-2_1200w.webp" data-srcset="images/optimisees/carich-dentifrice-menthe-2_400w.webp 400w, images/optimisees/carich-dentifrice-menthe-2_800w.webp 800w, images/optimisees/carich-dentifrice-menthe-2_1200w.webp 1200w"><img src="images/optimisees/carich-dentifrice-menthe-2_1200w.webp" alt="Carich Dentifrice Rafraîchissant à la Menthe - miniature 2" loading="lazy"></div>
 </div>
 </div>
 
@@ -504,8 +503,12 @@ if(tab)tab.classList.add('active');
 document.querySelectorAll('.gallery__thumb').forEach(function(thumb){
 thumb.addEventListener('click',function(){
 var src=thumb.dataset.src;
+var srcset=thumb.dataset.srcset;
 var mainImg=document.getElementById('main-product-img');
-if(mainImg)mainImg.src=src;
+if(mainImg){
+mainImg.src=src;
+if(srcset)mainImg.srcset=srcset;
+}
 document.querySelectorAll('.gallery__thumb').forEach(function(t){t.classList.remove('active')});
 thumb.classList.add('active');
 });
