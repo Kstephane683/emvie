@@ -1425,23 +1425,133 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
   .howto-grid > *:nth-child(7),
   .faq-container > *:nth-child(7) { z-index: 7; }
   
-  /* Catalogue produits : flex column + scale (pas sticky, 34 produits = trop) */
+  /* Catalogue produits : sticky stacking selon protocole Chime section 8.3 */
   #catalogue .products-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    display: block !important;
+    padding: 0;
+    gap: 0;
   }
   #catalogue .product-card {
-    transform: scale(0.97);
-    transform-origin: top center;
-    transition: transform 0.3s ease;
+    position: sticky;
+    top: var(--header-h);
+    min-height: 78vh;
+    margin-bottom: 16px;
+    padding: 1.5rem;
+    z-index: 1;
+    background: white;
+    transform: none !important;
+    opacity: 1 !important;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  #catalogue .product-card.chime-reveal.is-visible {
-    transform: scale(1);
+  /* Z-index croissant : la nouvelle carte masque la precedente */
+  #catalogue .product-card:nth-child(1) { z-index: 1; }
+  #catalogue .product-card:nth-child(2) { z-index: 2; }
+  #catalogue .product-card:nth-child(3) { z-index: 3; }
+  #catalogue .product-card:nth-child(4) { z-index: 4; }
+  #catalogue .product-card:nth-child(5) { z-index: 5; }
+  #catalogue .product-card:nth-child(6) { z-index: 6; }
+  #catalogue .product-card:nth-child(7) { z-index: 7; }
+  #catalogue .product-card:nth-child(8) { z-index: 8; }
+  #catalogue .product-card:nth-child(9) { z-index: 9; }
+  #catalogue .product-card:nth-child(10) { z-index: 10; }
+  #catalogue .product-card:nth-child(n+11) { z-index: 11; }
+  
+  /* Layout de la product-card en sticky : image a gauche, contenu a droite */
+  #catalogue .product-card .product-card__img-wrap {
+    width: 100%;
+    aspect-ratio: 16/10;
+    margin-bottom: 1rem;
+  }
+  #catalogue .product-card .product-card__body {
+    padding: 0;
+  }
+  #catalogue .product-card .product-card__desc {
+    -webkit-line-clamp: 3;
   }
   
   /* Comment commander : desactiver la ligne de connexion */
   .howto-grid::before { display: none; }
+}
+
+
+/* ============================================
+   TOOLBAR MOBILE : cachee par defaut, apparait au footer
+   ============================================ */
+@media (max-width: 768px) {
+  /* La toolbar dans le catalogue : cachee sur mobile */
+  #catalogue .toolbar {
+    display: none !important;
+  }
+  
+  /* Toolbar flottante en bas : visible seulement quand on atteint le footer */
+  .toolbar-floating {
+    position: fixed;
+    bottom: 70px; /* au-dessus de la mobile-nav */
+    left: 0;
+    right: 0;
+    z-index: 998;
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.12);
+    border-top: 2px solid var(--or);
+    border-radius: 20px 20px 0 0;
+    padding: 1rem;
+    transform: translateY(120%);
+    transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  .toolbar-floating.show {
+    transform: translateY(0);
+  }
+  .toolbar-floating .toolbar-close {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.8rem;
+    background: rgba(0,0,0,0.05);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--texte);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .toolbar-floating .toolbar-close:hover {
+    background: rgba(0,0,0,0.1);
+  }
+  .toolbar-floating .toolbar-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primaire);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+    padding-right: 2rem;
+  }
+  .toolbar-floating .search-box {
+    margin-bottom: 0.8rem;
+  }
+  .toolbar-floating .filters-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .toolbar-floating .filter-btn {
+    font-size: 0.78rem;
+    padding: 0.5rem 0.9rem;
+  }
+}
+
+/* Desktop : toolbar normale dans le catalogue (sticky) */
+@media (min-width: 769px) {
+  .toolbar-floating { display: none !important; }
 }
 
 /* REDUCED MOTION */
@@ -2323,6 +2433,20 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 
 
 
+
+<!-- TOOLBAR FLOTTANTE (mobile, apparait au footer) -->
+<div class="toolbar-floating" id="toolbarFloating">
+<button class="toolbar-close" id="toolbarClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+<div class="toolbar-title"><i class="fas fa-filter"></i> Filtrer les produits</div>
+<div class="search-box">
+<i class="fas fa-search"></i>
+<input type="search" id="search-input-floating" placeholder="Rechercher un produit..." aria-label="Rechercher">
+</div>
+<div class="filters-wrapper" id="filters-wrapper-floating">
+<!-- Rempli par JS : clone des filtres -->
+</div>
+</div>
+
 </main>
 
 <!-- FOOTER -->
@@ -2774,6 +2898,83 @@ el.addEventListener('mouseleave',function(){cursor.classList.remove('hover')});
 });
 })();
 
+
+// ============================================================
+// TOOLBAR FLOTTANTE MOBILE (apparait au footer)
+// ============================================================
+(function(){
+'use strict';
+if(!window.matchMedia('(max-width: 768px)').matches)return;
+
+var floating = document.getElementById('toolbarFloating');
+var originalFilters = document.getElementById('filters-wrapper');
+var floatingFilters = document.getElementById('filters-wrapper-floating');
+var originalSearch = document.getElementById('search-input');
+var floatingSearch = document.getElementById('search-input-floating');
+var closeBtn = document.getElementById('toolbarClose');
+var footer = document.querySelector('.footer');
+
+if(!floating || !originalFilters || !floatingFilters)return;
+
+// Cloner les filtres dans la toolbar flottante
+function syncFilters(){
+  floatingFilters.innerHTML = originalFilters.innerHTML;
+  // Synchroniser l'etat active
+  var origActive = originalFilters.querySelector('.filter-btn.active');
+  if(origActive){
+    var floatBtns = floatingFilters.querySelectorAll('.filter-btn');
+    floatBtns.forEach(function(b){
+      b.classList.toggle('active', b.dataset.category === origActive.dataset.category);
+    });
+  }
+}
+syncFilters();
+
+// Observer le footer : quand il est visible, montrer la toolbar flottante
+if(footer){
+  var footerObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        floating.classList.add('show');
+        syncFilters();
+      } else {
+        floating.classList.remove('show');
+      }
+    });
+  }, {threshold: 0.1});
+  footerObs.observe(footer);
+}
+
+// Gestion des clics sur les filtres flottants
+floatingFilters.addEventListener('click', function(e){
+  if(e.target.classList.contains('filter-btn')){
+    // Synchroniser avec les filtres originaux
+    var cat = e.target.dataset.category;
+    var origBtn = originalFilters.querySelector('[data-category="'+cat+'"]');
+    if(origBtn) origBtn.click();
+    // Mettre a jour l'etat active dans la toolbar flottante
+    floatingFilters.querySelectorAll('.filter-btn').forEach(function(b){
+      b.classList.remove('active');
+    });
+    e.target.classList.add('active');
+  }
+});
+
+// Synchroniser la recherche
+if(floatingSearch && originalSearch){
+  floatingSearch.addEventListener('input', function(){
+    originalSearch.value = floatingSearch.value;
+    originalSearch.dispatchEvent(new Event('input'));
+  });
+}
+
+// Bouton fermer
+if(closeBtn){
+  closeBtn.addEventListener('click', function(){
+    floating.classList.remove('show');
+  });
+}
+})();
 // ============================================================
 // TRACKING (optionnel - GA4, Meta Pixel, Clarity)
 // ============================================================
