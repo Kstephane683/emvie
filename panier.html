@@ -1,172 +1,845 @@
-<!DOCTYPE html><html lang=fr><head><meta charset=utf-8><meta content="width=device-width, initial-scale=1.0" name=viewport><title>Panier &amp; Commande | EM'VIE SHOP</title><meta content="Finalisez votre commande sur EM'VIE SHOP. Paiement à la livraison, Wave, Orange Money." name=description><meta content="noindex, nofollow" name=robots><link href=https://fonts.googleapis.com rel=preconnect><link crossorigin href=https://fonts.gstatic.com rel=preconnect><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@400;600;800&family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500;700&family=Merriweather:wght@400;700&family=Lato:wght@400;700&family=Nunito:wght@400;700&family=Cormorant+Garamond:wght@400;700&display=swap" rel=stylesheet><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css rel=stylesheet><style>
-        :root {
-            --primaire: #7A8349;
-            --secondaire: #9BA276;
-            --accent: #68703F;
-            --fond-clair: #F8F9FA;
-            --fond-moyen: #E9ECEF;
-            --fond-fonce: #1A1A1A;
-            --blanc: #FFFFFF;
-            --whatsapp: #25D366;
-            --or: #D4AF37;
-            --danger: #E74C3C;
-            --texte: #333333;
-            --gris: #777777;
-            --border: #EEEEEE;
-            --police-titres: 'Roboto', sans-serif;
-            --police-corps: 'Roboto', sans-serif;
-            --radius-btn: 50px;
-            --radius-card: 12px;
-            --shadow: 0 10px 30px rgba(0,0,0,0.08);
-            --shadow-hover: 0 15px 40px rgba(0,0,0,0.12);
-            --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            --header-h: 64px;
-        }
-    </style><link href=style.css rel=stylesheet><script type=application/ld+json>{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Panier | EM'VIE SHOP", "url": "https://emvie.shop/"}</script></head><body data-whatsapp=2250778358969><a class=skip-link href=#main>Aller au contenu</a><header class=header><nav class=nav><a class=nav__brand href=index.html><img alt="EM'VIE SHOP" class=nav__logo src=images/optimisees/logo_1200w.webp style="height: 40px; width: auto; max-height: 40px; object-fit: contain;"><span>EM'VIE SHOP</span></a><ul class=nav__menu><li><a href=index.html>Boutique</a></li><li><a href=opportunite.html style="color: var(--or);">Opportunité</a></li><li><a href=contact.html>Contact</a></li></ul><div class=nav__actions><a class=cart-link href=panier.html><span class=icon-wrap><i class="fas fa-shopping-bag"></i><span class=cart-badge id=cart-count-header>0</span></span></a><button aria-label="Ouvrir le menu" class=nav__toggle id=menu-toggle><i class="fas fa-bars"></i></button></div></nav></header><main class=container id=main><div class=page-hero><h1>Finaliser ma commande</h1></div><div class=empty-state id=cart-empty style="display: none;"><i class="fas fa-shopping-cart"></i><h3>Votre panier est vide</h3><p>Il semble que vous n'ayez encore ajouté aucun produit.</p><a class="btn btn--primaire" href=index.html style="display:inline-flex; width:auto;">Continuer mes achats</a></div><div class=checkout-layout id=cart-content><div class=cart-items-section><h2 style="margin-bottom: 1rem; font-size: 1.2rem;">1. Vos articles</h2><div id=cart-items-container></div><hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);"><h2 style="margin-bottom: 1rem; font-size: 1.2rem;">2. Informations de livraison</h2><form id=checkout-form><div class=form-group><label for=cust-name>Nom complet *</label><input class=form-control id=cust-name placeholder="Ex: Jean Kouassi" required type=text></div><div class=form-group><label for=cust-phone>Numéro de téléphone *</label><input class=form-control id=cust-phone placeholder="Ex: 07 00 00 00 00" required type=tel></div><div class=form-group><label for=cust-address>Adresse de livraison précise *</label><textarea class=form-control id=cust-address placeholder="Quartier, rue, point de repère..." required rows=3></textarea></div><div class=form-group><label for=cust-payment>Moyen de paiement *</label><select class=form-control id=cust-payment required><option value="Cash à la livraison">Cash à la livraison</option><option value=Wave>Wave</option><option value="Orange Money">Orange Money</option><option value="MTN Mobile Money">MTN Mobile Money</option></select></div><div class=form-group><label for=cust-delivery-fee>Frais de livraison (FCFA)</label><input class=form-control id=cust-delivery-fee min=0 step=500 type=number value=1000><small style="color: var(--gris); font-size: 0.78rem;">1 000 FCFA par défaut (livraison standard). Modifiable si besoin (retrait en boutique, zone spécifique...).</small></div></form></div><div class=checkout-summary-section><h3 class=summary-title>Récapitulatif</h3><div class=summary-row><span>Sous-total</span><span id=sub-total>0 FCFA</span></div><div class=summary-row><span>Livraison</span><span id=delivery-fee-display>1 000 FCFA</span></div><div class=summary-total><span>Total</span><span id=total-price>0 FCFA</span></div><button class="btn btn--whatsapp" id=checkout-submit><i class="fab fa-whatsapp"></i> Valider sur WhatsApp </button><p style="font-size: 0.8rem; text-align: center; color: var(--gris); margin-top: 1rem;"><i class="fas fa-lock"></i> Aucun paiement en ligne. Vous payez à la réception. </p></div></div></main><footer class=footer><div class=container><div class=footer-bottom>© 2026 EM'VIE SHOP. Tous droits réservés.</div></div></footer><nav class=mobile-nav><a class="mobile-nav-item active" href=index.html><i class="fas fa-home"></i> <span>Boutique</span></a><a class=mobile-nav-item href=opportunite.html style="color: var(--or);"><i class="fas fa-rocket"></i> <span>Business</span></a><a class=mobile-nav-item href=panier.html><span class=icon-wrap><i class="fas fa-shopping-bag"></i><span class=cart-badge id=cart-count-mobile>0</span></span><span>Panier</span></a><a class=mobile-nav-item href=https://wa.me/2250778358969 rel=noopener style="color: var(--whatsapp);" target=_blank><i class="fab fa-whatsapp"></i> <span>WhatsApp</span></a></nav><script src=script.js></script><script>
-        // ====== LOGIQUE PANIER SPÉCIFIQUE (page panier) ======
-        // Utilise getCart() et saveCart() de script.js partagé
-        const FRAIS_LIVRAISON_DEFAUT = 1000;
-        let subTotalActuel = 0;
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panier & Commande | EM'VIE SHOP</title>
+<meta name="description" content="Finalisez votre commande sur EM'VIE SHOP. Paiement a la livraison, Wave, Orange Money, MTN, Moov. Livraison 24-48h a Abidjan.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.emvie.shop/panier.html">
+<meta property="og:title" content="Panier & Commande | EM'VIE SHOP">
+<meta property="og:description" content="Finalisez votre commande. Paiement Mobile Money securise.">
+<meta name="theme-color" content="#7A8349">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --primaire: #7A8349;
+  --secondaire: #9BA276;
+  --accent: #68703F;
+  --fond-clair: #F8F9FA;
+  --fond-moyen: #E9ECEF;
+  --fond-fonce: #1A1A1A;
+  --blanc: #FFFFFF;
+  --whatsapp: #25D366;
+  --or: #D4AF37;
+  --or-clair: #F1C40F;
+  --danger: #E74C3C;
+  --texte: #2A2A2A;
+  --gris: #777777;
+  --border: #EEEEEE;
+  --premium-bg: #0F1419;
+  --premium-surface: rgba(255,255,255,0.04);
+  --premium-border: rgba(212,175,55,0.25);
+  --premium-glow: rgba(212,175,55,0.15);
+  --header-glass-bg: rgba(255,255,255,0.92);
+  --header-glass-border: rgba(122,131,73,0.15);
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Roboto', sans-serif;
+  --radius-btn: 50px;
+  --radius-card: 16px;
+  --radius-card-lg: 24px;
+  --shadow-sm: 0 4px 12px rgba(0,0,0,0.06);
+  --shadow: 0 10px 30px rgba(0,0,0,0.08);
+  --shadow-hover: 0 20px 50px rgba(0,0,0,0.15);
+  --shadow-glow: 0 10px 40px rgba(212,175,55,0.2);
+  --transition: 0.35s cubic-bezier(0.25,0.46,0.45,0.94);
+  --transition-slow: 0.6s cubic-bezier(0.16,1,0.3,1);
+  --header-h: 72px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-body); color: var(--texte); background: var(--fond-clair); line-height: 1.65; padding-top: var(--header-h); padding-bottom: 70px; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+button { font-family: inherit; cursor: pointer; }
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height: 1.2; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+.skip-link { position: absolute; left: -999px; top: 0; background: var(--primaire); color: white; padding: 0.6rem 1.2rem; z-index: 10000; }
+.skip-link:focus { left: 0; }
 
-        // Recalcule et affiche le total (sous-total + frais de livraison courant)
-        function calculerTotaux() {
-            const inputFrais = document.getElementById('cust-delivery-fee');
-            let frais = parseInt(inputFrais.value, 10);
-            if (isNaN(frais) || frais < 0) frais = FRAIS_LIVRAISON_DEFAUT;
+/* TRUST BAR */
+.trust-banner { background: var(--premium-bg); color: rgba(255,255,255,0.8); font-size: 0.78rem; text-align: center; padding: 0.5rem 1rem; border-bottom: 1px solid rgba(212,175,55,0.15); }
+.trust-banner span { margin: 0 1.2rem; white-space: nowrap; display: inline-flex; align-items: center; gap: 0.4rem; }
+.trust-banner i { color: var(--or); font-size: 0.7rem; }
+.trust-banner a { color: var(--or); font-weight: 700; }
 
-            document.getElementById('delivery-fee-display').textContent = frais === 0 ? 'Gratuite' : frais.toLocaleString() + ' FCFA';
-            document.getElementById('total-price').textContent = (subTotalActuel + frais).toLocaleString() + ' FCFA';
-            return frais;
-        }
+/* HEADER GLASS */
+.header { position: fixed; top: 0; left: 0; right: 0; height: var(--header-h); background: var(--header-glass-bg); backdrop-filter: blur(16px) saturate(180%); -webkit-backdrop-filter: blur(16px) saturate(180%); z-index: 1000; border-bottom: 1px solid var(--header-glass-border); display: flex; align-items: center; transition: all var(--transition); }
+.header.scrolled { height: 60px; background: rgba(255,255,255,0.98); box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+.nav { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; gap: 1.5rem; }
+.nav__brand { display: flex; align-items: center; gap: 0.6rem; }
+.nav__logo { height: 42px; width: auto; object-fit: contain; border-radius: 6px; transition: transform var(--transition); }
+.nav__brand:hover .nav__logo { transform: scale(1.05); }
+.nav__brand-text { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; color: var(--primaire); letter-spacing: 0.5px; }
+.nav__menu { display: flex; gap: 2rem; list-style: none; }
+.nav__menu a { font-weight: 500; color: var(--texte); position: relative; padding: 0.5rem 0; font-size: 0.95rem; transition: color var(--transition); }
+.nav__menu a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--or); transition: width var(--transition); }
+.nav__menu a:hover, .nav__menu a.active { color: var(--primaire); }
+.nav__menu a:hover::after, .nav__menu a.active::after { width: 100%; }
+.nav__menu a.opportunite-link { color: var(--or); font-weight: 700; }
+.nav__menu a.opportunite-link::after { background: var(--or); }
+.nav__actions { display: flex; align-items: center; gap: 1rem; }
+.icon-wrap { position: relative; display: inline-flex; }
+.cart-link { font-size: 1.2rem; color: var(--primaire); padding: 0.5rem; border-radius: 50%; transition: all var(--transition); }
+.cart-link:hover { background: rgba(122,131,73,0.1); transform: translateY(-2px); }
+.cart-badge { position: absolute; top: -2px; right: -2px; background: var(--or); color: var(--fond-fonce); font-size: 0.65rem; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; min-width: 18px; padding: 0 4px; }
+.nav__toggle { display: none; background: none; border: none; font-size: 1.4rem; color: var(--primaire); padding: 0.4rem; border-radius: 8px; }
+.nav__cta-wa { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: var(--whatsapp); color: white; border-radius: var(--radius-btn); font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: all var(--transition); box-shadow: 0 4px 14px rgba(37,211,102,0.3); }
+.nav__cta-wa:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(37,211,102,0.4); }
+.nav__menu-overlay { display: none; position: fixed; top: var(--header-h); left: 0; right: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(16px); z-index: 999; padding: 1rem 1.5rem; box-shadow: 0 6px 20px rgba(0,0,0,0.1); border-top: 1px solid var(--border); }
+.nav__menu-overlay.open { display: block; }
+.nav__menu-overlay ul { list-style: none; padding: 0; margin: 0; }
+.nav__menu-overlay a { display: block; padding: 1rem 0.5rem; font-weight: 600; color: var(--texte); border-bottom: 1px solid var(--border); }
+.nav__menu-overlay a:last-child { border-bottom: none; }
 
-        function renderCart() {
-            const cart = window.getCart();
-            const container = document.getElementById('cart-items-container');
-            const emptyDiv = document.getElementById('cart-empty');
-            const contentDiv = document.getElementById('cart-content');
+/* BOUTONS */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.95rem 1.6rem; border-radius: var(--radius-btn); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.3px; cursor: pointer; transition: all var(--transition); border: none; text-decoration: none; font-family: var(--font-body); }
+.btn-premium { background: linear-gradient(135deg, var(--primaire), var(--accent)); color: white; box-shadow: 0 6px 20px rgba(122,131,73,0.35); }
+.btn-premium:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(122,131,73,0.5); }
+.btn-gold { background: linear-gradient(135deg, var(--or), var(--or-clair)); color: var(--fond-fonce); box-shadow: 0 6px 20px rgba(212,175,55,0.35); }
+.btn-gold:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(212,175,55,0.5); }
+.btn-outline-gold { background: transparent; color: var(--or); border: 2px solid var(--or); padding: 0.8rem 1.5rem; }
+.btn-outline-gold:hover { background: var(--or); color: var(--fond-fonce); transform: translateY(-2px); }
+.btn-whatsapp { background: var(--whatsapp); color: white; box-shadow: 0 6px 20px rgba(37,211,102,0.35); }
+.btn-whatsapp:hover { background: #1da851; transform: translateY(-2px); box-shadow: 0 12px 28px rgba(37,211,102,0.45); }
+.btn-outline { background: transparent; color: var(--primaire); border: 2px solid var(--primaire); }
+.btn-outline:hover { background: var(--primaire); color: white; transform: translateY(-2px); }
 
-            if (cart.length === 0) {
-                emptyDiv.style.display = 'block';
-                contentDiv.style.display = 'none';
-                return;
-            }
+/* PAGE HERO */
+.page-hero { background: linear-gradient(135deg, var(--premium-bg), var(--fond-fonce)); color: white; padding: 4rem 0 3rem; text-align: center; position: relative; overflow: hidden; }
+.page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(212,175,55,0.1), transparent 60%); z-index: 0; }
+.page-hero .container { position: relative; z-index: 1; }
+.page-hero__badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(212,175,55,0.15); border: 1px solid var(--premium-border); color: var(--or); padding: 0.4rem 1rem; border-radius: var(--radius-btn); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1rem; }
+.page-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 0.5rem; }
+.page-hero h1 span { color: var(--or); font-style: italic; }
+.page-hero p { font-size: 1.05rem; opacity: 0.85; max-width: 580px; margin: 0 auto; }
 
-            emptyDiv.style.display = 'none';
-            contentDiv.style.display = 'grid';
-            container.innerHTML = '';
+/* TRUST STRIP */
+.trust-strip { background: white; padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
+.trust-strip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; text-align: center; }
+.trust-strip-item { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 600; color: var(--texte); }
+.trust-strip-item i { font-size: 1.5rem; color: var(--primaire); background: rgba(122,131,73,0.1); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.trust-strip-item small { color: var(--gris); font-weight: 400; font-size: 0.75rem; }
 
-            let subTotal = 0;
+/* PAYMENT STRIP */
+.chime-payment-strip { background: #000; padding: 1rem 0; text-align: center; border-top: 1px solid rgba(212,175,55,0.2); border-bottom: 1px solid rgba(212,175,55,0.2); }
+.chime-payment-strip .ps-label { font-size: 0.7rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.6rem; font-weight: 500; }
+.chime-payment-logos { display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.chime-payment-logo { background: transparent; padding: 4px; border-radius: 6px; height: 40px; display: flex; align-items: center; justify-content: center; transition: transform var(--transition), filter var(--transition); filter: brightness(1.1); }
+.chime-payment-logo:hover { transform: translateY(-3px) scale(1.05); filter: brightness(1.2); }
+.chime-payment-logo img { max-height: 30px; max-width: 75px; object-fit: contain; }
 
-            cart.forEach(item => {
-                const itemTotal = item.prix * item.qte;
-                subTotal += itemTotal;
+/* CHECKOUT LAYOUT */
+.checkout-section { padding: 3rem 0; }
+.checkout-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem; align-items: start; }
+.cart-items-section { background: white; padding: 2rem; border-radius: var(--radius-card); box-shadow: var(--shadow); border: 1px solid var(--border); }
+.section-step { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid var(--fond-clair); }
+.section-step-num { width: 32px; height: 32px; background: linear-gradient(135deg, var(--primaire), var(--accent)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-family: var(--font-heading); font-size: 0.95rem; flex-shrink: 0; }
+.section-step h2 { font-size: 1.2rem; color: var(--primaire); margin: 0; }
 
-                const div = document.createElement('div');
-                div.className = 'cart-item';
-                // v4.4.3 : utilisation de textContent pour échapper le HTML (sécurité XSS)
-                const img = document.createElement('img');
-                img.src = item.image;
-                img.alt = item.nom;
-                img.className = 'cart-item__img';
+/* CART ITEM */
+.cart-item { display: flex; gap: 1rem; padding: 1.2rem 0; border-bottom: 1px solid var(--border); position: relative; }
+.cart-item:last-child { border-bottom: none; }
+.cart-item__img { width: 90px; height: 90px; object-fit: cover; border-radius: 12px; background: var(--fond-clair); flex-shrink: 0; }
+.cart-item__details { flex: 1; min-width: 0; }
+.cart-item__name { font-weight: 600; margin-bottom: 0.3rem; font-size: 0.95rem; }
+.cart-item__price { color: var(--accent); font-weight: 700; font-size: 0.88rem; margin-bottom: 0.6rem; }
+.cart-item__actions { display: flex; align-items: center; gap: 1rem; margin-top: 0.5rem; flex-wrap: wrap; }
+.cart-qty-selector { display: flex; align-items: center; border: 1px solid var(--border); border-radius: 20px; overflow: hidden; background: var(--fond-clair); }
+.cart-qty-btn { background: var(--fond-clair); border: none; width: 30px; height: 30px; cursor: pointer; font-weight: bold; font-size: 1rem; color: var(--primaire); transition: background var(--transition); }
+.cart-qty-btn:hover { background: var(--border); }
+.cart-qty-val { padding: 0 12px; font-weight: 700; font-size: 0.9rem; min-width: 30px; text-align: center; }
+.remove-btn { color: var(--danger); background: none; border: none; cursor: pointer; font-size: 0.8rem; transition: opacity var(--transition); display: flex; align-items: center; gap: 0.3rem; }
+.remove-btn:hover { opacity: 0.7; }
+.cart-item__total { font-weight: 800; color: var(--primaire); margin-left: auto; align-self: center; font-family: var(--font-heading); font-size: 1.05rem; white-space: nowrap; }
 
-                const details = document.createElement('div');
-                details.className = 'cart-item__details';
+/* FORM FLOATING LABELS */
+.form-group { position: relative; margin-bottom: 1.2rem; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 1.2rem 1rem 0.5rem; background: var(--fond-clair); border: 1px solid var(--border); border-radius: 12px; color: var(--texte); font-family: inherit; font-size: 0.95rem; outline: none; transition: border var(--transition), background var(--transition), box-shadow var(--transition); }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--primaire); background: white; box-shadow: 0 0 0 3px rgba(122,131,73,0.1); }
+.form-group label { position: absolute; left: 1rem; top: 1rem; color: var(--gris); font-size: 0.95rem; pointer-events: none; transition: all var(--transition); }
+.form-group input:focus + label, .form-group input:not(:placeholder-shown) + label,
+.form-group select:focus + label, .form-group select:valid + label,
+.form-group textarea:focus + label, .form-group textarea:not(:placeholder-shown) + label { top: 0.3rem; left: 0.8rem; font-size: 0.7rem; color: var(--primaire); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; background: white; padding: 0 4px; }
+.form-group select option { background: white; color: var(--texte); }
+.form-group textarea { resize: vertical; min-height: 80px; }
+.form-group small { display: block; color: var(--gris); font-size: 0.78rem; margin-top: 0.4rem; padding-left: 0.5rem; }
 
-                const nameEl = document.createElement('div');
-                nameEl.className = 'cart-item__name';
-                nameEl.textContent = item.nom;
+/* SUMMARY STICKY GLASS-CARD */
+.checkout-summary-section { position: sticky; top: calc(var(--header-h) + 20px); background: linear-gradient(135deg, var(--premium-bg), var(--fond-fonce)); color: white; padding: 2rem; border-radius: var(--radius-card-lg); box-shadow: var(--shadow-hover); border: 1px solid var(--premium-border); }
+.summary-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); color: var(--or); }
+.summary-row { display: flex; justify-content: space-between; margin-bottom: 0.8rem; font-size: 0.95rem; }
+.summary-row span:first-child { opacity: 0.8; }
+.summary-row span:last-child { font-weight: 600; }
+.summary-total { display: flex; justify-content: space-between; font-size: 1.4rem; font-weight: 800; color: var(--or); margin-top: 1rem; padding-top: 1rem; border-top: 2px solid rgba(212,175,55,0.2); font-family: var(--font-heading); }
+.checkout-summary-section .btn { width: 100%; margin-top: 1.5rem; }
+.summary-trust { text-align: center; font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.4rem; }
+.summary-trust i { color: var(--whatsapp); }
 
-                const priceEl = document.createElement('div');
-                priceEl.className = 'cart-item__price';
-                priceEl.textContent = item.prix.toLocaleString() + ' FCFA';
+/* EMPTY STATE PREMIUM */
+.empty-state { text-align: center; padding: 4rem 1rem; background: white; border-radius: var(--radius-card-lg); box-shadow: var(--shadow); border: 1px solid var(--border); max-width: 600px; margin: 2rem auto; }
+.empty-state__icon { width: 100px; height: 100px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(122,131,73,0.1)); color: var(--or); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+.empty-state h3 { font-size: 1.6rem; margin-bottom: 0.5rem; color: var(--primaire); }
+.empty-state p { color: var(--gris); margin-bottom: 2rem; font-size: 1rem; }
 
-                const actionsEl = document.createElement('div');
-                actionsEl.className = 'cart-item__actions';
-                actionsEl.innerHTML = `
-                    <div class="cart-qty-selector">
-                        <button class="cart-qty-btn" data-action="dec" data-id="${item.id}">-</button>
-                        <span class="cart-qty-val">${item.qte}</span>
-                        <button class="cart-qty-btn" data-action="inc" data-id="${item.id}">+</button>
-                    </div>
-                    <button class="remove-btn" data-action="remove" data-id="${item.id}"><i class="fas fa-trash"></i> Retirer</button>
-                `;
+/* TRUST BADGES SECTION */
+.trust-badges-section { padding: 4rem 0; background: white; }
+.trust-badges-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.trust-badge-card { text-align: center; padding: 2rem 1.5rem; border-radius: var(--radius-card); border: 1px solid var(--border); transition: transform var(--transition), box-shadow var(--transition); }
+.trust-badge-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: var(--premium-border); }
+.trust-badge-icon { width: 60px; height: 60px; margin: 0 auto 1rem; background: linear-gradient(135deg, var(--or), var(--or-clair)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+.trust-badge-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--primaire); }
+.trust-badge-card p { color: var(--gris); font-size: 0.88rem; line-height: 1.5; }
 
-                details.appendChild(nameEl);
-                details.appendChild(priceEl);
-                details.appendChild(actionsEl);
+/* FAQ */
+.faq-container { max-width: 820px; margin: 0 auto; }
+.faq-item { background: var(--fond-clair); border: 1px solid var(--border); border-radius: var(--radius-card); margin-bottom: 1rem; overflow: hidden; transition: all var(--transition); }
+.faq-item.active { background: white; border-color: var(--premium-border); box-shadow: var(--shadow); }
+.faq-question { padding: 1.3rem 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600; font-size: 1rem; color: var(--primaire); gap: 1rem; user-select: none; transition: color var(--transition); }
+.faq-question:hover { color: var(--or); }
+.faq-question .faq-icon { flex-shrink: 0; width: 32px; height: 32px; background: rgba(212,175,55,0.1); color: var(--or); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all var(--transition); font-size: 0.85rem; }
+.faq-item.active .faq-question .faq-icon { transform: rotate(180deg); background: var(--or); color: white; }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.45s ease, padding 0.45s ease; padding: 0 1.5rem; color: var(--gris); line-height: 1.7; font-size: 0.92rem; }
+.faq-item.active .faq-answer { padding: 0 1.5rem 1.3rem; max-height: 500px; }
 
-                const totalEl = document.createElement('div');
-                totalEl.style.cssText = 'font-weight: 800; color: var(--primaire); margin-left: auto; align-self: center;';
-                totalEl.textContent = itemTotal.toLocaleString() + ' F';
+/* SECTION GENERALE */
+.section { padding: 4rem 0; }
+.section-header { text-align: center; margin-bottom: 3rem; }
+.section-title { font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; color: var(--primaire); margin-bottom: 0.8rem; letter-spacing: -0.5px; }
+.section-title span { color: var(--or); font-style: italic; }
+.section-subtitle { color: var(--gris); max-width: 640px; margin: 0 auto; font-size: 1rem; }
 
-                div.appendChild(img);
-                div.appendChild(details);
-                div.appendChild(totalEl);
-                container.appendChild(div);
-            });
+/* FOOTER */
+.footer { background: var(--premium-bg); color: rgba(255,255,255,0.7); padding: 3rem 0 1.5rem; margin-top: 4rem; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 2rem; }
+.footer-brand { display: flex; flex-direction: column; gap: 0.8rem; }
+.footer-brand .brand-row { display: flex; align-items: center; gap: 0.6rem; }
+.footer-brand img { height: 40px; }
+.footer-brand .brand-text { font-family: var(--font-heading); font-size: 1.2rem; color: var(--or); font-weight: 700; }
+.footer-brand p { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.6); max-width: 320px; }
+.footer h4 { color: white; margin-bottom: 1rem; font-size: 1rem; font-family: var(--font-body); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+.footer ul { list-style: none; padding: 0; }
+.footer ul li { margin-bottom: 0.6rem; }
+.footer ul li a { color: rgba(255,255,255,0.6); transition: color var(--transition); font-size: 0.88rem; }
+.footer ul li a:hover { color: var(--or); }
+.footer-social { display: flex; gap: 0.8rem; margin-top: 1rem; }
+.footer-social a { width: 36px; height: 36px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); transition: all var(--transition); }
+.footer-social a:hover { background: var(--or); color: var(--fond-fonce); transform: translateY(-2px); border-color: var(--or); }
+.footer-bottom { text-align: center; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+.chime-branding { text-align: center; padding: 1rem 0 0.5rem; margin-top: 1rem; }
+.chime-branding a { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; color: rgba(255,255,255,0.45); text-decoration: none; transition: color var(--transition); }
+.chime-branding a:hover { color: var(--or); }
+.chime-branding .ep-mark { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 6px; background: linear-gradient(135deg, var(--or), var(--or-clair)); color: var(--fond-fonce); font-weight: 800; font-size: 0.65rem; font-family: var(--font-body); }
 
-            // Attacher les listeners aux boutons qty/remove
-            container.querySelectorAll('.cart-qty-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const id = this.getAttribute('data-id');
-                    const delta = this.getAttribute('data-action') === 'inc' ? 1 : -1;
-                    window.changeQty(id, delta);
-                    renderCart(); // re-render
-                });
-            });
-            container.querySelectorAll('.remove-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const id = this.getAttribute('data-id');
-                    window.removeItem(id);
-                    renderCart(); // re-render
-                });
-            });
+/* MOBILE NAV */
+.mobile-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 -2px 14px rgba(0,0,0,0.08); display: none; justify-content: space-around; padding: 0.5rem 0; z-index: 1000; border-top: 1px solid var(--border); }
+.mobile-nav-item { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; font-size: 0.65rem; color: var(--gris); padding: 0.4rem; flex: 1; text-decoration: none; transition: color var(--transition); position: relative; }
+.mobile-nav-item.active, .mobile-nav-item:hover { color: var(--primaire); }
+.mobile-nav-item i { font-size: 1.2rem; }
 
-            document.getElementById('sub-total').textContent = subTotal.toLocaleString() + ' FCFA';
-            subTotalActuel = subTotal;
-            calculerTotaux();
-            window.updateCartUI();
-        }
+/* CHAT WHATSAPP */
+.chime-chat { position: fixed; bottom: 90px; right: 20px; z-index: 999; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--whatsapp), #1da851); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #fff; box-shadow: 0 8px 28px rgba(37,211,102,0.4); cursor: pointer; transition: all var(--transition); text-decoration: none; animation: pulseWA 2.5s infinite; }
+.chime-chat:hover { transform: scale(1.1) rotate(4deg); }
+@keyframes pulseWA { 0% { box-shadow: 0 8px 28px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.5); } 70% { box-shadow: 0 8px 28px rgba(37,211,102,0.4), 0 0 0 18px rgba(37,211,102,0); } 100% { box-shadow: 0 8px 28px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0); } }
 
-        // ====== ENVOI COMMANDE WHATSAPP ======
-        function sendWhatsAppOrder() {
-            const name = document.getElementById('cust-name').value.trim();
-            const phone = document.getElementById('cust-phone').value.trim();
-            const address = document.getElementById('cust-address').value.trim();
-            const payment = document.getElementById('cust-payment').value;
-            const whatsappNumber = document.body.dataset.whatsapp || '22500000000';
+/* TOAST */
+.toast { position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%) translateY(100px); background: linear-gradient(135deg, var(--primaire), var(--accent)); color: white; padding: 1.2rem 2rem; border-radius: var(--radius-btn); font-size: 0.95rem; font-weight: 600; z-index: 2000; opacity: 0; transition: all 0.4s cubic-bezier(0.16,1,0.3,1); box-shadow: 0 12px 40px rgba(0,0,0,0.4); border: 2px solid var(--or); display: flex; align-items: center; gap: 0.6rem; max-width: 90vw; }
+.toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+.toast i { color: var(--or); font-size: 1.2rem; }
 
-            if (!name || !phone || !address) {
-                alert("Veuillez remplir tous les champs obligatoires (*) s'il vous plaît.");
-                return;
-            }
+/* RESPONSIVE */
+@media (max-width: 980px) {
+  .checkout-layout { grid-template-columns: 1fr; }
+  .checkout-summary-section { position: static; }
+  .trust-badges-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+@media (max-width: 768px) {
+  :root { --header-h: 60px; }
+  body { padding-bottom: 70px; }
+  .trust-banner { font-size: 0.7rem; padding: 0.4rem 0.6rem; }
+  .trust-banner span { margin: 0 0.6rem; }
+  .nav__menu { display: none; }
+  .nav__cta-wa { display: none; }
+  .nav__toggle { display: block; }
+  .nav__brand-text { display: none; }
+  .page-hero { padding: 3rem 0 2rem; }
+  .trust-strip-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+  .chime-payment-logos { gap: 0.5rem; }
+  .chime-payment-logo { height: 34px; }
+  .chime-payment-logo img { max-height: 24px; }
+  .cart-items-section { padding: 1.5rem 1rem; }
+  .cart-item { gap: 0.8rem; }
+  .cart-item__img { width: 70px; height: 70px; }
+  .cart-item__name { font-size: 0.88rem; }
+  .cart-item__total { font-size: 0.95rem; margin-left: 0; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .mobile-nav { display: flex; }
+  .chime-chat { bottom: 80px; right: 16px; width: 50px; height: 50px; font-size: 1.6rem; }
+}
+@media (max-width: 480px) {
+  .page-hero h1 { font-size: 1.6rem; }
+  .section-title { font-size: 1.4rem; }
+  .cart-item { flex-wrap: wrap; }
+  .cart-item__details { width: calc(100% - 80px); }
+  .cart-item__total { width: 100%; text-align: right; margin-top: 0.5rem; }
+}
+</style>
+</head>
+<body data-whatsapp="2250778358969">
+<a class="skip-link" href="#main">Aller au contenu</a>
 
-            const cart = window.getCart();
-            if (cart.length === 0) return;
+<div class="trust-banner">
+<span><i class="fas fa-truck"></i> Livraison 24-48h</span>
+<span><i class="fas fa-shield-alt"></i> Paiement securise</span>
+<span><i class="fas fa-undo"></i> Satisfait ou rembourse</span>
+</div>
 
-            let message = `*NOUVELLE COMMANDE - EM'VIE SHOP*\n-----------------------------------\n`;
-            message += `*Client:* ${name}\n*Tél:* ${phone}\n*Adresse:* ${address}\n*Paiement:* ${payment}\n`;
-            message += `-----------------------------------\n*ARTICLES:*\n`;
+<header class="header" id="header">
+<nav class="nav">
+<a class="nav__brand" href="index.html">
+<img alt="EM'VIE SHOP" class="nav__logo" src="images/optimisees/logo_1200w.webp">
+<span class="nav__brand-text">EM'VIE SHOP</span>
+</a>
+<ul class="nav__menu">
+<li><a href="index.html">Boutique</a></li>
+<li><a class="opportunite-link" href="opportunite.html">Opportunite</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="nav__actions">
+<a class="cart-link" href="panier.html" aria-label="Voir le panier">
+<span class="icon-wrap">
+<i class="fas fa-shopping-bag"></i>
+<span class="cart-badge" id="cart-count-header">0</span>
+</span>
+</a>
+<button aria-label="Ouvrir le menu" class="nav__toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+</div>
+</nav>
+</header>
 
-            let total = 0;
-            cart.forEach((item, index) => {
-                const itemTotal = item.prix * item.qte;
-                total += itemTotal;
-                message += `\n${index + 1}. ${item.nom}\n   ${item.qte} x ${item.prix.toLocaleString()} F = ${itemTotal.toLocaleString()} F`;
-            });
+<div class="nav__menu-overlay" id="nav-menu-overlay">
+<ul>
+<li><a href="index.html">Boutique</a></li>
+<li><a href="opportunite.html">Opportunite business</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="panier.html">Mon panier</a></li>
+</ul>
+</div>
 
-            const frais = calculerTotaux();
-            total += frais;
+<main id="main">
 
-            message += `\n-----------------------------------\n*TOTAL: ${total.toLocaleString()} FCFA*\n_Livraison: ${frais === 0 ? 'Gratuite' : frais.toLocaleString() + ' FCFA'}_`;
+<!-- PAGE HERO -->
+<div class="page-hero">
+<div class="container">
+<span class="page-hero__badge"><i class="fas fa-shopping-bag"></i> Finalisation de commande</span>
+<h1>Finaliser ma <span>commande</span></h1>
+<p>Verifiez vos articles, renseignez vos informations de livraison et validez votre commande via WhatsApp. Paiement securise a la reception.</p>
+</div>
+</div>
 
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-            window.open(whatsappUrl, '_blank');
-        }
+<!-- TRUST STRIP -->
+<section class="trust-strip">
+<div class="container">
+<div class="trust-strip-grid">
+<div class="trust-strip-item"><i class="fas fa-truck"></i> Livraison 24-48h <small>Abidjan & toute la CI</small></div>
+<div class="trust-strip-item"><i class="fas fa-shield-alt"></i> Paiement Securise <small>Mobile Money ou cash</small></div>
+<div class="trust-strip-item"><i class="fas fa-undo"></i> Satisfait ou Rembourse <small>Sous 7 jours</small></div>
+<div class="trust-strip-item"><i class="fas fa-headset"></i> Support Client <small>7j/7 par WhatsApp</small></div>
+</div>
+</div>
+</section>
 
-        // Init
-        document.getElementById('checkout-submit').addEventListener('click', sendWhatsAppOrder);
-        document.getElementById('cust-delivery-fee').addEventListener('input', calculerTotaux);
-        renderCart();
-    </script></body></html>
+<!-- PAYMENT STRIP -->
+<section class="chime-payment-strip" aria-label="Moyens de paiement">
+<div class="container">
+<p class="ps-label">Paiements acceptes</p>
+<div class="chime-payment-logos">
+<span class="chime-payment-logo" title="Cash a la livraison"><i class="fas fa-money-bill-wave" style="color:#4CAF50;font-size:1.4rem;"></i></span>
+<span class="chime-payment-logo" title="Orange Money"><img src="images/optimisees/orange_money.svg" alt="Orange Money" loading="lazy"></span>
+<span class="chime-payment-logo" title="Wave"><img src="images/optimisees/wave.png" alt="Wave" loading="lazy"></span>
+<span class="chime-payment-logo" title="MTN Mobile Money"><img src="images/optimisees/mtn_money.png" alt="MTN Mobile Money" loading="lazy"></span>
+<span class="chime-payment-logo" title="Moov Money"><img src="images/optimisees/moov_money.png" alt="Moov Money" loading="lazy"></span>
+</div>
+</div>
+</section>
+
+<!-- CHECKOUT SECTION -->
+<section class="checkout-section">
+<div class="container">
+
+<!-- EMPTY STATE -->
+<div class="empty-state" id="cart-empty" style="display: block;">
+<div class="empty-state__icon"><i class="fas fa-shopping-cart"></i></div>
+<h3>Votre panier est vide</h3>
+<p>Il semble que vous n'ayez encore ajoute aucun produit. Decouvrez notre catalogue de produits naturels et completez votre panier.</p>
+<a class="btn btn-gold" href="index.html"><i class="fas fa-arrow-left"></i> Continuer mes achats</a>
+</div>
+
+<!-- CHECKOUT LAYOUT -->
+<div class="checkout-layout" id="cart-content" style="display: none;">
+
+<!-- CART ITEMS + FORM -->
+<div class="cart-items-section">
+
+<div class="section-step">
+<div class="section-step-num">1</div>
+<h2>Vos articles</h2>
+</div>
+
+<div id="cart-items-container"></div>
+
+<hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
+
+<div class="section-step">
+<div class="section-step-num">2</div>
+<h2>Informations de livraison</h2>
+</div>
+
+<form id="checkout-form">
+<div class="form-group">
+<input type="text" id="cust-name" placeholder=" " required>
+<label for="cust-name">Nom complet *</label>
+</div>
+<div class="form-group">
+<input type="tel" id="cust-phone" placeholder=" " required>
+<label for="cust-phone">Numero de telephone *</label>
+</div>
+<div class="form-group">
+<textarea id="cust-address" placeholder=" " rows="3" required></textarea>
+<label for="cust-address">Adresse de livraison precise *</label>
+</div>
+<div class="form-group">
+<select id="cust-payment" required>
+<option value="" disabled selected></option>
+<option value="Cash a la livraison">Cash a la livraison</option>
+<option value="Wave">Wave</option>
+<option value="Orange Money">Orange Money</option>
+<option value="MTN Mobile Money">MTN Mobile Money</option>
+<option value="Moov Money">Moov Money</option>
+</select>
+<label for="cust-payment">Moyen de paiement *</label>
+</div>
+<div class="form-group">
+<input type="number" id="cust-delivery-fee" min="0" step="500" value="1000">
+<label for="cust-delivery-fee">Frais de livraison (FCFA)</label>
+<small>1 000 FCFA par defaut (livraison standard). Modifiable si besoin (retrait en boutique, zone specifique...).</small>
+</div>
+</form>
+</div>
+
+<!-- SUMMARY STICKY -->
+<div class="checkout-summary-section">
+<h3 class="summary-title"><i class="fas fa-receipt"></i> Recapitulatif</h3>
+<div class="summary-row">
+<span>Sous-total</span>
+<span id="sub-total">0 FCFA</span>
+</div>
+<div class="summary-row">
+<span>Livraison</span>
+<span id="delivery-fee-display">1 000 FCFA</span>
+</div>
+<div class="summary-total">
+<span>Total</span>
+<span id="total-price">0 FCFA</span>
+</div>
+<button class="btn btn-whatsapp" id="checkout-submit"><i class="fab fa-whatsapp"></i> Valider sur WhatsApp</button>
+<div class="summary-trust">
+<i class="fas fa-lock"></i> Aucun paiement en ligne. Vous payez a la reception.
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- TRUST BADGES SECTION -->
+<section class="trust-badges-section">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Pourquoi commander chez <span>nous</span> ?</h2>
+<p class="section-subtitle">Une experience d'achat securisee et fiable, du panier a la livraison.</p>
+</div>
+<div class="trust-badges-grid">
+<div class="trust-badge-card">
+<div class="trust-badge-icon"><i class="fas fa-leaf"></i></div>
+<h3>Produits authentiques</h3>
+<p>Tous nos produits sont naturels, certifies et verifies avant expedition. Marques reconnues : Carich, Nilrich, iLiFE, SEALUXE, Greenleaf.</p>
+</div>
+<div class="trust-badge-card">
+<div class="trust-badge-icon"><i class="fas fa-shipping-fast"></i></div>
+<h3>Livraison rapide</h3>
+<p>Livraison 24-48h a Abidjan et 3-5 jours en region. Suivi de commande par WhatsApp et support client disponible 7j/7.</p>
+</div>
+<div class="trust-badge-card">
+<div class="trust-badge-icon"><i class="fas fa-shield-alt"></i></div>
+<h3>Paiement securise</h3>
+<p>Payez a la reception (cash) ou via Mobile Money (Orange, Wave, MTN, Moov). Aucun paiement en ligne, aucune carte requise.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ CHECKOUT -->
+<section class="section" style="background: var(--fond-clair);">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Questions <span>commande</span></h2>
+<p class="section-subtitle">Tout ce que vous devez savoir sur la finalisation de votre commande.</p>
+</div>
+<div class="faq-container">
+<div class="faq-item">
+<div class="faq-question" onclick="chimeFaqToggle(this)">
+<span>Comment se passe la validation de commande ?</span>
+<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+</div>
+<div class="faq-answer">
+<p>Apres avoir rempli vos informations de livraison et choisi votre moyen de paiement, cliquez sur "Valider sur WhatsApp". Votre commande s'ouvre pre-remplie dans WhatsApp avec le detail des articles, le total et vos coordonnees. Notre equipe confirme votre commande sous 1h pendant les heures ouvrables.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="chimeFaqToggle(this)">
+<span>Quels sont les delais de livraison ?</span>
+<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+</div>
+<div class="faq-answer">
+<p>Livraison 24-48h a Abidjan (Cocody, Yopougon, Marcory, Plateau, Treichville, Abobo, Koumassi, Port-Bouet, Attiecoubé, Adjamé). Pour les autres villes de Cote d'Ivoire, comptez 3 a 5 jours ouvrables. Les commandes validees avant 14h sont livrees des le lendemain.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="chimeFaqToggle(this)">
+<span>Comment payer ma commande ?</span>
+<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+</div>
+<div class="faq-answer">
+<p>Vous avez 5 options : Cash a la livraison (payez le livreur en especes), Wave, Orange Money, MTN Mobile Money, Moov Money. Pour les paiements Mobile Money, le numero vous sera communique par WhatsApp apres confirmation de votre commande. Aucun paiement en ligne, aucune carte bancaire requise.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="chimeFaqToggle(this)">
+<span>Puis-je modifier ma commande apres validation ?</span>
+<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+</div>
+<div class="faq-answer">
+<p>Oui, tant que la commande n'a pas ete expediee. Contactez-nous rapidement via WhatsApp au 07 78 35 89 69 pour modifier les articles, la quantite ou l'adresse de livraison. Une fois expediee, les modifications ne sont plus possibles.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="chimeFaqToggle(this)">
+<span>Que faire si un produit est endommage a la reception ?</span>
+<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+</div>
+<div class="faq-answer">
+<p>Si un produit arrive endommage ou defectueux, refusez la livraison ou contactez-nous immediatement via WhatsApp avec une photo. Nous organiserons un echange ou un remboursement sous 7 jours. Notre garantie satisfait ou rembourse couvre tous les produits non ouverts.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="brand-row">
+<img alt="EM'VIE SHOP" src="images/optimisees/logo_1200w.webp">
+<span class="brand-text">EM'VIE SHOP</span>
+</div>
+<p>Votre partenaire de confiance a Abidjan pour des produits naturels certifies. Livraison rapide et paiement securise.</p>
+<div class="footer-social">
+<a href="https://wa.me/2250778358969" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+<a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+<a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+</div>
+</div>
+<div>
+<h4>Navigation</h4>
+<ul>
+<li><a href="index.html">Boutique</a></li>
+<li><a href="opportunite.html">Opportunite</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="panier.html">Mon panier</a></li>
+</ul>
+</div>
+<div>
+<h4>Aide</h4>
+<ul>
+<li><a href="contact.html">Nous contacter</a></li>
+<li><a href="index.html#catalogue">Livraison</a></li>
+<li><a href="index.html#catalogue">Paiement</a></li>
+<li><a href="index.html#catalogue">Retours</a></li>
+</ul>
+</div>
+<div>
+<h4>Contact</h4>
+<ul>
+<li><i class="fas fa-map-marker-alt"></i> Abidjan, Cote d'Ivoire</li>
+<li><i class="fas fa-phone"></i> +225 07 78 35 89 69</li>
+<li><i class="fas fa-envelope"></i> contact@emvie.shop</li>
+<li><i class="fas fa-clock"></i> Lun-Sam : 8h - 19h</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 EM'VIE SHOP. Tous droits reserves.</p>
+<div class="chime-branding">
+<a href="https://eperformance.pro" target="_blank" rel="noopener"><span class="ep-mark">eP</span> Concu par ePerformance</a>
+</div>
+</div>
+</footer>
+
+<!-- MOBILE NAV BOTTOM -->
+<nav class="mobile-nav">
+<a class="mobile-nav-item" href="index.html"><i class="fas fa-home"></i> Boutique</a>
+<a class="mobile-nav-item" href="opportunite.html"><i class="fas fa-gem"></i> Business</a>
+<a class="mobile-nav-item active" href="panier.html"><i class="fas fa-shopping-bag"></i> Panier</a>
+<a class="mobile-nav-item" href="contact.html"><i class="fas fa-phone"></i> Contact</a>
+</nav>
+
+<!-- TOAST -->
+<div class="toast" id="toast">Produit ajoute</div>
+
+<!-- CHAT WHATSAPP -->
+<a class="chime-chat" href="https://wa.me/2250778358969?text=Bonjour%20EM%27VIE%20SHOP%2C%20j%27ai%20une%20question%20sur%20ma%20commande." target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+// ============================================================
+// PANIER (localStorage) - fonctions partagees
+// ============================================================
+(function(){
+'use strict';
+function getCart(){try{return JSON.parse(localStorage.getItem('emvie_cart')||'[]')}catch(e){return[]}}
+function saveCart(c){try{localStorage.setItem('emvie_cart',JSON.stringify(c))}catch(e){}}
+function addToCart(id,nom,prix,image){
+var cart=getCart();
+var existing=cart.find(function(i){return i.id===id});
+if(existing){existing.qty++}else{cart.push({id:id,nom:nom,prix:prix,image:image,qty:1})}
+saveCart(cart);
+updateCartUI();
+showToast(nom+' ajoute au panier');
+}
+function removeFromCart(id){var cart=getCart();cart=cart.filter(function(i){return i.id!==id});saveCart(cart);updateCartUI();}
+function changeQty(id,delta){
+var cart=getCart();
+var item=cart.find(function(i){return i.id===id});
+if(item){item.qty+=delta;if(item.qty<1){cart=cart.filter(function(i){return i.id!==id})}}
+saveCart(cart);
+updateCartUI();
+}
+function updateCartUI(){
+var cart=getCart();
+var count=cart.reduce(function(s,i){return s+i.qty},0);
+var badge=document.getElementById('cart-count-header');
+if(badge){badge.textContent=count;badge.style.display=count>0?'flex':'none';}
+}
+function showToast(msg){
+var toast=document.getElementById('toast');
+if(!toast)return;
+toast.innerHTML='<i class="fas fa-check-circle"></i> '+msg;
+toast.classList.add('show');
+setTimeout(function(){toast.classList.remove('show')},2800);
+}
+window.getCart=getCart;
+window.saveCart=saveCart;
+window.addToCart=addToCart;
+window.updateCartUI=updateCartUI;
+window.changeQty=changeQty;
+window.removeItem=removeFromCart;
+window.showToast=showToast;
+updateCartUI();
+})();
+
+// ============================================================
+// LOGIQUE PANIER (page panier)
+// ============================================================
+(function(){
+'use strict';
+var FRAIS_LIVRAISON_DEFAUT = 1000;
+var subTotalActuel = 0;
+
+function calculerTotaux() {
+var inputFrais = document.getElementById('cust-delivery-fee');
+if(!inputFrais)return FRAIS_LIVRAISON_DEFAUT;
+var frais = parseInt(inputFrais.value, 10);
+if (isNaN(frais) || frais < 0) frais = FRAIS_LIVRAISON_DEFAUT;
+var deliveryDisplay = document.getElementById('delivery-fee-display');
+var totalPrice = document.getElementById('total-price');
+if(deliveryDisplay)deliveryDisplay.textContent = frais === 0 ? 'Gratuite' : frais.toLocaleString('fr-FR') + ' FCFA';
+if(totalPrice)totalPrice.textContent = (subTotalActuel + frais).toLocaleString('fr-FR') + ' FCFA';
+return frais;
+}
+
+function renderCart() {
+var cart = window.getCart();
+var container = document.getElementById('cart-items-container');
+var emptyDiv = document.getElementById('cart-empty');
+var contentDiv = document.getElementById('cart-content');
+if(!container||!emptyDiv||!contentDiv)return;
+
+if (cart.length === 0) {
+emptyDiv.style.display = 'block';
+contentDiv.style.display = 'none';
+return;
+}
+
+emptyDiv.style.display = 'none';
+contentDiv.style.display = 'grid';
+container.innerHTML = '';
+
+var subTotal = 0;
+
+cart.forEach(function(item){
+var itemTotal = item.prix * item.qty;
+subTotal += itemTotal;
+
+var div = document.createElement('div');
+div.className = 'cart-item';
+
+var img = document.createElement('img');
+img.src = item.image;
+img.alt = item.nom;
+img.className = 'cart-item__img';
+img.loading = 'lazy';
+
+var details = document.createElement('div');
+details.className = 'cart-item__details';
+
+var nameEl = document.createElement('div');
+nameEl.className = 'cart-item__name';
+nameEl.textContent = item.nom;
+
+var priceEl = document.createElement('div');
+priceEl.className = 'cart-item__price';
+priceEl.textContent = item.prix.toLocaleString('fr-FR') + ' FCFA';
+
+var actionsEl = document.createElement('div');
+actionsEl.className = 'cart-item__actions';
+actionsEl.innerHTML = '<div class="cart-qty-selector"><button class="cart-qty-btn" data-action="dec" data-id="'+item.id+'">-</button><span class="cart-qty-val">'+item.qty+'</span><button class="cart-qty-btn" data-action="inc" data-id="'+item.id+'">+</button></div><button class="remove-btn" data-action="remove" data-id="'+item.id+'"><i class="fas fa-trash"></i> Retirer</button>';
+
+details.appendChild(nameEl);
+details.appendChild(priceEl);
+details.appendChild(actionsEl);
+
+var totalEl = document.createElement('div');
+totalEl.className = 'cart-item__total';
+totalEl.textContent = itemTotal.toLocaleString('fr-FR') + ' F';
+
+div.appendChild(img);
+div.appendChild(details);
+div.appendChild(totalEl);
+container.appendChild(div);
+});
+
+container.querySelectorAll('.cart-qty-btn').forEach(function(btn){
+btn.addEventListener('click', function() {
+var id = this.getAttribute('data-id');
+var delta = this.getAttribute('data-action') === 'inc' ? 1 : -1;
+window.changeQty(id, delta);
+renderCart();
+});
+});
+container.querySelectorAll('.remove-btn').forEach(function(btn){
+btn.addEventListener('click', function() {
+var id = this.getAttribute('data-id');
+window.removeItem(id);
+renderCart();
+});
+});
+
+var subTotalEl = document.getElementById('sub-total');
+if(subTotalEl)subTotalEl.textContent = subTotal.toLocaleString('fr-FR') + ' FCFA';
+subTotalActuel = subTotal;
+calculerTotaux();
+window.updateCartUI();
+}
+
+function sendWhatsAppOrder() {
+var name = document.getElementById('cust-name').value.trim();
+var phone = document.getElementById('cust-phone').value.trim();
+var address = document.getElementById('cust-address').value.trim();
+var payment = document.getElementById('cust-payment').value;
+var whatsappNumber = document.body.dataset.whatsapp || '22500000000';
+
+if (!name || !phone || !address) {
+alert("Veuillez remplir tous les champs obligatoires (*) s'il vous plait.");
+return;
+}
+
+var cart = window.getCart();
+if (cart.length === 0) return;
+
+var message = "*NOUVELLE COMMANDE - EM'VIE SHOP*\n-----------------------------------\n";
+message += "*Client:* " + name + "\n*Tel:* " + phone + "\n*Adresse:* " + address + "\n*Paiement:* " + payment + "\n";
+message += "-----------------------------------\n*ARTICLES:*\n";
+
+var total = 0;
+cart.forEach(function(item, index){
+var itemTotal = item.prix * item.qty;
+total += itemTotal;
+message += "\n" + (index + 1) + ". " + item.nom + "\n   " + item.qty + " x " + item.prix.toLocaleString('fr-FR') + " F = " + itemTotal.toLocaleString('fr-FR') + " F";
+});
+
+var frais = calculerTotaux();
+total += frais;
+message += "\n-----------------------------------\n*TOTAL: " + total.toLocaleString('fr-FR') + " FCFA*\n_Livraison: " + (frais === 0 ? 'Gratuite' : frais.toLocaleString('fr-FR') + ' FCFA') + "_";
+
+var encodedMessage = encodeURIComponent(message);
+var whatsappUrl = "https://wa.me/" + whatsappNumber + "?text=" + encodedMessage;
+window.open(whatsappUrl, '_blank');
+}
+
+// Init
+var checkoutSubmit = document.getElementById('checkout-submit');
+if(checkoutSubmit)checkoutSubmit.addEventListener('click', sendWhatsAppOrder);
+var deliveryFeeInput = document.getElementById('cust-delivery-fee');
+if(deliveryFeeInput)deliveryFeeInput.addEventListener('input', calculerTotaux);
+renderCart();
+})();
+
+// ============================================================
+// HEADER SCROLLED + MOBILE MENU
+// ============================================================
+(function(){
+'use strict';
+var header=document.getElementById('header');
+if(header){window.addEventListener('scroll',function(){header.classList.toggle('scrolled',window.scrollY>50)},{passive:true})}
+var toggle=document.getElementById('menu-toggle');
+var overlay=document.getElementById('nav-menu-overlay');
+if(toggle&&overlay){
+toggle.addEventListener('click',function(){
+overlay.classList.toggle('open');
+var icon=toggle.querySelector('i');
+if(icon){icon.className=overlay.classList.contains('open')?'fas fa-times':'fas fa-bars'}
+});
+document.addEventListener('click',function(e){
+if(!overlay.contains(e.target)&&!toggle.contains(e.target)){
+overlay.classList.remove('open');
+var icon=toggle.querySelector('i');
+if(icon)icon.className='fas fa-bars';
+}
+});
+}
+})();
+
+// ============================================================
+// FAQ ACCORDEON
+// ============================================================
+window.chimeFaqToggle=function(el){
+var item=el.parentElement;
+var wasActive=item.classList.contains('active');
+document.querySelectorAll('.faq-item').forEach(function(it){it.classList.remove('active')});
+if(!wasActive)item.classList.add('active');
+};
+</script>
+</body>
+</html>
