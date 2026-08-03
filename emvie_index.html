@@ -1,0 +1,2413 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EM'VIE SHOP — Bien-être Naturel Abidjan</title>
+  <meta name="description" content="EM'VIE SHOP - Votre voie vers un bien-être naturel à Abidjan. Produits de beauté, soins corps et compléments alimentaires. Livraison rapide !" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.emvie.shop/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="EM'VIE SHOP — Bien-être Naturel Abidjan" />
+  <meta property="og:description" content="Produits de beauté, soins corps et compléments alimentaires. Livraison rapide à Abidjan." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.emvie.shop/" />
+  <meta property="og:image" content="https://www.emvie.shop/images/optimisees/logo_1200w.webp" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EM'VIE SHOP — Bien-être Naturel Abidjan" />
+  <meta name="twitter:description" content="Produits de beauté, soins corps et compléments alimentaires." />
+  <meta name="twitter:image" content="https://www.emvie.shop/images/optimisees/logo_1200w.webp" />
+
+  <!-- Schema.org Organization -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Store","name":"EM'VIE SHOP","url":"https://www.emvie.shop","image":"https://www.emvie.shop/images/optimisees/logo_1200w.webp","description":"Bien-être naturel à Abidjan. Produits de beauté, soins corps et compléments alimentaires.","address":{"@type":"PostalAddress","addressLocality":"Abidjan","addressCountry":"CI"},"telephone":"+2250151170666"}
+  </script>
+
+  <!-- Fonts + Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@400;600;800&family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500;700&family=Merriweather:wght@400;700&family=Lato:wght@400;700&family=Nunito:wght@400;700&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- CSS existant (style.css inline) -->
+  <style>
+    /* ===================================================================
+       EM'VIE SHOP — style.css (charte graphique existante)
+       =================================================================== */
+
+    :root {
+      --primaire: #7A8349;
+      --secondaire: #9BA276;
+      --accent: #68703F;
+      --fond-clair: #F8F9FA;
+      --fond-moyen: #E9ECEF;
+      --fond-fonce: #1A1A1A;
+      --blanc: #FFFFFF;
+      --whatsapp: #25D366;
+      --or: #D4AF37;
+      --danger: #E74C3C;
+      --texte: #333333;
+      --gris: #777777;
+      --border: #EEEEEE;
+      --police-titres: 'Roboto', sans-serif;
+      --police-corps: 'Roboto', sans-serif;
+      --radius-btn: 50px;
+      --radius-card: 12px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --shadow-hover: 0 15px 40px rgba(0,0,0,0.12);
+      --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--police-corps);
+      color: var(--texte);
+      background: var(--blanc);
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: var(--primaire);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+
+    a:hover { color: var(--accent); }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--police-titres);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--fond-fonce);
+    }
+
+    ul { list-style: none; }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* ===== Boutons ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.8rem;
+      border: none;
+      border-radius: var(--radius-btn);
+      font-family: var(--police-titres);
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all var(--transition);
+      text-align: center;
+      white-space: nowrap;
+      line-height: 1;
+    }
+
+    .btn--primary {
+      background: var(--primaire);
+      color: var(--blanc);
+    }
+    .btn--primary:hover {
+      background: var(--accent);
+      color: var(--blanc);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .btn--secondary {
+      background: var(--or);
+      color: var(--fond-fonce);
+    }
+    .btn--secondary:hover {
+      background: #c9a96e;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .btn--outline {
+      background: transparent;
+      color: var(--primaire);
+      border: 2px solid var(--primaire);
+    }
+    .btn--outline:hover {
+      background: var(--primaire);
+      color: var(--blanc);
+    }
+
+    .btn--whatsapp {
+      background: var(--whatsapp);
+      color: var(--blanc);
+    }
+    .btn--whatsapp:hover {
+      background: #1da851;
+      color: var(--blanc);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn--block { width: 100%; }
+
+    /* ===== Trust banner ===== */
+    .trust-banner {
+      background: var(--fond-fonce);
+      color: var(--blanc);
+      padding: 0.6rem 1rem;
+      font-size: 0.82rem;
+      text-align: center;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    .trust-banner .stars {
+      color: var(--or);
+      letter-spacing: 2px;
+      margin-right: 8px;
+    }
+    .trust-banner strong { color: var(--or); }
+    .trust-banner .sep {
+      margin: 0 0.6rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ===== Header ===== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--blanc);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+      transition: padding var(--transition), box-shadow var(--transition);
+    }
+    .header.scrolled {
+      box-shadow: var(--shadow);
+    }
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-shrink: 0;
+    }
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+    .logo__text {
+      font-family: var(--police-titres);
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--primaire);
+      letter-spacing: 0.02em;
+    }
+    .logo__text span { color: var(--or); }
+
+    .nav {
+      display: flex;
+      align-items: center;
+    }
+    .nav__list {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .nav__link {
+      display: inline-block;
+      padding: 0.5rem 0.9rem;
+      color: var(--texte);
+      font-weight: 500;
+      font-size: 0.92rem;
+      border-radius: 8px;
+      transition: all var(--transition);
+    }
+    .nav__link:hover, .nav__link.active {
+      color: var(--primaire);
+      background: var(--fond-clair);
+    }
+
+    .header__actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .cart-btn {
+      position: relative;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--fond-clair);
+      border: none;
+      color: var(--primaire);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+    }
+    .cart-btn:hover {
+      background: var(--primaire);
+      color: var(--blanc);
+    }
+    .cart-count {
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      background: var(--or);
+      color: var(--fond-fonce);
+      font-size: 0.68rem;
+      font-weight: 700;
+      min-width: 18px;
+      height: 18px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 4px;
+    }
+
+    .nav__toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: var(--fond-clair);
+      border: none;
+      color: var(--primaire);
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(26,26,26,0.78), rgba(122,131,73,0.65)),
+                  url('images/optimisees/hero_1200w.webp') center/cover no-repeat;
+      color: var(--blanc);
+      padding: 4rem 0;
+      overflow: hidden;
+    }
+    .hero__content {
+      max-width: 640px;
+      position: relative;
+      z-index: 2;
+    }
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(212, 175, 55, 0.18);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      color: var(--or);
+      padding: 0.4rem 1rem;
+      border-radius: var(--radius-btn);
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.03em;
+    }
+    .hero__title {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      color: var(--blanc);
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+    .hero__title span { color: var(--or); }
+    .hero__text {
+      font-size: 1.1rem;
+      margin-bottom: 1.8rem;
+      opacity: 0.92;
+      line-height: 1.6;
+    }
+    .hero__cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    /* ===== Trust strip ===== */
+    .trust-strip {
+      background: var(--fond-clair);
+      padding: 1.8rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .trust-strip__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      justify-content: center;
+    }
+    .trust-item i {
+      font-size: 1.6rem;
+      color: var(--primaire);
+      flex-shrink: 0;
+    }
+    .trust-item__text {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--texte);
+      line-height: 1.3;
+    }
+    .trust-item__text small {
+      display: block;
+      font-weight: 400;
+      color: var(--gris);
+      font-size: 0.76rem;
+    }
+
+    /* ===== Sections ===== */
+    .section {
+      padding: 4rem 0;
+      position: relative;
+      z-index: 1;
+    }
+    .section--clair { background: var(--fond-clair); }
+    .section--moyen { background: var(--fond-moyen); }
+    .section--fonce {
+      background: var(--fond-fonce);
+      color: var(--blanc);
+    }
+    .section--fonce h2, .section--fonce h3 { color: var(--blanc); }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      margin-bottom: 0.6rem;
+    }
+    .section-title span { color: var(--primaire); }
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--gris);
+      line-height: 1.6;
+    }
+
+    /* ===== Catalogue / toolbar ===== */
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+    .search-box {
+      position: relative;
+      flex: 1;
+      min-width: 220px;
+      max-width: 360px;
+    }
+    .search-box i {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gris);
+      font-size: 0.95rem;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 0.75rem 1rem 0.75rem 2.6rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      font-family: var(--police-corps);
+      font-size: 0.9rem;
+      background: var(--blanc);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+    }
+    .search-box input:focus {
+      border-color: var(--primaire);
+      box-shadow: 0 0 0 3px rgba(122,131,73,0.1);
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .filter-btn {
+      padding: 0.55rem 1.1rem;
+      border: 1px solid var(--border);
+      background: var(--blanc);
+      color: var(--texte);
+      border-radius: var(--radius-btn);
+      font-family: var(--police-corps);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .filter-btn:hover {
+      border-color: var(--primaire);
+      color: var(--primaire);
+    }
+    .filter-btn.active {
+      background: var(--primaire);
+      color: var(--blanc);
+      border-color: var(--primaire);
+    }
+
+    /* ===== Products grid ===== */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .product-card {
+      background: var(--blanc);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+    .product-card__img-wrap {
+      position: relative;
+      display: block;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      background: var(--fond-clair);
+    }
+    .product-card__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .product-card:hover .product-card__img {
+      transform: scale(1.06);
+    }
+    .product-card__badge {
+      position: absolute;
+      top: 0.7rem;
+      left: 0.7rem;
+      background: var(--or);
+      color: var(--fond-fonce);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.25rem 0.7rem;
+      border-radius: var(--radius-btn);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      z-index: 2;
+    }
+    .product-card__badge.badge-new { background: var(--primaire); color: var(--blanc); }
+    .product-card__badge.badge-promo { background: var(--danger); color: var(--blanc); }
+
+    .product-card__body {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      position: relative;
+      z-index: 2;
+    }
+    .product-card__cat {
+      font-size: 0.72rem;
+      color: var(--secondaire);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .product-card__title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--texte);
+      line-height: 1.3;
+    }
+    .product-card__rating {
+      font-size: 0.8rem;
+      color: var(--or);
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+    .product-card__rating span {
+      color: var(--gris);
+      letter-spacing: 0;
+      font-size: 0.76rem;
+    }
+    .product-card__desc {
+      font-size: 0.84rem;
+      color: var(--gris);
+      margin-bottom: 0.9rem;
+      flex: 1;
+      line-height: 1.5;
+    }
+    .product-card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .product-card__price {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primaire);
+    }
+    .product-card__price .old {
+      font-size: 0.78rem;
+      color: var(--gris);
+      text-decoration: line-through;
+      font-weight: 400;
+      display: block;
+      line-height: 1;
+    }
+    .product-card__btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: none;
+      background: var(--primaire);
+      color: var(--blanc);
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+      flex-shrink: 0;
+    }
+    .product-card__btn:hover {
+      background: var(--or);
+      color: var(--fond-fonce);
+      transform: scale(1.1);
+    }
+
+    .product-card.hidden { display: none; }
+    .no-results {
+      grid-column: 1/-1;
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--gris);
+    }
+    .no-results i { font-size: 2.5rem; color: var(--border); margin-bottom: 1rem; }
+
+    /* ===== Upsell interstitial ===== */
+    .upsell {
+      padding: 2.5rem 0;
+    }
+    .upsell-card {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: linear-gradient(135deg, var(--primaire), var(--accent));
+      color: var(--blanc);
+      border-radius: var(--radius-card);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+    .upsell-card__icon {
+      font-size: 2.5rem;
+      color: var(--or);
+      flex-shrink: 0;
+    }
+    .upsell-card__body { flex: 1; }
+    .upsell-card__title {
+      font-size: 1.3rem;
+      color: var(--blanc);
+      margin-bottom: 0.3rem;
+    }
+    .upsell-card__text {
+      font-size: 0.92rem;
+      opacity: 0.9;
+      margin-bottom: 0;
+    }
+    .upsell-card__btn {
+      flex-shrink: 0;
+    }
+
+    /* ===== Avantages ===== */
+    .avantages__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .avantage-card {
+      background: var(--blanc);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .avantage-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+    .avantage-card__icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--fond-clair), var(--fond-moyen));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+      font-size: 1.8rem;
+      color: var(--primaire);
+    }
+    .avantage-card__title {
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+    }
+    .avantage-card__text {
+      font-size: 0.9rem;
+      color: var(--gris);
+      line-height: 1.6;
+    }
+
+    /* ===== Stats bar ===== */
+    .stats-bar {
+      background: var(--primaire);
+      color: var(--blanc);
+      padding: 2.5rem 0;
+    }
+    .stats-bar__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      text-align: center;
+    }
+    .stat-item {
+      padding: 0 0.5rem;
+      position: relative;
+    }
+    .stat-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 50px;
+      background: rgba(255,255,255,0.15);
+    }
+    .stat-number {
+      font-family: var(--police-titres);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      color: var(--or);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      opacity: 0.9;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* ===== Étapes ===== */
+    .etapes__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .etape-card {
+      background: var(--blanc);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 1.8rem 1.4rem;
+      text-align: center;
+      position: relative;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition);
+    }
+    .etape-card:hover { transform: translateY(-4px); }
+    .etape-card__num {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--or), #c9a96e);
+      color: var(--fond-fonce);
+      font-weight: 800;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .etape-card__icon {
+      font-size: 1.6rem;
+      color: var(--primaire);
+      margin-bottom: 0.8rem;
+    }
+    .etape-card__title {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+    .etape-card__text {
+      font-size: 0.85rem;
+      color: var(--gris);
+      line-height: 1.5;
+    }
+
+    /* ===== Témoignages ===== */
+    .temoignages__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .testimonial-card {
+      background: var(--blanc);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 1.8rem 1.5rem;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+    .testimonial-card__stars {
+      color: var(--or);
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      margin-bottom: 0.8rem;
+    }
+    .testimonial-card__text {
+      font-size: 0.92rem;
+      color: var(--texte);
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+      font-style: italic;
+      flex: 1;
+    }
+    .testimonial-card__author {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .testimonial-card__avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primaire), var(--secondaire));
+      color: var(--blanc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .testimonial-card__name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--texte);
+    }
+    .testimonial-card__role {
+      font-size: 0.78rem;
+      color: var(--gris);
+    }
+
+    /* ===== CTA section ===== */
+    .cta-section {
+      background: var(--fond-fonce);
+      color: var(--blanc);
+      padding: 4rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .double-cta-card {
+      max-width: 680px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .double-cta-card h2 {
+      color: var(--blanc);
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      margin-bottom: 0.8rem;
+    }
+    .double-cta-card h2 span { color: var(--or); }
+    .double-cta-card p {
+      font-size: 1.05rem;
+      opacity: 0.85;
+      margin-bottom: 1.8rem;
+    }
+    .double-cta-card__btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      justify-content: center;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      background: var(--fond-fonce);
+      color: rgba(255,255,255,0.7);
+      padding: 3.5rem 0 5.5rem;
+    }
+    .footer__inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 2rem;
+    }
+    .footer__col h4 {
+      color: var(--blanc);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+    .footer__logo img {
+      height: 42px;
+      filter: brightness(0) invert(1);
+    }
+    .footer__about {
+      font-size: 0.86rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .footer__social {
+      display: flex;
+      gap: 0.6rem;
+    }
+    .footer__social a {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      color: var(--blanc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      transition: all var(--transition);
+    }
+    .footer__social a:hover {
+      background: var(--or);
+      color: var(--fond-fonce);
+      transform: translateY(-3px);
+    }
+    .footer__link {
+      display: block;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.88rem;
+      padding: 0.3rem 0;
+      transition: color var(--transition);
+    }
+    .footer__link:hover { color: var(--or); }
+    .footer__contact li {
+      font-size: 0.86rem;
+      padding: 0.3rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+    .footer__contact i {
+      color: var(--or);
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+    }
+    .footer__bottom {
+      text-align: center;
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ===== WhatsApp float (legacy — masqué par Chime) ===== */
+    .wa-float {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      z-index: 999;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: var(--whatsapp);
+      color: var(--blanc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 8px 28px rgba(37,211,102,0.4);
+      transition: transform var(--transition);
+    }
+    .wa-float:hover { transform: scale(1.08); }
+
+    /* ===== Mobile nav (barre fixe basse) ===== */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--blanc);
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+      z-index: 998;
+      padding: 0.4rem 0;
+      padding-bottom: env(safe-area-inset-bottom, 0.4rem);
+    }
+    .mobile-nav-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.15rem;
+      padding: 0.4rem 0.2rem;
+      color: var(--gris);
+      font-size: 0.68rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color var(--transition);
+      position: relative;
+    }
+    .mobile-nav-item i { font-size: 1.2rem; }
+    .mobile-nav-item.active,
+    .mobile-nav-item:active { color: var(--primaire); }
+    .cart-badge {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      margin-right: -22px;
+      background: var(--or);
+      color: var(--fond-fonce);
+      font-size: 0.62rem;
+      font-weight: 700;
+      min-width: 16px;
+      height: 16px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 4px;
+    }
+
+    /* ===== Toast ===== */
+    .toast {
+      position: fixed;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--fond-fonce);
+      color: var(--blanc);
+      padding: 0.85rem 1.4rem;
+      border-radius: var(--radius-btn);
+      font-size: 0.88rem;
+      font-weight: 500;
+      box-shadow: var(--shadow-hover);
+      z-index: 10000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition), transform var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      max-width: 90vw;
+    }
+    .toast i { color: var(--or); }
+    .toast--show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .products-grid { grid-template-columns: repeat(3, 1fr); }
+      .etapes__grid { grid-template-columns: repeat(2, 1fr); }
+      .footer__inner { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    }
+
+    @media (max-width: 768px) {
+      .nav { display: none; }
+      .nav.open {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100vh;
+        background: var(--blanc);
+        box-shadow: -10px 0 40px rgba(0,0,0,0.15);
+        padding: 5rem 1.5rem 2rem;
+        z-index: 1001;
+        overflow-y: auto;
+      }
+      .nav.open .nav__list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.3rem;
+      }
+      .nav.open .nav__link {
+        display: block;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        border-radius: 8px;
+      }
+      .nav__toggle { display: flex; align-items: center; justify-content: center; }
+
+      .nav-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 1000;
+      }
+      .nav-overlay.show { display: block; }
+
+      .hero { min-height: 420px; padding: 3rem 0; }
+      .hero__cta .btn { flex: 1; min-width: 140px; }
+
+      .trust-strip__grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .avantages__grid { grid-template-columns: 1fr; }
+      .stats-bar__grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem 0; }
+      .stat-item:nth-child(2)::after { display: none; }
+      .etapes__grid { grid-template-columns: 1fr; }
+      .temoignages__grid { grid-template-columns: 1fr; }
+      .footer__inner { grid-template-columns: 1fr; }
+
+      .upsell-card { flex-direction: column; text-align: center; }
+
+      .section { padding: 3rem 0; }
+
+      .mobile-nav { display: flex; justify-content: space-around; }
+      body { padding-bottom: 60px; }
+    }
+
+    @media (max-width: 480px) {
+      .products-grid { grid-template-columns: 1fr; }
+      .trust-strip__grid { grid-template-columns: 1fr; }
+      .stats-bar__grid { grid-template-columns: 1fr 1fr; }
+      .logo__text { font-size: 1.1rem; }
+      .logo img { height: 40px; }
+    }
+  </style>
+
+  <!-- CSS CHIME OVERLAY (surcharge, ne casse pas l'existant) -->
+  <style id="chime-overlay">
+    /* ===== CHIME OVERLAY — Surcharge sans casser l'existant ===== */
+
+    /* Background blobs animés */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background: radial-gradient(circle 300px at 20% 30%, rgba(122, 131, 73, 0.06), transparent 70%),
+                  radial-gradient(circle 250px at 80% 70%, rgba(212, 175, 55, 0.04), transparent 70%);
+      animation: chime-blobs 25s ease-in-out infinite;
+      will-change: transform;
+    }
+    @keyframes chime-blobs {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(30px, -40px) scale(1.1); }
+      66% { transform: translate(-20px, 30px) scale(0.95); }
+    }
+
+    /* Header glassmorphism */
+    .header {
+      background: rgba(255, 255, 255, 0.85) !important;
+      backdrop-filter: blur(20px) saturate(180%) !important;
+      -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15) !important;
+      transition: padding 0.3s ease, background 0.3s ease !important;
+    }
+    .header.scrolled {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      background: rgba(255, 255, 255, 0.95) !important;
+    }
+
+    /* Hover glow sur les cartes (suit la souris) */
+    .product-card, .avantage-card, .testimonial-card, .double-cta-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .product-card::before, .avantage-card::before, .testimonial-card::before, .double-cta-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgba(212, 175, 55, 0.08), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .product-card:hover::before, .avantage-card:hover::before, .testimonial-card:hover::before, .double-cta-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Bordure lumineuse haut sur les cartes */
+    .product-card::after, .avantage-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      right: 20px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1;
+    }
+    .product-card:hover::after, .avantage-card:hover::after {
+      opacity: 1;
+    }
+
+    /* Reveal au scroll */
+    .chime-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .chime-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Cursor custom (desktop only) */
+    .chime-cursor {
+      position: fixed;
+      width: 14px;
+      height: 14px;
+      border: 2px solid var(--or, #D4AF37);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transition: transform 0.15s ease, width 0.3s, height 0.3s, background 0.3s;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: difference;
+    }
+    .chime-cursor.hover {
+      width: 40px;
+      height: 40px;
+      background: rgba(212, 175, 55, 0.1);
+    }
+    @media (max-width: 768px) {
+      .chime-cursor { display: none; }
+      * { cursor: auto !important; }
+    }
+
+    /* Live chat widget (remplace WA float) */
+    .chime-chat {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      z-index: 999;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--or, #D4AF37), #F1C40F);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: white;
+      box-shadow: 0 8px 28px rgba(212, 175, 55, 0.4);
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      text-decoration: none;
+    }
+    .chime-chat:hover {
+      transform: scale(1.08) rotate(4deg);
+    }
+    .chime-chat::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid var(--or, #D4AF37);
+      opacity: 0;
+      animation: chime-pulse-ring 2s ease-out infinite;
+    }
+    @keyframes chime-pulse-ring {
+      0% { transform: scale(0.8); opacity: 1; }
+      100% { transform: scale(1.4); opacity: 0; }
+    }
+
+    /* Masquer l'ancien WA float */
+    .wa-float { display: none !important; }
+
+    /* Trust banner enrichi */
+    .trust-banner {
+      background: var(--fond-fonce, #1A1A1A) !important;
+      padding: 0.5rem 1rem !important;
+      font-size: 0.8rem !important;
+    }
+    .trust-banner .stars {
+      color: var(--or, #D4AF37);
+      letter-spacing: 2px;
+      margin-right: 8px;
+    }
+
+    /* Payment strip */
+    .chime-payment-strip {
+      padding: 1rem 0;
+      text-align: center;
+      background: var(--fond-clair, #F8F9FA);
+      border-top: 1px solid var(--border, #EEEEEE);
+      border-bottom: 1px solid var(--border, #EEEEEE);
+    }
+    .chime-payment-strip .ps-label {
+      font-size: 0.7rem;
+      color: var(--gris, #777777);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.6rem;
+      font-weight: 500;
+    }
+    .chime-payment-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .chime-payment-logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.4rem 0.7rem;
+      background: white;
+      border: 1px solid var(--border, #EEEEEE);
+      border-radius: 6px;
+      height: 40px;
+      min-width: 70px;
+      transition: all 0.3s ease;
+    }
+    .chime-payment-logo:hover {
+      border-color: var(--or, #D4AF37);
+      transform: translateY(-2px);
+    }
+    .chime-payment-logo img {
+      max-height: 26px;
+      max-width: 60px;
+      object-fit: contain;
+      filter: saturate(1.1);
+    }
+
+    /* Branding ePerformance dans le footer */
+    .chime-branding {
+      text-align: center;
+      padding: 1.5rem 0 0.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 1.5rem;
+    }
+    .chime-branding a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.4);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .chime-branding a:hover {
+      color: var(--or, #D4AF37);
+    }
+    .chime-branding .ep-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, #c9a96e, #e2c07a);
+      color: #0a0a0e;
+      font-weight: 700;
+      font-size: 0.65rem;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    /* Skip link + focus visible */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 0;
+      background: var(--or, #D4AF37);
+      color: var(--fond-fonce, #1A1A1A);
+      padding: 0.5rem 1rem;
+      z-index: 10000;
+      font-weight: 600;
+    }
+    .skip-link:focus { top: 0; }
+    :focus-visible {
+      outline: 2px solid var(--or, #D4AF37);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    /* Sticky stacking mobile (catalogue) */
+    @media (max-width: 768px) {
+      .products-grid {
+        display: block !important;
+      }
+      .products-grid .product-card {
+        position: sticky;
+        top: 70px;
+        min-height: 60vh;
+        margin-bottom: 1rem;
+        z-index: 1;
+      }
+      .products-grid .product-card:nth-child(1) { z-index: 1; }
+      .products-grid .product-card:nth-child(2) { z-index: 2; }
+      .products-grid .product-card:nth-child(3) { z-index: 3; }
+      .products-grid .product-card:nth-child(4) { z-index: 4; }
+      .products-grid .product-card:nth-child(5) { z-index: 5; }
+      .products-grid .product-card:nth-child(6) { z-index: 6; }
+      .products-grid .product-card:nth-child(7) { z-index: 7; }
+      .products-grid .product-card:nth-child(8) { z-index: 8; }
+    }
+
+    /* prefers-reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .chime-cursor { display: none; }
+      body::after { animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 1. Skip link -->
+  <a href="#catalogue" class="skip-link">Aller au catalogue</a>
+
+  <!-- 2. Trust banner (enrichi) -->
+  <div class="trust-banner">
+    <span class="stars">★★★★★</span>
+    <strong>4,9/5</strong> satisfaction clients
+    <span class="sep">·</span>
+    <strong>Livraison rapide</strong> à Abidjan
+    <span class="sep">·</span>
+    <strong>100% naturel</strong> &amp; certifié
+  </div>
+
+  <!-- 3. Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="EM'VIE SHOP — Accueil">
+        <img src="images/optimisees/logo_1200w.webp" alt="EM'VIE SHOP" width="180" height="48">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link active">Accueil</a></li>
+          <li><a href="#catalogue" class="nav__link">Boutique</a></li>
+          <li><a href="#avantages" class="nav__link">Pourquoi nous</a></li>
+          <li><a href="#temoignages" class="nav__link">Avis</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+          <li><a href="opportunite.html" class="nav__link">Opportunité</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="panier.html" class="cart-btn" aria-label="Voir le panier">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cart-count" style="display:none">0</span>
+        </a>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </header>
+
+  <!-- 4. Hero -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero__content">
+        <span class="hero__badge">
+          <i class="fa-solid fa-leaf"></i> Bien-être naturel à Abidjan
+        </span>
+        <h1 class="hero__title">Votre voie vers un <span>bien-être naturel</span></h1>
+        <p class="hero__text">
+          Découvrez notre sélection de produits de beauté, soins du corps et compléments alimentaires
+          100% naturels. Pensés pour vous, livrés rapidement à Abidjan.
+        </p>
+        <div class="hero__cta">
+          <a href="#catalogue" class="btn btn--primary">
+            <i class="fa-solid fa-bag-shopping"></i> Découvrir la boutique
+          </a>
+          <a href="https://wa.me/2250151170666" class="btn btn--whatsapp" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Commander sur WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Trust strip -->
+  <section class="trust-strip">
+    <div class="container">
+      <div class="trust-strip__grid">
+        <div class="trust-item">
+          <i class="fa-solid fa-truck-fast"></i>
+          <div class="trust-item__text">Livraison rapide<small>À Abidjan en 24-48h</small></div>
+        </div>
+        <div class="trust-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div class="trust-item__text">Paiement sécurisé<small>Mobile money &amp; carte</small></div>
+        </div>
+        <div class="trust-item">
+          <i class="fa-solid fa-seedling"></i>
+          <div class="trust-item__text">Qualité naturel<small>100% ingrédients naturels</small></div>
+        </div>
+        <div class="trust-item">
+          <i class="fa-brands fa-whatsapp"></i>
+          <div class="trust-item__text">WhatsApp<small>+225 01 51 17 06 66</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Payment strip -->
+  <section class="chime-payment-strip" aria-label="Moyens de paiement acceptés">
+    <div class="container">
+      <p class="ps-label">Paiements acceptés</p>
+      <div class="chime-payment-logos">
+        <span class="chime-payment-logo" title="Orange Money"><img src="images/optimisees/orange_money.svg" alt="Orange Money" loading="lazy"></span>
+        <span class="chime-payment-logo" title="Wave"><img src="images/optimisees/wave.png" alt="Wave" loading="lazy"></span>
+        <span class="chime-payment-logo" title="MTN Mobile Money"><img src="images/optimisees/mtn_money.png" alt="MTN Mobile Money" loading="lazy"></span>
+        <span class="chime-payment-logo" title="Moov Money"><img src="images/optimisees/moov_money.png" alt="Moov Money" loading="lazy"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Catalogue header + toolbar -->
+  <section class="section" id="catalogue">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Notre <span>catalogue</span></h2>
+        <p class="section-subtitle">
+          Des produits naturels soigneusement sélectionnés pour votre bien-être au quotidien.
+        </p>
+      </div>
+
+      <div class="toolbar">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" id="search-input" placeholder="Rechercher un produit..." aria-label="Rechercher un produit">
+        </div>
+        <div class="filters" id="filters" role="group" aria-label="Filtrer par catégorie">
+          <button class="filter-btn active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="Soins corporels">Soins corporels</button>
+          <button class="filter-btn" data-filter="Soins du visage">Soins du visage</button>
+          <button class="filter-btn" data-filter="Compléments alimentaires">Compléments</button>
+          <button class="filter-btn" data-filter="Hygiène bucco-dentaire">Bucco-dentaire</button>
+        </div>
+      </div>
+
+      <!-- 8. Products grid (8 produits) -->
+      <div class="products-grid" id="products-grid">
+
+        <!-- Produit 1 -->
+        <div class="product-card" data-category="Soins corporels" data-name="Lait corporel nourrissant">
+          <a href="produit-lait-corporel.html" class="product-card__img-wrap">
+            <img class="product-card__img" src="images/optimisees/carich-lait-corporel-nourrissant_400w.webp" alt="Lait corporel nourrissant" loading="lazy">
+            <span class="product-card__badge">Best-seller</span>
+          </a>
+          <div class="product-card__body">
+            <span class="product-card__cat">Soins corporels</span>
+            <h3 class="product-card__title">Lait corporel nourrissant</h3>
+            <div class="product-card__rating">★★★★★ <span>(12 avis)</span></div>
+            <p class="product-card__desc">Hydratation profonde 24h avec beurre de karité bio.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">8 000 F</span>
+              <button class="product-card__btn btn--add" data-id="1" data-nom="Lait corporel nourrissant" data-prix="8000" data-image="images/optimisees/carich-lait-corporel-nourrissant_400w.webp" aria-label="Ajouter au panier">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 2 -->
+        <div class="product-card" data-category="Soins corporels" data-name="Beurre de karité pur">
+          <a href="produit-beurre-karite.html" class="product-card__img-wrap">
+            <img class="product-card__img" src="images/optimisees/beurre-karite-pur_400w.webp" alt="Beurre de karité pur" loading="lazy">
+            <span class="product-card__badge badge-new">Nouveau</span>
+          </a>
+          <div class="product-card__body">
+            <span class="product-card__cat">Soins corporels</span>
+            <h3 class="product-card__title">Beurre de karité pur</h3>
+            <div class="product-card__rating">★★★★★ <span>(8 avis)</span></div>
+            <p class="product-card__desc">Beurre de karité 100% brut, non raffiné, équitable.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">5 000 F</span>
+              <button class="product-card__btn btn--add" data-id="2" data-nom="Beurre de karité pur" data-prix="5000" data-image="images/optimisees/beurre-karite-pur_400w.webp" aria-label="Ajouter au panier">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 3 -->
+        <div class="product-card" data-category="Soins du visage" data-name="Sérum éclat visage">
+          <a href="produit-serum-eclat.html" class="product-card__img-wrap">
+            <img class="product-card__img" src="images/optimisees/serum-eclat-visage_400w.webp" alt="Sérum éclat visage" loading="lazy">
+            <span class="product-card__badge">Best-seller</span>
+          </a>
+          <div class="product-card__body">
+            <span class="product-card__cat">Soins du visage</span>
+            <h3 class="product-card__title">Sérum éclat visage</h3>
+            <div class="product-card__rating">★★★★★ <span>(21 avis)</span></div>
+            <p class="product-card__desc">Sérum vitamine C pour un teint lumineux et uniforme.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">12 000 F</span>
+              <button class="product-card__btn btn--add" data-id="3" data-nom="Sérum éclat visage" data-prix="12000" data-image="images/optimisees/serum-eclat-visage_400w.webp" aria-label="Ajouter au panier">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 4 -->
+        <div class="product-card" data-category="Soins du visage" data-name="Crème hydratante visage">
+          <a href="produit-creme-hydratante.html" class="product-card__img-wrap">
+            <img class="product-card__img" src="images/optimisees/creme-hydratante-visage_400w.webp" alt="Crème hydratante visage" loading="lazy">
+            <span class="product-card__badge badge-promo">Promo</span>
+          </a>
+          <div class="product-card__body">
+            <span class="product-card__cat">Soins du visage</span>
+            <h3 class="product-card__title">Crème hydratante visage</h3>
+            <div class="product-card__rating">★★★★☆ <span>(15 avis)</span></div>
+            <p class="product-card__desc">Hydratation longue durée à l'acide hyaluronique naturel.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">10 000 F<span class="old">13 000 F</span></span>
+              <button class="product-card__btn btn--add" data-id="4" data-nom="Crème hydratante visage" data-prix="10000" data-image="images/optimisees/creme-hydratante-visage_400w.webp" aria-label="Ajouter au panier">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 5 -->
+        <div class="product-card" data-category="Compléments alimentaires" data-name="Complément immunité">
+          <a href="produit-complement-immunite.html" class="product-card__img-wrap">
+            <img class="product-card__img" src="images/optimisees/complement-immunite_400w.webp" alt="Complément immunité naturelle" loading="lazy">
+            <span class="product-card__badge">Best-seller</span>
+          </a>
+          <div class="product-card__body">
+            <span class="product-card__cat">Compléments alimentaires</span>
+            <h3 class="product-card__title">Complément immunité</h3>
+            <div class="product-card__rating">★★★★★ <span>(18 avis)</span></div>
+            <p class="product-card__desc">Boost naturel d'immunité à base de plantes et vitamines.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">15 000 F</span>
+              <button class="product-card__btn btn--add" data-id="5" data-nom="Complément immunité" data-prix="15000" data-image="images/optimisees/complement-immunite_400w.webp" aria-label="Ajouter au panier">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 6 -->
+        <div class="product-card" data-category="Compléments alimentaires" data-name="Vitamines naturelles">
+          <a href="produit-vitamines-naturelles.html" class="product-card__img-wrap">
+            <img class="product-card__img" src="images/optimisees/vitamines-naturelles_400w.webp" alt="Vitamines naturelles" loading="lazy">
+          </a>
+          <div class="product-card__body">
+            <span class="product-card__cat">Compléments alimentaires</span>
+            <h3 class="product-card__title">Vitamines naturelles</h3>
+            <div class="product-card__rating">★★★★☆ <span>(9 avis)</span></div>
+            <p class="product-card__desc">Apport quotidien en vitamines essentielles d'origine naturelle.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">9 000 F</span>
+              <button class="product-card__btn btn--add" data-id="6" data-nom="Vitamines naturelles" data-prix="9000" data-image="images/optimisees/vitamines-naturelles_400w.webp" aria-label="Ajouter au panier">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 7 -->
+        <div class="product-card" data-category="Hygiène bucco-dentaire" data-name="Dentifrice naturel">
+          <a href="produit-dentifrice-naturel.html" class="product-card__img-wrap">
+            <img class="product-card__img" src="images/optimisees/dentifrice-naturel_400w.webp" alt="Dentifrice naturel" loading="lazy">
+            <span class="product-card__badge badge-new">Nouveau</span>
+          </a>
+          <div class="product-card__body">
+            <span class="product-card__cat">Hygiène bucco-dentaire</span>
+            <h3 class="product-card__title">Dentifrice naturel</h3>
+            <div class="product-card__rating">★★★★★ <span>(7 avis)</span></div>
+            <p class="product-card__desc">Dentifrice sans fluor à base d'argile et d'huile essentielle.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">3 500 F</span>
+              <button class="product-card__btn btn--add" data-id="7" data-nom="Dentifrice naturel" data-prix="3500" data-image="images/optimisees/dentifrice-naturel_400w.webp" aria-label="Ajouter au panier">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 8 -->
+        <div class="product-card" data-category="Hygiène bucco-dentaire" data-name="Bain de bouche bio">
+          <a href="produit-bain-de-bouche.html" class="product-card__img-wrap">
+            <img class="product-card__img" src="images/optimisees/bain-de-bouche-bio_400w.webp" alt="Bain de bouche bio" loading="lazy">
+          </a>
+          <div class="product-card__body">
+            <span class="product-card__cat">Hygiène bucco-dentaire</span>
+            <h3 class="product-card__title">Bain de bouche bio</h3>
+            <div class="product-card__rating">★★★★☆ <span>(6 avis)</span></div>
+            <p class="product-card__desc">Fraîcheur naturelle à base de plantes et d'huile de coco.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">4 500 F</span>
+              <button class="product-card__btn btn--add" data-id="8" data-nom="Bain de bouche bio" data-prix="4500" data-image="images/optimisees/bain-de-bouche-bio_400w.webp" aria-label="Ajouter au panier">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="no-results" id="no-results" style="display:none">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <p>Aucun produit ne correspond à votre recherche.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Upsell interstitial (cross-sell) -->
+  <section class="upsell">
+    <div class="container">
+      <div class="upsell-card">
+        <div class="upsell-card__icon"><i class="fa-solid fa-gift"></i></div>
+        <div class="upsell-card__body">
+          <h3 class="upsell-card__title">Profitez de -10% sur votre 2e produit</h3>
+          <p class="upsell-card__text">Ajoutez un second article à votre panier et bénéficiez automatiquement d'une remise. Offre valable sur toute la boutique.</p>
+        </div>
+        <a href="#catalogue" class="btn btn--secondary upsell-card__btn">
+          <i class="fa-solid fa-plus"></i> Ajouter un produit
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Section avantages -->
+  <section class="section section--clair" id="avantages">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Pourquoi choisir <span>EM'VIE SHOP</span> ?</h2>
+        <p class="section-subtitle">Notre engagement : des produits naturels, authentiques et accessibles.</p>
+      </div>
+      <div class="avantages__grid">
+        <div class="avantage-card">
+          <div class="avantage-card__icon"><i class="fa-solid fa-leaf"></i></div>
+          <h3 class="avantage-card__title">100% Naturel</h3>
+          <p class="avantage-card__text">Des produits formulés avec des ingrédients naturels soigneusement sélectionnés, sans produits chimiques agressifs.</p>
+        </div>
+        <div class="avantage-card">
+          <div class="avantage-card__icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3 class="avantage-card__title">Livraison rapide</h3>
+          <p class="avantage-card__text">Recevez vos commandes en 24 à 48h partout à Abidjan. Suivi et paiement à la livraison possibles.</p>
+        </div>
+        <div class="avantage-card">
+          <div class="avantage-card__icon"><i class="fa-solid fa-heart"></i></div>
+          <h3 class="avantage-card__title">Conseils personnalisés</h3>
+          <p class="avantage-card__text">Une équipe à l'écoute pour vous orienter vers les produits les plus adaptés à vos besoins.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Stats bar -->
+  <section class="stats-bar" id="stats">
+    <div class="container">
+      <div class="stats-bar__grid">
+        <div class="stat-item">
+          <div class="stat-number" data-count="2500" data-suffix="+">0</div>
+          <div class="stat-label">Clients satisfaits</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="50" data-suffix="+">0</div>
+          <div class="stat-label">Produits naturels</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="4" data-suffix=".9/5">0</div>
+          <div class="stat-label">Note moyenne</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="48" data-suffix="h">0</div>
+          <div class="stat-label">Livraison max</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Section étapes -->
+  <section class="section" id="etapes">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Comment <span>commander</span> ?</h2>
+        <p class="section-subtitle">Commander chez EM'VIE SHOP est simple et rapide en 4 étapes.</p>
+      </div>
+      <div class="etapes__grid">
+        <div class="etape-card">
+          <div class="etape-card__num">1</div>
+          <div class="etape-card__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3 class="etape-card__title">Choisissez</h3>
+          <p class="etape-card__text">Parcourez notre catalogue et ajoutez vos produits au panier.</p>
+        </div>
+        <div class="etape-card">
+          <div class="etape-card__num">2</div>
+          <div class="etape-card__icon"><i class="fa-solid fa-cart-shopping"></i></div>
+          <h3 class="etape-card__title">Validez</h3>
+          <p class="etape-card__text">Validez votre panier ou commandez directement via WhatsApp.</p>
+        </div>
+        <div class="etape-card">
+          <div class="etape-card__num">3</div>
+          <div class="etape-card__icon"><i class="fa-solid fa-credit-card"></i></div>
+          <h3 class="etape-card__title">Payez</h3>
+          <p class="etape-card__text">Réglez par Mobile Money, carte ou à la livraison.</p>
+        </div>
+        <div class="etape-card">
+          <div class="etape-card__num">4</div>
+          <div class="etape-card__icon"><i class="fa-solid fa-box-open"></i></div>
+          <h3 class="etape-card__title">Recevez</h3>
+          <p class="etape-card__text">Recevez votre commande à Abidjan en 24 à 48h.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. Section témoignages -->
+  <section class="section section--clair" id="temoignages">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Ils nous font <span>confiance</span></h2>
+        <p class="section-subtitle">Découvrez ce que nos clients pensent de nos produits.</p>
+      </div>
+      <div class="temoignages__grid">
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">« Le lait corporel est exceptionnel ! Ma peau est plus douce et hydratée toute la journée. Livraison rapide à Cocody. »</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">AK</div>
+            <div>
+              <div class="testimonial-card__name">Aya Koffi</div>
+              <div class="testimonial-card__role">Cocody, Abidjan</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">« Le sérum éclat a vraiment transformé mon teint en quelques semaines. Produits naturels et service au top ! »</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">MD</div>
+            <div>
+              <div class="testimonial-card__name">Mariam Diarra</div>
+              <div class="testimonial-card__role">Plateau, Abidjan</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">« Je commande régulièrement les compléments immunité. Qualité constante et conseils personnalisés. Je recommande ! »</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">YT</div>
+            <div>
+              <div class="testimonial-card__name">Yao Tanoh</div>
+              <div class="testimonial-card__role">Yopougon, Abidjan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. CTA section -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <div class="double-cta-card">
+        <h2>Prêt à prendre soin de <span>vous</span> ?</h2>
+        <p>Rejoignez des milliers de clients qui ont choisi le bien-être naturel avec EM'VIE SHOP.</p>
+        <div class="double-cta-card__btns">
+          <a href="#catalogue" class="btn btn--secondary">
+            <i class="fa-solid fa-bag-shopping"></i> Voir la boutique
+          </a>
+          <a href="https://wa.me/2250151170666?text=Bonjour%20EM'VIE%20SHOP%2C%20je%20souhaette%20un%20conseil." class="btn btn--whatsapp" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Parler à un conseiller
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15. Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <img src="images/optimisees/logo_1200w.webp" alt="EM'VIE SHOP" width="160" height="42">
+          </div>
+          <p class="footer__about">
+            EM'VIE SHOP, votre voie vers un bien-être naturel à Abidjan. Produits de beauté, soins du corps et compléments alimentaires 100% naturels.
+          </p>
+          <div class="footer__social">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/2250151170666" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Boutique</h4>
+          <a href="#catalogue" class="footer__link">Soins corporels</a>
+          <a href="#catalogue" class="footer__link">Soins du visage</a>
+          <a href="#catalogue" class="footer__link">Compléments alimentaires</a>
+          <a href="#catalogue" class="footer__link">Hygiène bucco-dentaire</a>
+        </div>
+
+        <div class="footer__col">
+          <h4>Liens utiles</h4>
+          <a href="index.html" class="footer__link">Accueil</a>
+          <a href="#avantages" class="footer__link">Pourquoi nous</a>
+          <a href="#temoignages" class="footer__link">Avis clients</a>
+          <a href="opportunite.html" class="footer__link">Opportunité</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul class="footer__contact">
+            <li><i class="fa-solid fa-location-dot"></i> Abidjan, Côte d'Ivoire</li>
+            <li><i class="fa-brands fa-whatsapp"></i> +225 01 51 17 06 66</li>
+            <li><i class="fa-solid fa-envelope"></i> contact@emvie.shop</li>
+            <li><i class="fa-solid fa-clock"></i> Lun - Sam : 8h - 19h</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chime-branding">
+        <a href="https://eperformance.pro" target="_blank" rel="noopener">
+          <span class="ep-mark">eP</span> Conçu par ePerformance
+        </a>
+      </div>
+
+      <div class="footer__bottom">
+        © 2024 EM'VIE SHOP. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <!-- 16. Mobile nav (À CONSERVER) -->
+  <nav class="mobile-nav" aria-label="Navigation mobile">
+    <a href="index.html" class="mobile-nav-item active">
+      <i class="fa-solid fa-house"></i>
+      <span>Accueil</span>
+    </a>
+    <a href="#catalogue" class="mobile-nav-item">
+      <i class="fa-solid fa-tags"></i>
+      <span>Boutique</span>
+    </a>
+    <a href="panier.html" class="mobile-nav-item">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span>Panier</span>
+      <span class="cart-badge" id="cart-count-mobile" style="display:none">0</span>
+    </a>
+    <a href="https://wa.me/2250151170666" class="mobile-nav-item" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <!-- 17. Toast (pour le panier) -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toast-msg">Produit ajouté au panier</span>
+  </div>
+
+  <!-- Legacy WA float (masqué par Chime overlay) -->
+  <a href="https://wa.me/2250151170666" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- 18. Script existant (script.js inline) -->
+  <script>
+    /* ===================================================================
+       EM'VIE SHOP — script.js (fonctionnalités existantes)
+       Panier localStorage, filtres, galerie, zoom, tabs, sticky, compteurs
+       =================================================================== */
+    (function () {
+      'use strict';
+
+      /* ---------- PANIER (localStorage) ---------- */
+      var CART_KEY = 'emvie_cart';
+
+      function getCart() {
+        try {
+          return JSON.parse(localStorage.getItem(CART_KEY)) || [];
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function saveCart(cart) {
+        localStorage.setItem(CART_KEY, JSON.stringify(cart));
+        updateCartCount();
+      }
+
+      function addToCart(product) {
+        var cart = getCart();
+        var existing = cart.find(function (item) { return item.id === product.id; });
+        if (existing) {
+          existing.qty += 1;
+        } else {
+          cart.push({ id: product.id, nom: product.nom, prix: product.prix, image: product.image, qty: 1 });
+        }
+        saveCart(cart);
+        showToast(product.nom + ' ajouté au panier');
+      }
+
+      function removeFromCart(id) {
+        var cart = getCart().filter(function (item) { return item.id !== id; });
+        saveCart(cart);
+      }
+
+      function updateQty(id, qty) {
+        var cart = getCart();
+        var item = cart.find(function (i) { return i.id === id; });
+        if (item) {
+          item.qty = qty < 1 ? 1 : qty;
+          saveCart(cart);
+        }
+      }
+
+      function cartTotal() {
+        return getCart().reduce(function (sum, item) { return sum + item.prix * item.qty; }, 0);
+      }
+
+      function cartCount() {
+        return getCart().reduce(function (sum, item) { return sum + item.qty; }, 0);
+      }
+
+      function updateCartCount() {
+        var count = cartCount();
+        var els = [document.getElementById('cart-count'), document.getElementById('cart-count-mobile')].filter(Boolean);
+        els.forEach(function (el) {
+          if (count > 0) {
+            el.textContent = count;
+            el.style.display = 'flex';
+          } else {
+            el.style.display = 'none';
+          }
+        });
+      }
+
+      /* ---------- TOAST ---------- */
+      var toastTimer = null;
+      function showToast(msg) {
+        var toast = document.getElementById('toast');
+        var toastMsg = document.getElementById('toast-msg');
+        if (!toast || !toastMsg) return;
+        toastMsg.textContent = msg;
+        toast.classList.add('toast--show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () {
+          toast.classList.remove('toast--show');
+        }, 2500);
+      }
+
+      /* ---------- BOUTONS "AJOUTER AU PANIER" ---------- */
+      document.querySelectorAll('.btn--add').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          var product = {
+            id: btn.getAttribute('data-id'),
+            nom: btn.getAttribute('data-nom'),
+            prix: parseFloat(btn.getAttribute('data-prix')),
+            image: btn.getAttribute('data-image')
+          };
+          addToCart(product);
+
+          /* Animation du bouton */
+          var icon = btn.querySelector('i');
+          if (icon) {
+            var orig = icon.className;
+            icon.className = 'fa-solid fa-check';
+            btn.style.background = 'var(--or, #D4AF37)';
+            setTimeout(function () {
+              icon.className = orig;
+              btn.style.background = '';
+            }, 900);
+          }
+        });
+      });
+
+      /* ---------- FILTRES PAR CATÉGORIE ---------- */
+      var filterBtns = document.querySelectorAll('.filter-btn');
+      var productCards = document.querySelectorAll('.product-card');
+      var noResults = document.getElementById('no-results');
+
+      function applyFilters() {
+        var activeFilter = document.querySelector('.filter-btn.active');
+        var category = activeFilter ? activeFilter.getAttribute('data-filter') : 'all';
+        var searchTerm = (document.getElementById('search-input').value || '').toLowerCase().trim();
+        var visibleCount = 0;
+
+        productCards.forEach(function (card) {
+          var cardCategory = card.getAttribute('data-category') || '';
+          var cardName = (card.getAttribute('data-name') || '').toLowerCase();
+          var matchCategory = category === 'all' || cardCategory === category;
+          var matchSearch = !searchTerm || cardName.indexOf(searchTerm) !== -1;
+          if (matchCategory && matchSearch) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        if (noResults) {
+          noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+      }
+
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          applyFilters();
+        });
+      });
+
+      var searchInput = document.getElementById('search-input');
+      if (searchInput) {
+        searchInput.addEventListener('input', applyFilters);
+      }
+
+      /* ---------- BURGER MENU MOBILE ---------- */
+      var navToggle = document.getElementById('nav-toggle');
+      var nav = document.getElementById('nav');
+      var navOverlay = document.getElementById('nav-overlay');
+
+      function closeNav() {
+        if (nav) nav.classList.remove('open');
+        if (navOverlay) navOverlay.classList.remove('show');
+        if (navToggle) {
+          navToggle.setAttribute('aria-expanded', 'false');
+          var icon = navToggle.querySelector('i');
+          if (icon) icon.className = 'fa-solid fa-bars';
+        }
+      }
+
+      if (navToggle && nav) {
+        navToggle.addEventListener('click', function () {
+          var isOpen = nav.classList.toggle('open');
+          if (navOverlay) navOverlay.classList.toggle('show', isOpen);
+          navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          var icon = navToggle.querySelector('i');
+          if (icon) icon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        });
+      }
+      if (navOverlay) {
+        navOverlay.addEventListener('click', closeNav);
+      }
+      document.querySelectorAll('.nav__link').forEach(function (link) {
+        link.addEventListener('click', closeNav);
+      });
+
+      /* ---------- STICKY HEADER (shadow au scroll) ---------- */
+      var header = document.querySelector('.header');
+      if (header) {
+        window.addEventListener('scroll', function () {
+          header.classList.toggle('scrolled', window.scrollY > 30);
+        }, { passive: true });
+      }
+
+      /* ---------- GALERIE D'IMAGES (pour pages produit) ---------- */
+      function initGallery() {
+        var mainImg = document.querySelector('.gallery-main img');
+        var thumbs = document.querySelectorAll('.gallery-thumb');
+        if (!mainImg || thumbs.length === 0) return;
+        thumbs.forEach(function (thumb) {
+          thumb.addEventListener('click', function () {
+            var src = thumb.getAttribute('data-src') || (thumb.querySelector('img') ? thumb.querySelector('img').src : '');
+            if (src) {
+              mainImg.src = src;
+              thumbs.forEach(function (t) { t.classList.remove('active'); });
+              thumb.classList.add('active');
+            }
+          });
+        });
+      }
+      initGallery();
+
+      /* ---------- ZOOM SUR IMAGE (hover desktop) ---------- */
+      function initZoom() {
+        document.querySelectorAll('.product-card__img-wrap').forEach(function (wrap) {
+          var img = wrap.querySelector('.product-card__img');
+          if (!img) return;
+          wrap.addEventListener('mousemove', function (e) {
+            var rect = wrap.getBoundingClientRect();
+            var x = ((e.clientX - rect.left) / rect.width) * 100;
+            var y = ((e.clientY - rect.top) / rect.height) * 100;
+            img.style.transformOrigin = x + '% ' + y + '%';
+          });
+          wrap.addEventListener('mouseleave', function () {
+            img.style.transformOrigin = 'center center';
+          });
+        });
+      }
+      initZoom();
+
+      /* ---------- TABS (pour pages produit / FAQ) ---------- */
+      function initTabs() {
+        var tabBtns = document.querySelectorAll('.tab-btn');
+        if (tabBtns.length === 0) return;
+        tabBtns.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var group = btn.getAttribute('data-tab-group') || 'default';
+            var target = btn.getAttribute('data-tab-target');
+            document.querySelectorAll('.tab-btn[data-tab-group="' + group + '"]').forEach(function (b) {
+              b.classList.remove('active');
+            });
+            btn.classList.add('active');
+            document.querySelectorAll('.tab-panel[data-tab-group="' + group + '"]').forEach(function (panel) {
+              panel.classList.remove('active');
+            });
+            var panel = document.getElementById(target);
+            if (panel) panel.classList.add('active');
+          });
+        });
+      }
+      initTabs();
+
+      /* ---------- COMPTEURS ANIMÉS (stats bar) ---------- */
+      function animateCounter(el) {
+        var target = parseFloat(el.getAttribute('data-count')) || 0;
+        var suffix = el.getAttribute('data-suffix') || '';
+        var isFloat = target % 1 !== 0;
+        var duration = 1800;
+        var startTime = null;
+
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3); /* ease-out cubic */
+          var value = target * eased;
+          var display;
+          if (isFloat) {
+            display = value.toFixed(1);
+          } else {
+            display = Math.floor(value).toLocaleString('fr-FR');
+          }
+          el.textContent = display + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = (isFloat ? target.toFixed(1) : Math.floor(target).toLocaleString('fr-FR')) + suffix;
+          }
+        }
+        requestAnimationFrame(step);
+      }
+
+      var statNumbers = document.querySelectorAll('.stat-number');
+      if (statNumbers.length > 0 && 'IntersectionObserver' in window) {
+        var statObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              statObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+        statNumbers.forEach(function (el) { statObserver.observe(el); });
+      } else {
+        statNumbers.forEach(function (el) {
+          var target = parseFloat(el.getAttribute('data-count')) || 0;
+          var suffix = el.getAttribute('data-suffix') || '';
+          el.textContent = target + suffix;
+        });
+      }
+
+      /* ---------- INIT ---------- */
+      updateCartCount();
+
+      /* Exposer l'API panier pour les autres pages */
+      window.EmvieCart = {
+        get: getCart,
+        add: addToCart,
+        remove: removeFromCart,
+        updateQty: updateQty,
+        total: cartTotal,
+        count: cartCount,
+        showToast: showToast
+      };
+    })();
+  </script>
+
+  <!-- 19. Script Chime (overlay : cursor, reveal, hover glow, header shrink, live chat) -->
+  <script id="chime-script">
+    (function(){
+      'use strict';
+
+      // 1. HEADER SHRINK ON SCROLL
+      const header = document.querySelector('.header');
+      if (header) {
+        window.addEventListener('scroll', function() {
+          header.classList.toggle('scrolled', window.scrollY > 50);
+        }, { passive: true });
+      }
+
+      // 2. REVEAL AU SCROLL
+      const revealElements = document.querySelectorAll('.section, .section-header, .product-card, .avantage-card, .testimonial-card, .etape-card, .stats-bar, .cta-section, .trust-strip');
+      revealElements.forEach(el => el.classList.add('chime-reveal'));
+
+      const revealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+      revealElements.forEach(function(el) { revealObserver.observe(el); });
+
+      // 3. HOVER GLOW (suit la souris sur les cartes)
+      document.querySelectorAll('.product-card, .avantage-card, .testimonial-card, .double-cta-card').forEach(function(card) {
+        card.addEventListener('mousemove', function(e) {
+          const rect = card.getBoundingClientRect();
+          card.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
+          card.style.setProperty('--my', (e.clientY - rect.top) + 'px');
+        });
+      });
+
+      // 4. CURSOR CUSTOM (desktop only)
+      if (window.matchMedia('(min-width: 769px)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const cursor = document.createElement('div');
+        cursor.className = 'chime-cursor';
+        document.body.appendChild(cursor);
+
+        let cx = 0, cy = 0, tx = 0, ty = 0;
+        document.addEventListener('mousemove', function(e) { tx = e.clientX; ty = e.clientY; });
+
+        function loop() {
+          cx += (tx - cx) * 0.2;
+          cy += (ty - cy) * 0.2;
+          cursor.style.left = cx + 'px';
+          cursor.style.top = cy + 'px';
+          requestAnimationFrame(loop);
+        }
+        loop();
+
+        document.querySelectorAll('a, button, .product-card, .avantage-card, .filter-btn, .nav__toggle, .qty-btn, .btn--add').forEach(function(el) {
+          el.addEventListener('mouseenter', function() { cursor.classList.add('hover'); });
+          el.addEventListener('mouseleave', function() { cursor.classList.remove('hover'); });
+        });
+      }
+
+      // 5. LIVE CHAT WIDGET (remplace WA float)
+      const waFloat = document.querySelector('.wa-float');
+      if (waFloat) {
+        waFloat.style.display = 'none';
+      }
+
+      const chatWidget = document.createElement('a');
+      chatWidget.className = 'chime-chat';
+      chatWidget.href = 'https://wa.me/2250151170666?text=' + encodeURIComponent('Bonjour EM\'VIE SHOP, j\'ai une question sur vos produits.');
+      chatWidget.target = '_blank';
+      chatWidget.rel = 'noopener';
+      chatWidget.setAttribute('aria-label', 'Discuter sur WhatsApp');
+      chatWidget.innerHTML = '<i class="fa-brands fa-whatsapp"></i>';
+      document.body.appendChild(chatWidget);
+    })();
+  </script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7QW8BCYQ1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z7QW8BCYQ1');
+  </script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1592627695615531');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1592627695615531&ev=PageView&noscript=1" alt="" />
+  </noscript>
+</body>
+</html>
