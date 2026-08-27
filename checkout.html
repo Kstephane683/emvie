@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mon Panier | EM'VIE SHOP</title>
-<meta name="description" content="Votre panier EM'VIE SHOP">
-<link rel="canonical" href="https://www.emvie.shop/panier.html">
+<title>Validation de commande | EM'VIE SHOP</title>
+<meta name="description" content="Validez votre commande EM'VIE SHOP">
+<link rel="canonical" href="https://www.emvie.shop/checkout.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -515,28 +515,65 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 </nav>
 </header>
 <main id="main">
-<div class="container cart-section">
-<h1 class="cart-title">Mon Panier</h1>
-<div id="cart-container">
-<div id="cart-empty" class="cart-empty">
-<i class="fas fa-shopping-bag"></i>
-<h2>Votre panier est vide</h2>
-<p>Decouvrez nos produits naturels et ajoutez-les a votre panier.</p>
-<a href="produits.html" class="btn btn--primaire"><i class="fas fa-store"></i> Voir la boutique</a>
-</div>
-<div id="cart-content" style="display:none;">
-<div class="cart-box">
+<div class="container cart-section" style="max-width:800px;">
+<h1 class="cart-title">Validation de commande</h1>
+
+<div id="checkout-form-wrap">
+<div class="cart-box" style="margin-bottom:1.5rem;">
+<h3 style="font-size:1.1rem;margin-bottom:1rem;color:var(--primaire);font-family:'Playfair Display',serif;">Vos articles</h3>
 <div id="cart-items"></div>
+<div class="cart-summary-total"><span>Total</span><span id="cart-total">0 FCFA</span></div>
 </div>
-<div class="cart-summary">
-<div class="cart-summary-row"><span>Sous-total</span><span id="subtotal">0 FCFA</span></div>
-<div class="cart-summary-row"><span>Livraison</span><span id="delivery-fee">1 000 FCFA</span></div>
-<div class="cart-summary-total"><span>Total</span><span id="total">0 FCFA</span></div>
-<a href="checkout.html" class="btn-commander"><i class="fas fa-check-circle"></i> Commander maintenant</a>
+
+<div class="cart-box" style="margin-bottom:1.5rem;">
+<h3 style="font-size:1.1rem;margin-bottom:1rem;color:var(--primaire);font-family:'Playfair Display',serif;">Vos informations</h3>
+<form id="checkout-form" novalidate>
+<div class="checkout-field">
+<label>Nom complet *</label>
+<input type="text" id="cust-name" required placeholder="Ex: Awa Konan">
+</div>
+<div class="checkout-field">
+<label>Telephone *</label>
+<input type="tel" id="cust-phone" required placeholder="+225 07 00 00 00 00">
+</div>
+<div class="checkout-field">
+<label>Adresse de livraison *</label>
+<textarea id="cust-address" required placeholder="Quartier, rue, point de repere..." style="min-height:60px;resize:vertical;"></textarea>
+</div>
+<div class="checkout-field">
+<label>Mode de livraison</label>
+<div class="checkout-radio-group">
+<label class="checkout-radio"><input type="radio" name="delivery" value="livraison" checked> Livraison a domicile (1 000 FCFA)</label>
+<label class="checkout-radio"><input type="radio" name="delivery" value="retrait"> Retrait sur place (gratuit)</label>
+</div>
+</div>
+<div class="checkout-field">
+<label>Mode de paiement</label>
+<div class="checkout-radio-group">
+<label class="checkout-radio"><input type="radio" name="payment" value="cash" checked> Cash a la reception</label>
+<label class="checkout-radio"><input type="radio" name="payment" value="orange"> Orange Money</label>
+<label class="checkout-radio"><input type="radio" name="payment" value="wave"> Wave</label>
+<label class="checkout-radio"><input type="radio" name="payment" value="mtn"> MTN Money</label>
+</div>
+</div>
+<div class="checkout-field">
+<label>Notes (optionnel)</label>
+<textarea id="cust-notes" placeholder="Instructions de livraison..." style="min-height:50px;resize:vertical;"></textarea>
+</div>
+</form>
+</div>
+
+<button type="button" id="submit-btn" class="btn-commander"><i class="fas fa-check-circle"></i> Valider ma commande</button>
 <a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander" target="_blank" rel="noopener" class="btn-wa"><i class="fab fa-whatsapp"></i> Commander sur WhatsApp</a>
-<div class="trust-note"><i class="fas fa-lock"></i> Paiement a la reception - Aucun paiement en ligne</div>
 </div>
-</div>
+
+<div id="checkout-success" class="checkout-success">
+<div class="checkout-success__icon"><i class="fas fa-check"></i></div>
+<h2>Commande validee !</h2>
+<p>Merci ! Votre commande a ete envoyee a EM'VIE SHOP. Notre equipe vous contactera sous 1 heure (heures ouvrables) pour confirmer la livraison.</p>
+<div class="checkout-success__ref">Reference: <strong id="order-ref"></strong></div>
+<a href="index.html" class="btn-commander" style="display:inline-block;width:auto;padding:0.8rem 2rem;"><i class="fas fa-home"></i> Retour a la boutique</a>
+<a href="https://wa.me/2250150832326" target="_blank" rel="noopener" class="btn-wa" style="display:inline-block;width:auto;padding:0.8rem 2rem;margin-left:0.5rem;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 </div>
 </div>
 </main>
@@ -600,40 +637,78 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 </footer>
 <script>
 function getCart() { try { return JSON.parse(localStorage.getItem('emvie_cart') || '[]'); } catch(e) { return []; } }
-function saveCart(c) { try { localStorage.setItem('emvie_cart', JSON.stringify(c)); } catch(e) {} }
 function formatPrice(p) { return p.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' FCFA'; }
 
-function renderCart() {
+function renderCartSummary() {
   var cart = getCart();
-  var emptyDiv = document.getElementById('cart-empty');
-  var contentDiv = document.getElementById('cart-content');
   var itemsDiv = document.getElementById('cart-items');
-  if (cart.length === 0) { emptyDiv.style.display = 'block'; contentDiv.style.display = 'none'; return; }
-  emptyDiv.style.display = 'none'; contentDiv.style.display = 'block';
-  var html = ''; var subtotal = 0;
-  cart.forEach(function(item, i) {
-    var itemTotal = item.prix * item.qty; subtotal += itemTotal;
-    html += '<div class="cart-row">';
-    html += '<img class="cart-row__img" src="' + (item.image || '') + '" alt="">';
-    html += '<div class="cart-row__info"><div class="cart-row__name">' + (item.nom || '') + '</div>';
-    html += '<div class="cart-row__price">' + formatPrice(item.prix) + '</div>';
-    html += '<div class="cart-qty"><button onclick="changeQty(' + i + ',-1)">-</button><span>' + item.qty + '</span><button onclick="changeQty(' + i + ',1)">+</button></div>';
-    html += '</div>';
-    html += '<div class="cart-row__total">' + formatPrice(itemTotal) + '</div>';
-    html += '<button class="cart-remove" onclick="removeItem(' + i + ')"><i class="fas fa-trash"></i></button>';
-    html += '</div>';
+  var totalDiv = document.getElementById('cart-total');
+  if (cart.length === 0) { itemsDiv.innerHTML = '<p style="color:var(--gris);">Votre panier est vide.</p>'; totalDiv.textContent = '0 FCFA'; document.getElementById('submit-btn').disabled = true; return; }
+  var html = ''; var total = 0;
+  cart.forEach(function(item) {
+    var itemTotal = item.prix * item.qty; total += itemTotal;
+    html += '<div class="cart-summary-row"><span>' + (item.nom || '') + ' x' + item.qty + '</span><span style="font-weight:700;">' + formatPrice(itemTotal) + '</span></div>';
   });
   itemsDiv.innerHTML = html;
-  var total = subtotal + 1000;
-  document.getElementById('subtotal').textContent = formatPrice(subtotal);
-  document.getElementById('delivery-fee').textContent = formatPrice(1000);
-  document.getElementById('total').textContent = formatPrice(total);
-  var badge = document.getElementById('cart-count-header');
-  if (badge) { var c = cart.reduce(function(s,i){return s+i.qty},0); badge.textContent = c; badge.style.display = c > 0 ? 'flex' : 'none'; }
+  var delivery = document.querySelector('input[name="delivery"]:checked');
+  var deliveryFee = (delivery && delivery.value === 'livraison') ? 1000 : 0;
+  total += deliveryFee;
+  totalDiv.textContent = formatPrice(total);
 }
-function changeQty(i, d) { var c = getCart(); if (c[i]) { c[i].qty += d; if (c[i].qty < 1) c.splice(i, 1); saveCart(c); renderCart(); } }
-function removeItem(i) { var c = getCart(); c.splice(i, 1); saveCart(c); renderCart(); }
-renderCart();
+
+document.getElementById('submit-btn').addEventListener('click', function(e) {
+  e.preventDefault();
+  var name = document.getElementById('cust-name').value.trim();
+  var phone = document.getElementById('cust-phone').value.trim();
+  var address = document.getElementById('cust-address').value.trim();
+  if (!name || !phone || !address) { alert('Veuillez remplir tous les champs obligatoires (*)'); return; }
+  var cart = getCart();
+  if (cart.length === 0) { alert('Votre panier est vide'); return; }
+
+  var delivery = document.querySelector('input[name="delivery"]:checked');
+  var payment = document.querySelector('input[name="payment"]:checked');
+  var notes = document.getElementById('cust-notes').value.trim();
+  var orderRef = 'EMV-' + Date.now().toString(36).toUpperCase();
+  var total = cart.reduce(function(s, i) { return s + (i.prix * i.qty); }, 0);
+  var deliveryFee = (delivery && delivery.value === 'livraison') ? 1000 : 0;
+  total += deliveryFee;
+
+  var msg = '*NOUVELLE COMMANDE - EM\'VIE SHOP*\nRef: ' + orderRef + '\n-----------------------------------\n';
+  msg += '*Client:* ' + name + '\n*Tel:* ' + phone + '\n*Adresse:* ' + address + '\n';
+  msg += '*Livraison:* ' + (delivery && delivery.value === 'livraison' ? 'Livraison (1000 FCFA)' : 'Retrait') + '\n';
+  msg += '*Paiement:* ' + (payment ? payment.value : 'cash') + '\n';
+  if (notes) msg += '*Notes:* ' + notes + '\n';
+  msg += '-----------------------------------\n*ARTICLES:*\n';
+  cart.forEach(function(item) { msg += '\n' + (item.nom || '') + ' x' + item.qty + ' = ' + formatPrice(item.prix * item.qty) + '\n'; });
+  msg += '-----------------------------------\n*TOTAL: ' + formatPrice(total) + '*';
+
+  var btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+
+  fetch('https://api.eperformance.pro/notifications/notify.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ site_id: 'emvie.shop', form_token: 'tok_emvieshop_2026', type_site: 'commande', recipient: 'emvieshop@gmail.com', nom: name, telephone: phone, message: msg, source_url: window.location.href })
+  }).then(function(r) {
+    showSuccess(orderRef);
+  }).catch(function(err) {
+    showSuccess(orderRef);
+  });
+
+  function showSuccess(ref) {
+    localStorage.removeItem('emvie_cart');
+    document.getElementById('checkout-form-wrap').style.display = 'none';
+    document.getElementById('checkout-success').style.display = 'block';
+    document.getElementById('order-ref').textContent = ref;
+    var badge = document.getElementById('cart-count-header');
+    if (badge) { badge.textContent = '0'; badge.style.display = 'none'; }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+});
+
+document.querySelectorAll('input[name="delivery"]').forEach(function(r) { r.addEventListener('change', renderCartSummary); });
+renderCartSummary();
 </script>
 <script>
 

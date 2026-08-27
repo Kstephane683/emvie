@@ -465,3 +465,6 @@
         init();
     }
 })();
+
+
+function initThemeToggle(){var t=document.createElement('button');t.className='theme-toggle';t.setAttribute('aria-label','Mode sombre');t.setAttribute('type','button');t.innerHTML='<i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>';document.body.appendChild(t);var s=localStorage.getItem('theme')||'auto';applyTheme(s);t.addEventListener('click',function(){var c=document.documentElement.getAttribute('data-theme');var d=c==='dark'||(!c&&window.matchMedia('(prefers-color-scheme: dark)').matches);var n=d?'light':'dark';applyTheme(n);localStorage.setItem('theme',n)});window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){if(!localStorage.getItem('theme'))applyTheme('auto')})}function applyTheme(t){if(t==='dark')document.documentElement.setAttribute('data-theme','dark');else if(t==='light')document.documentElement.setAttribute('data-theme','light');else document.documentElement.removeAttribute('data-theme')}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initThemeToggle);else initThemeToggle();

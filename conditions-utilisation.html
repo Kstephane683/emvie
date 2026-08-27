@@ -91,7 +91,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 .skip-link:focus { left: 0; }
 
 /* HEADER */
-.header { position: fixed; top: 0; left: 0; right: 0; height: var(--header-h); background: var(--header-glass-bg); backdrop-filter: blur(16px) saturate(180%); -webkit-backdrop-filter: blur(16px) saturate(180%); z-index: 1000; border-bottom: 1px solid var(--header-glass-border); display: flex; align-items: center; transition: all var(--transition); }
+.header { position: fixed; top: 0; left: 0; right: 0; height: var(--header-h); background: rgba(255,255,255,0.98); z-index: 1000; border-bottom: 1px solid var(--header-glass-border); display: flex; align-items: center; transition: background 0.3s, box-shadow 0.3s; }
 .header.scrolled { height: 60px; background: rgba(255,255,255,0.98); box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
 .nav { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; gap: 1.5rem; }
 .nav__brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
@@ -106,7 +106,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 .nav__actions { display: flex; align-items: center; gap: 1rem; }
 .cart-link { font-size: 1.2rem; color: var(--primaire); padding: 0.5rem; border-radius: 50%; }
 .nav__toggle { display: none; background: none; border: none; font-size: 1.4rem; color: var(--primaire); padding: 0.4rem; border-radius: 8px; }
-.nav__menu-overlay { display: none; position: fixed; top: var(--header-h); left: 0; right: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(16px); z-index: 999; padding: 1rem 1.5rem; box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+.nav__menu-overlay { display: none; position: fixed; top: var(--header-h); left: 0; right: 0; background: rgba(255,255,255,0.99); z-index: 999; padding: 1rem 1.5rem; box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
 .nav__menu-overlay.open { display: block; }
 .nav__menu-overlay ul { list-style: none; padding: 0; margin: 0; }
 .nav__menu-overlay a { display: block; padding: 1rem 0.5rem; font-weight: 600; color: var(--texte); border-bottom: 1px solid var(--border); }
@@ -144,7 +144,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 .legal-contact a { color: var(--or); font-weight: 600; }
 
 /* FOOTER */
-.footer { background: var(--premium-bg); color: rgba(255,255,255,0.7); padding: 2rem 0 1.5rem; }
+.footer { background: var(--fond-fonce); color: rgba(255,255,255,0.7); padding: 2rem 0 1.5rem; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 1.5rem; max-width: 1280px; margin-left: auto; margin-right: auto; padding: 0 1.5rem; }
 .footer-brand { display: flex; flex-direction: column; gap: 0.5rem; }
 .footer-brand .brand-row { display: flex; align-items: center; gap: 0.6rem; }
@@ -167,9 +167,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 .mobile-nav-item.active, .mobile-nav-item:hover { color: var(--primaire); }
 .mobile-nav-item i { font-size: 1.2rem; }
 
-/* CHAT WHATSAPP */
-.chime-chat { position: fixed; bottom: 90px; right: 20px; z-index: 999; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--whatsapp), #1da851); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #fff; box-shadow: 0 8px 28px rgba(37,211,102,0.4); text-decoration: none; animation: pulseWA 2.5s infinite; }
-@keyframes pulseWA { 0% { box-shadow: 0 8px 28px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.5); } 70% { box-shadow: 0 8px 28px rgba(37,211,102,0.4), 0 0 0 18px rgba(37,211,102,0); } 100% { box-shadow: 0 8px 28px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0); } }
+/* CHAT WHATSAPP — retire (cause conflit avec chatbot IA) */ 70% { box-shadow: 0 8px 28px rgba(37,211,102,0.4), 0 0 0 18px rgba(37,211,102,0); } 100% { box-shadow: 0 8px 28px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0); } }
 
 @media (max-width: 768px) {
   :root { --header-h: 60px; }
@@ -180,7 +178,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
   .legal-section { padding: 1.5rem 1rem; }
   .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .mobile-nav { display: flex; }
-  .chime-chat { bottom: 80px; right: 16px; width: 50px; height: 50px; font-size: 1.6rem; }
+   { bottom: 80px; right: 16px; width: 50px; height: 50px; font-size: 1.6rem; }
 }
 </style>
 <script type="application/ld+json">
@@ -287,12 +285,12 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p>Le Client peut passer commande de deux manieres :</p>
 <ul>
 <li><strong>Via le Site</strong> : ajout des Produits au panier, remplissage du formulaire de commande (nom, telephone, adresse, moyen de paiement), validation via WhatsApp.</li>
-<li><strong>Via WhatsApp</strong> : envoi direct de la commande au +225 07 78 35 89 69 avec la liste des Produits souhaites.</li>
+<li><strong>Via WhatsApp</strong> : envoi direct de la commande au +225 01 50 83 23 26 avec la liste des Produits souhaites.</li>
 </ul>
 <h3>4.2 Confirmation</h3>
 <p>EM'VIE SHOP confirme chaque commande par WhatsApp dans un delai maximum de 1h pendant les heures ouvrables (8h-19h, lundi a samedi). La confirmation inclut le detail des Produits, le total a payer, les frais de livraison et le delai de livraison estime.</p>
 <h3>4.3 Annulation</h3>
-<p>Le Client peut annuler sa commande sans frais tant qu'elle n'a pas ete expediee. Pour annuler, il doit contacter EM'VIE SHOP via WhatsApp au +225 07 78 35 89 69. Apres expedition, l'annulation n'est plus possible, mais le Client peut refuser la livraison ou utiliser son droit de retractation.</p>
+<p>Le Client peut annuler sa commande sans frais tant qu'elle n'a pas ete expediee. Pour annuler, il doit contacter EM'VIE SHOP via WhatsApp au +225 01 50 83 23 26. Apres expedition, l'annulation n'est plus possible, mais le Client peut refuser la livraison ou utiliser son droit de retractation.</p>
 </div>
 
 <div class="legal-section" id="art5">
@@ -388,8 +386,8 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <div class="legal-contact">
 <h3><i class="fas fa-headset"></i> Une question sur nos CGU ?</h3>
 <p>Notre equipe est a votre disposition pour repondre a toutes vos questions.</p>
-<p><i class="fab fa-whatsapp"></i> WhatsApp : <a href="https://wa.me/2250778358969">+225 07 78 35 89 69</a><br>
-<i class="fas fa-envelope"></i> Email : <a href="mailto:contact@emvie.shop">contact@emvie.shop</a></p>
+<p><i class="fab fa-whatsapp"></i> WhatsApp : <a href="https://wa.me/2250150832326">+225 01 50 83 23 26</a><br>
+<i class="fas fa-envelope"></i> Email : <a href="mailto:emvieshop@gmail.com">emvieshop@gmail.com</a></p>
 </div>
 </div>
 
@@ -433,15 +431,12 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 </footer>
 
 <nav class="mobile-nav">
-<a class="mobile-nav-item" href="index.html"><i class="fas fa-home"></i> Boutique</a>
+<a class="mobile-nav-item" href="index.html"><i class="fas fa-home"></i> Accueil</a>
+<a class="mobile-nav-item" href="produits.html"><i class="fas fa-store"></i> Boutique</a>
 <a class="mobile-nav-item" href="opportunite.html"><i class="fas fa-gem"></i> Business</a>
 <a class="mobile-nav-item" href="panier.html"><i class="fas fa-shopping-bag"></i> Panier</a>
 <a class="mobile-nav-item" href="contact.html"><i class="fas fa-phone"></i> Contact</a>
 </nav>
-
-<a class="chime-chat" href="https://wa.me/2250778358969?text=Bonjour%20EM%27VIE%20SHOP" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
 
 <script>
 (function(){{

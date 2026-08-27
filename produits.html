@@ -59,13 +59,13 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 .skip-link:focus { left: 0; }
 
 /* TRUST BAR */
-.trust-banner { background: var(--premium-bg); color: rgba(255,255,255,0.8); font-size: 0.78rem; text-align: center; padding: 0.5rem 1rem; border-bottom: 1px solid rgba(212,175,55,0.15); }
+.trust-banner { background: var(--primaire); color: rgba(255,255,255,0.8); font-size: 0.78rem; text-align: center; padding: 0.5rem 1rem; border-bottom: 1px solid rgba(212,175,55,0.15); }
 .trust-banner span { margin: 0 1.2rem; white-space: nowrap; display: inline-flex; align-items: center; gap: 0.4rem; }
 .trust-banner i { color: var(--or); font-size: 0.7rem; }
 .trust-banner a { color: var(--or); font-weight: 700; }
 
 /* HEADER GLASS */
-.header { position: fixed; top: 0; left: 0; right: 0; height: var(--header-h); background: var(--header-glass-bg); backdrop-filter: blur(16px) saturate(180%); -webkit-backdrop-filter: blur(16px) saturate(180%); z-index: 1000; border-bottom: 1px solid var(--header-glass-border); display: flex; align-items: center; transition: all var(--transition); }
+.header { position: fixed; top: 0; left: 0; right: 0; height: var(--header-h); background: rgba(255,255,255,0.98); z-index: 1000; border-bottom: 1px solid var(--header-glass-border); display: flex; align-items: center; transition: background 0.3s, box-shadow 0.3s; }
 .header.scrolled { height: 60px; background: rgba(255,255,255,0.98); box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
 .nav { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; gap: 1.5rem; }
 .nav__brand { display: flex; align-items: center; gap: 0.6rem; }
@@ -81,38 +81,38 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 .nav__menu a.opportunite-link::after { background: var(--or); }
 .nav__actions { display: flex; align-items: center; gap: 1rem; }
 .icon-wrap { position: relative; display: inline-flex; }
-.cart-link { font-size: 1.2rem; color: var(--primaire); padding: 0.5rem; border-radius: 50%; transition: all var(--transition); }
+.cart-link { font-size: 1.2rem; color: var(--primaire); padding: 0.5rem; border-radius: 50%; transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; }
 .cart-link:hover { background: rgba(122,131,73,0.1); transform: translateY(-2px); }
 .cart-badge { position: absolute; top: -2px; right: -2px; background: var(--or); color: var(--fond-fonce); font-size: 0.65rem; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; min-width: 18px; padding: 0 4px; }
 .cart-badge.pulse { animation: badgePulse 0.6s ease; }
 @keyframes badgePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.5); background: var(--whatsapp); } }
 .nav__toggle { display: none; background: none; border: none; font-size: 1.4rem; color: var(--primaire); padding: 0.4rem; border-radius: 8px; }
-.nav__cta-wa { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: var(--whatsapp); color: white; border-radius: var(--radius-btn); font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: all var(--transition); box-shadow: 0 4px 14px rgba(37,211,102,0.3); }
+.nav__cta-wa { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: var(--whatsapp); color: white; border-radius: var(--radius-btn); font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 14px rgba(37,211,102,0.3); }
 .nav__cta-wa:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(37,211,102,0.4); }
-.nav__menu-overlay { display: none; position: fixed; top: var(--header-h); left: 0; right: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(16px); z-index: 999; padding: 1rem 1.5rem; box-shadow: 0 6px 20px rgba(0,0,0,0.1); border-top: 1px solid var(--border); }
+.nav__menu-overlay { display: none; position: fixed; top: var(--header-h); left: 0; right: 0; background: rgba(255,255,255,0.99); z-index: 999; padding: 1rem 1.5rem; box-shadow: 0 6px 20px rgba(0,0,0,0.1); border-top: 1px solid var(--border); }
 .nav__menu-overlay.open { display: block; }
 .nav__menu-overlay ul { list-style: none; padding: 0; margin: 0; }
 .nav__menu-overlay a { display: block; padding: 1rem 0.5rem; font-weight: 600; color: var(--texte); border-bottom: 1px solid var(--border); }
 .nav__menu-overlay a:last-child { border-bottom: none; }
 
 /* BOUTONS */
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.95rem 1.6rem; border-radius: var(--radius-btn); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.3px; cursor: pointer; transition: all var(--transition); border: none; text-decoration: none; font-family: var(--font-body); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.95rem 1.6rem; border-radius: var(--radius-btn); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.3px; cursor: pointer; transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; border: none; text-decoration: none; font-family: var(--font-body); }
 .btn-premium { background: linear-gradient(135deg, var(--primaire), var(--accent)); color: white; box-shadow: 0 6px 20px rgba(122,131,73,0.35); }
 .btn-premium:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(122,131,73,0.5); }
 .btn-gold { background: linear-gradient(135deg, var(--or), var(--or-clair)); color: var(--fond-fonce); box-shadow: 0 6px 20px rgba(212,175,55,0.35); }
 .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(212,175,55,0.5); }
 .btn-outline-gold { background: transparent; color: var(--or); border: 2px solid var(--or); padding: 0.8rem 1.5rem; }
 .btn-outline-gold:hover { background: var(--or); color: var(--fond-fonce); transform: translateY(-2px); box-shadow: var(--shadow-glow); }
-.btn-glass { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(8px); }
+.btn-glass { background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.2); }
 .btn-glass:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
 .btn-whatsapp { background: var(--whatsapp); color: white; box-shadow: 0 6px 20px rgba(37,211,102,0.35); }
 .btn-whatsapp:hover { background: #1da851; transform: translateY(-2px); box-shadow: 0 12px 28px rgba(37,211,102,0.45); }
 
 /* HERO PARALLAX 3D */
-.hero { position: relative; min-height: 70vh; display: flex; align-items: center; color: white; overflow: hidden; padding: 5rem 1.5rem; perspective: 1000px; }
-.hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; transform: scale(1.1); will-change: transform; }
+.hero { position: relative; min-height: 70vh; display: flex; align-items: center; color: white; overflow: hidden; padding: 5rem 1.5rem;  }
+.hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;  }
 .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,20,25,0.88) 0%, rgba(26,26,26,0.7) 50%, rgba(122,131,73,0.4) 100%); z-index: 1; }
-.hero__content { position: relative; z-index: 3; max-width: 800px; margin: 0 auto; width: 100%; text-align: center; will-change: transform; }
+.hero__content { position: relative; z-index: 3; max-width: 800px; margin: 0 auto; width: 100%; text-align: center; }
 .hero__badge { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, rgba(212,175,55,0.2), rgba(212,175,55,0.05)); border: 1px solid rgba(212,175,55,0.4); color: var(--or); padding: 0.4rem 1rem; border-radius: var(--radius-btn); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1.5rem; }
 .hero__title { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 900; line-height: 1.05; margin-bottom: 1.2rem; letter-spacing: -0.5px; }
 .hero__title span { color: var(--or); font-style: italic; }
@@ -123,7 +123,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 .hero__cta-row { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
 
 /* STATS BAR */
-.stats-bar { background: linear-gradient(135deg, var(--premium-bg) 0%, var(--fond-fonce) 100%); color: white; padding: 3rem 0; position: relative; z-index: 5; margin-top: -3rem; border-top: 1px solid var(--premium-border); }
+.stats-bar { background: linear-gradient(135deg, var(--primaire) 0%, var(--accent) 100%); color: white; padding: 3rem 0; position: relative; z-index: 5; margin-top: -3rem; border-top: 1px solid var(--premium-border); }
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
 .stat-item { display: flex; flex-direction: column; align-items: center; }
 .stat-num { font-family: var(--font-heading); font-size: clamp(2.2rem, 4vw, 3rem); font-weight: 900; color: var(--or); font-variant-numeric: tabular-nums; line-height: 1; }
@@ -152,13 +152,13 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 .section-subtitle { color: var(--gris); max-width: 640px; margin: 0 auto; font-size: 1rem; }
 
 /* TOOLBAR */
-.toolbar { position: sticky; top: var(--header-h); background: rgba(248,249,250,0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 90; padding: 1rem 0; margin-bottom: 2rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.toolbar { position: sticky; top: var(--header-h); background: rgba(248,249,250,0.98); z-index: 90; padding: 1rem 0; margin-bottom: 2rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
 .search-box { position: relative; flex: 1; min-width: 200px; }
 .search-box input { width: 100%; padding: 0.8rem 1rem 0.8rem 2.8rem; border: 1px solid var(--border); border-radius: var(--radius-btn); font-size: 0.95rem; outline: none; background: white; transition: border var(--transition), box-shadow var(--transition); font-family: inherit; }
 .search-box input:focus { border-color: var(--primaire); box-shadow: 0 0 0 3px rgba(122,131,73,0.1); }
 .search-box i { position: absolute; left: 1.2rem; top: 50%; transform: translateY(-50%); color: var(--gris); }
 .filters-wrapper { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-.filter-btn { padding: 0.55rem 1.1rem; border: 1px solid var(--border); background: white; border-radius: var(--radius-btn); cursor: pointer; font-weight: 600; font-size: 0.82rem; transition: all var(--transition); font-family: inherit; color: var(--texte); }
+.filter-btn { padding: 0.55rem 1.1rem; border: 1px solid var(--border); background: white; border-radius: var(--radius-btn); cursor: pointer; font-weight: 600; font-size: 0.82rem; transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; font-family: inherit; color: var(--texte); }
 .filter-btn:hover { border-color: var(--primaire); color: var(--primaire); }
 .filter-btn.active { background: linear-gradient(135deg, var(--primaire), var(--accent)); color: white; border-color: var(--primaire); box-shadow: 0 4px 14px rgba(122,131,73,0.3); }
 
@@ -180,15 +180,15 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 .product-card__desc { font-size: 0.84rem; color: var(--gris); margin-bottom: 1rem; flex: 1; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.5; }
 .product-card__footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 0.8rem; border-top: 1px solid var(--border); }
 .product-card__price { font-size: 1.2rem; font-weight: 800; color: var(--primaire); font-family: var(--font-heading); }
-.btn--add { background: linear-gradient(135deg, var(--primaire), var(--accent)); color: white; border: none; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all var(--transition); font-size: 0.9rem; }
-.btn--add:hover { background: linear-gradient(135deg, var(--or), var(--or-clair)); transform: scale(1.1); box-shadow: 0 6px 16px rgba(212,175,55,0.4); }
+.btn--add { background: linear-gradient(135deg, var(--primaire), var(--accent)); color: white; border: none; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; font-size: 0.9rem; }
+.btn--add:hover { background: linear-gradient(135deg, var(--or), var(--or-clair));  box-shadow: 0 6px 16px rgba(212,175,55,0.4); }
 .empty-state { text-align: center; padding: 4rem 1rem; background: white; border-radius: var(--radius-card); box-shadow: var(--shadow); display: none; }
 .empty-state i { font-size: 4rem; color: var(--border); margin-bottom: 1rem; }
 .empty-state h3 { font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--primaire); }
 .empty-state p { color: var(--gris); margin-bottom: 2rem; }
 
 /* TOOLBAR FLOTTANTE MOBILE */
-.toolbar-floating { position: fixed; bottom: 70px; left: 0; right: 0; z-index: 998; background: rgba(255,255,255,0.98); backdrop-filter: blur(16px) saturate(180%); -webkit-backdrop-filter: blur(16px) saturate(180%); box-shadow: 0 -4px 24px rgba(0,0,0,0.12); border-top: 2px solid var(--or); border-radius: 20px 20px 0 0; padding: 1rem; transform: translateY(120%); transition: transform 0.5s cubic-bezier(0.16,1,0.3,1); max-height: 70vh; overflow-y: auto; }
+.toolbar-floating { position: fixed; bottom: 70px; left: 0; right: 0; z-index: 998; background: rgba(255,255,255,0.99); box-shadow: 0 -4px 24px rgba(0,0,0,0.12); border-top: 2px solid var(--or); border-radius: 20px 20px 0 0; padding: 1rem; transform: translateY(120%); transition: transform 0.5s cubic-bezier(0.16,1,0.3,1); max-height: 70vh; overflow-y: auto; }
 .toolbar-floating.show { transform: translateY(0); }
 .toolbar-floating .toolbar-close { position: absolute; top: 0.6rem; right: 0.8rem; background: rgba(0,0,0,0.05); border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; color: var(--texte); font-size: 1rem; display: flex; align-items: center; justify-content: center; }
 .toolbar-floating .toolbar-close:hover { background: rgba(0,0,0,0.1); }
@@ -198,8 +198,8 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 .toolbar-floating .filter-btn { font-size: 0.78rem; padding: 0.5rem 0.9rem; }
 
 /* GLASS-CARD LIFESTYLE */
-.lifestyle-section { position: relative; padding: 6rem 0; overflow: hidden; background: var(--fond-fonce); color: white; }
-.lifestyle-bg { position: absolute; inset: 0; z-index: 0; opacity: 0.35; }
+.lifestyle-section { position: relative; padding: 4rem 0; overflow: hidden; background: var(--fond-clair); color: var(--texte); }
+.lifestyle-bg { position: absolute; inset: 0; z-index: 0; opacity: 0.12; }
 .lifestyle-bg img { width: 100%; height: 100%; object-fit: cover; }
 .lifestyle-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,20,25,0.85), rgba(26,26,26,0.7)); }
 .lifestyle-content { position: relative; z-index: 2; max-width: 580px; padding: 2rem 0; }
@@ -213,7 +213,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 
 /* UPSELL */
 .upsell-section { padding: 4rem 0; }
-.upsell-interstitial { background: linear-gradient(135deg, var(--premium-bg), var(--fond-fonce)); border: 1px solid var(--premium-border); border-radius: var(--radius-card-lg); padding: 3rem 2rem; text-align: center; color: white; display: flex; flex-direction: column; align-items: center; gap: 1rem; position: relative; overflow: hidden; }
+.upsell-interstitial { background: linear-gradient(135deg, var(--primaire), var(--accent)); border: 1px solid var(--premium-border); border-radius: var(--radius-card-lg); padding: 3rem 2rem; text-align: center; color: white; display: flex; flex-direction: column; align-items: center; gap: 1rem; position: relative; overflow: hidden; }
 .upsell-interstitial::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(212,175,55,0.15), transparent 60%); z-index: 0; }
 .upsell-interstitial > * { position: relative; z-index: 1; }
 .upsell-icon { width: 64px; height: 64px; background: linear-gradient(135deg, var(--or), var(--or-clair)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--fond-fonce); box-shadow: 0 8px 24px rgba(212,175,55,0.4); }
@@ -222,17 +222,17 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 
 /* FAQ */
 .faq-container { max-width: 820px; margin: 0 auto; }
-.faq-item { background: var(--fond-clair); border: 1px solid var(--border); border-radius: var(--radius-card); margin-bottom: 1rem; overflow: hidden; transition: all var(--transition); }
+.faq-item { background: var(--fond-clair); border: 1px solid var(--border); border-radius: var(--radius-card); margin-bottom: 1rem; overflow: hidden; transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; }
 .faq-item.active { background: white; border-color: var(--premium-border); box-shadow: var(--shadow); }
 .faq-question { padding: 1.3rem 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600; font-size: 1rem; color: var(--primaire); gap: 1rem; user-select: none; transition: color var(--transition); }
 .faq-question:hover { color: var(--or); }
-.faq-question .faq-icon { flex-shrink: 0; width: 32px; height: 32px; background: rgba(212,175,55,0.1); color: var(--or); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all var(--transition); font-size: 0.85rem; }
+.faq-question .faq-icon { flex-shrink: 0; width: 32px; height: 32px; background: rgba(212,175,55,0.1); color: var(--or); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; font-size: 0.85rem; }
 .faq-item.active .faq-question .faq-icon { transform: rotate(180deg); background: var(--or); color: white; }
 .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.45s ease, padding 0.45s ease; padding: 0 1.5rem; color: var(--gris); line-height: 1.7; font-size: 0.92rem; }
 .faq-item.active .faq-answer { padding: 0 1.5rem 1.3rem; max-height: 500px; }
 
 /* FOOTER */
-.footer { background: var(--premium-bg); color: rgba(255,255,255,0.7); padding: 4rem 0 1.5rem; }
+.footer { background: var(--fond-fonce); color: rgba(255,255,255,0.7); padding: 4rem 0 1.5rem; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
 .footer-brand { display: flex; flex-direction: column; gap: 0.8rem; }
 .footer-brand .brand-row { display: flex; align-items: center; gap: 0.6rem; }
@@ -245,7 +245,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 .footer ul li a { color: rgba(255,255,255,0.6); transition: color var(--transition); font-size: 0.88rem; }
 .footer ul li a:hover { color: var(--or); }
 .footer-social { display: flex; gap: 0.8rem; margin-top: 1rem; }
-.footer-social a { width: 36px; height: 36px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); transition: all var(--transition); }
+.footer-social a { width: 36px; height: 36px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; }
 .footer-social a:hover { background: var(--or); color: var(--fond-fonce); transform: translateY(-2px); border-color: var(--or); }
 .footer-bottom { text-align: center; padding-top: 1.8rem; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.82rem; color: rgba(255,255,255,0.5); }
 .chime-branding { text-align: center; padding: 1rem 0 0.5rem; margin-top: 1.2rem; }
@@ -254,22 +254,19 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 .chime-branding .ep-mark { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 6px; background: linear-gradient(135deg, var(--or), var(--or-clair)); color: var(--fond-fonce); font-weight: 800; font-size: 0.65rem; font-family: var(--font-body); }
 
 /* MOBILE NAV */
-.mobile-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 -2px 14px rgba(0,0,0,0.08); display: none; justify-content: space-around; padding: 0.5rem 0; z-index: 1000; border-top: 1px solid var(--border); }
+.mobile-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.99); box-shadow: 0 -2px 14px rgba(0,0,0,0.08); display: none; justify-content: space-around; padding: 0.5rem 0; z-index: 1000; border-top: 1px solid var(--border); }
 .mobile-nav-item { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; font-size: 0.65rem; color: var(--gris); padding: 0.4rem; flex: 1; text-decoration: none; transition: color var(--transition); }
 .mobile-nav-item.active, .mobile-nav-item:hover { color: var(--primaire); }
 .mobile-nav-item i { font-size: 1.2rem; }
 
-/* CHAT WHATSAPP */
-.chime-chat { position: fixed; bottom: 90px; right: 20px; z-index: 999; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--whatsapp), #1da851); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #fff; box-shadow: 0 8px 28px rgba(37,211,102,0.4); cursor: pointer; transition: all var(--transition); text-decoration: none; animation: pulseWA 2.5s infinite; }
-.chime-chat:hover { transform: scale(1.1) rotate(4deg); }
-@keyframes pulseWA { 0% { box-shadow: 0 8px 28px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.5); } 70% { box-shadow: 0 8px 28px rgba(37,211,102,0.4), 0 0 0 18px rgba(37,211,102,0); } 100% { box-shadow: 0 8px 28px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0); } }
+/* CHAT WHATSAPP — retire (cause conflit avec chatbot IA) */ 70% { box-shadow: 0 8px 28px rgba(37,211,102,0.4), 0 0 0 18px rgba(37,211,102,0); } 100% { box-shadow: 0 8px 28px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0); } }
 
 /* CURSOR CUSTOM */
-.chime-cursor { position: fixed; width: 14px; height: 14px; border: 2px solid var(--or); border-radius: 50%; pointer-events: none; z-index: 9999; transition: transform 0.15s ease, width 0.3s, height 0.3s, background 0.3s; transform: translate(-50%, -50%); mix-blend-mode: difference; }
+.chime-cursor { display: none !important; position: fixed; width: 14px; height: 14px; border: 2px solid var(--or); border-radius: 50%; pointer-events: none; z-index: 9999; transition: transform 0.15s ease, width 0.3s, height 0.3s, background 0.3s; transform: translate(-50%, -50%); mix-blend-mode: difference; }
 .chime-cursor.hover { width: 42px; height: 42px; background: rgba(212,175,55,0.1); }
 
 /* TOAST */
-.toast { position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%) translateY(100px); background: linear-gradient(135deg, var(--primaire), var(--accent)); color: white; padding: 1.2rem 2rem; border-radius: var(--radius-btn); font-size: 0.95rem; font-weight: 600; z-index: 2000; opacity: 0; transition: all 0.4s cubic-bezier(0.16,1,0.3,1); box-shadow: 0 12px 40px rgba(0,0,0,0.4); border: 2px solid var(--or); display: flex; align-items: center; gap: 0.6rem; max-width: 90vw; }
+.toast { position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%) translateY(100px); background: linear-gradient(135deg, var(--primaire), var(--accent)); color: white; padding: 1.2rem 2rem; border-radius: var(--radius-btn); font-size: 0.95rem; font-weight: 600; z-index: 2000; opacity: 0; transition: opacity 0.4s, transform 0.4s cubic-bezier(0.16,1,0.3,1); box-shadow: 0 12px 40px rgba(0,0,0,0.4); border: 2px solid var(--or); display: flex; align-items: center; gap: 0.6rem; max-width: 90vw; }
 .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 .toast i { color: var(--or); font-size: 1.2rem; }
 
@@ -317,7 +314,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
   .lifestyle-content { max-width: 100%; }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
   .mobile-nav { display: flex; }
-  .chime-chat { bottom: 80px; right: 16px; width: 50px; height: 50px; font-size: 1.6rem; }
+   { bottom: 80px; right: 16px; width: 50px; height: 50px; font-size: 1.6rem; }
 }
 @media (min-width: 769px) { .toolbar-floating { display: none !important; } }
 @media (max-width: 480px) {
@@ -334,7 +331,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.emvie.shop/"}, {"@type": "ListItem", "position": 2, "name": "Produits", "item": "https://www.emvie.shop/produits"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quels types de produits proposez-vous ?", "acceptedAnswer": {"@type": "Answer", "text": "EM'VIE SHOP propose des produits naturels : soins corporels, hygiene bucco-dentaire, complements alimentaires, parfums, entretien menager. 34 produits certifies de marques reconnues (Carich, Nilrich, iLiFE, SEALUXE, Greenleaf, YIBEILE)."}}, {"@type": "Question", "name": "Vos produits sont-ils naturels et authentiques ?", "acceptedAnswer": {"@type": "Answer", "text": "Tous nos produits proviennent de marques certifiees selectionnees pour leur engagement envers la qualite et le naturel. Chaque produit est verifie avant expedition."}}, {"@type": "Question", "name": "Quels sont les delais de livraison ?", "acceptedAnswer": {"@type": "Answer", "text": "Livraison 24-48h a Abidjan et 3-5 jours dans toute la Cote d'Ivoire. Les commandes validees avant 14h sont livrees des le lendemain."}}, {"@type": "Question", "name": "Quels modes de paiement acceptez-vous ?", "acceptedAnswer": {"@type": "Answer", "text": "Cash a la livraison, Orange Money, Wave, MTN Mobile Money, Moov Money. Aucun paiement en ligne, vous payez a la reception."}}]}</script>
 </head>
-<body data-whatsapp="2250778358969">
+<body data-whatsapp="2250150832326">
 <a class="skip-link" href="#main">Aller au contenu</a>
 
 <div class="trust-banner">
@@ -355,7 +352,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <li><a href="contact.html">Contact</a></li>
 </ul>
 <div class="nav__actions">
-<a class="nav__cta-wa" href="https://wa.me/2250778358969?text=Bonjour%20EM%27VIE%20SHOP" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+<a class="nav__cta-wa" href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
 <a class="cart-link" href="panier.html" aria-label="Voir le panier">
 <span class="icon-wrap">
 <i class="fas fa-shopping-bag"></i>
@@ -389,7 +386,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="hero__subtitle">Decouvrez l'ensemble de nos produits naturels certifies : soins corporels, hygiene, complements alimentaires, parfums et plus encore. 34 produits selectionnes pour votre bien-etre au quotidien.</p>
 <div class="hero__cta-row">
 <a href="#catalogue" class="btn btn-gold"><i class="fas fa-shopping-bag"></i> Parcourir le catalogue</a>
-<a href="https://wa.me/2250778358969?text=Bonjour%20EM%27VIE%20SHOP%2C%20j%27ai%20une%20question%20sur%20vos%20produits" target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Demander conseil</a>
+<a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20j%27ai%20une%20question%20sur%20vos%20produits" target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Demander conseil</a>
 </div>
 </div>
 </section>
@@ -471,7 +468,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le Carich Lait Corporel Nourrissant est un soin quotidien enrichi en protéines et nutriments de lait. Conçu pour tous les types de peau, il combat la sécheresse, unifie le teint et adoucit l&#x27;épiderme en profondeur tout en laissant un fini soyeux.</p>
 <div class="product-card__footer">
 <span class="product-card__price">5000 FCFA</span>
-<button class="btn--add" data-id="1" data-image="images/optimisees/carich-lait-corporel-nourrissant_1200w.webp" data-nom="Carich Lait Corporel Nourrissant" data-prix="5000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="1" data-image="images/optimisees/carich-lait-corporel-nourrissant_1200w.webp" data-nom="Carich Lait Corporel Nourrissant" data-prix="5000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Carich Lait Corporel Nourrissant" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -485,7 +482,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le dentifrice rafraîchissant à la menthe Carich est un soin bucco-dentaire conçu pour nettoyer en douceur, protéger les gencives et procurer une haleine fraîche et durable. Il est formulé pour offrir une sensation de propreté intense tout en respectant l&#x27;émail.</p>
 <div class="product-card__footer">
 <span class="product-card__price">3500 FCFA</span>
-<button class="btn--add" data-id="2" data-image="images/optimisees/carich-dentifrice-menthe_1200w.webp" data-nom="Carich Dentifrice Rafraîchissant à la Menthe" data-prix="3500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="2" data-image="images/optimisees/carich-dentifrice-menthe_1200w.webp" data-nom="Carich Dentifrice Rafraîchissant à la Menthe" data-prix="3500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Carich Dentifrice Rafraîchissant à la Menthe" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -499,7 +496,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Les Carich Patchs Détox Nuit sont des coussinets plantaires inspirés de la médecine traditionnelle asiatique. Ils sont conçus pour absorber l&#x27;humidité et les impuretés du corps par les pieds pendant le sommeil.</p>
 <div class="product-card__footer">
 <span class="product-card__price">10000 FCFA</span>
-<button class="btn--add" data-id="3" data-image="images/optimisees/carich-patch-detox-nuit_1200w.webp" data-nom="Carich Patch Détox Nuit" data-prix="10000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="3" data-image="images/optimisees/carich-patch-detox-nuit_1200w.webp" data-nom="Carich Patch Détox Nuit" data-prix="10000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Carich Patch Détox Nuit" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -513,7 +510,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le déodorant anti-transpirant Carich est un soin roll-on conçu pour réguler la transpiration tout en neutralisant les odeurs. Il offre une protection longue durée sans agresser la peau.</p>
 <div class="product-card__footer">
 <span class="product-card__price">2500 FCFA</span>
-<button class="btn--add" data-id="4" data-image="images/optimisees/carich-deodorant-anti-transpirant_1200w.webp" data-nom="Carich Déodorant Anti-transpirant" data-prix="2500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="4" data-image="images/optimisees/carich-deodorant-anti-transpirant_1200w.webp" data-nom="Carich Déodorant Anti-transpirant" data-prix="2500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Carich Déodorant Anti-transpirant" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -527,7 +524,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le Carich Liquide Apaisant à Base de Plantes est une solution externe conçue pour soulager rapidement les douleurs articulaires et musculaires. Il est particulièrement apprécié pour chasser le froid, activer la circulation sanguine et drainer l&#x27;humidité corporelle.</p>
 <div class="product-card__footer">
 <span class="product-card__price">12000 FCFA</span>
-<button class="btn--add" data-id="5" data-image="images/optimisees/carich-liquide-apaisant-plantes_1200w.webp" data-nom="Carich Liquide Apaisant à Base de Plantes" data-prix="12000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="5" data-image="images/optimisees/carich-liquide-apaisant-plantes_1200w.webp" data-nom="Carich Liquide Apaisant à Base de Plantes" data-prix="12000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Carich Liquide Apaisant à Base de Plantes" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -541,7 +538,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le Savon au Beurre de Karité Nourrissant Carich est un soin nettoyant enrichi en extraits de karité africain et en miel, conçu pour un usage quotidien sur le visage et le corps. Il nettoie en profondeur tout en hydratant et en restaurant l&#x27;élasticité naturelle de la peau, qu&#x27;il laisse douce et nourrie.</p>
 <div class="product-card__footer">
 <span class="product-card__price">2500 FCFA</span>
-<button class="btn--add" data-id="6" data-image="images/optimisees/carich-savon-karite_1200w.webp" data-nom="Carich Savon au Beurre de Karité Nourrissant" data-prix="2500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="6" data-image="images/optimisees/carich-savon-karite_1200w.webp" data-nom="Carich Savon au Beurre de Karité Nourrissant" data-prix="2500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Carich Savon au Beurre de Karité Nourrissant" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -555,7 +552,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Les Lingettes Nettoyantes pour Bébés Carich (80 pièces) sont des soins quotidiens spécialement formulés pour l&#x27;hygiène et la protection des peaux les plus fragiles. Fabriquées à base de fibres végétales naturelles pour respecter l&#x27;épiderme délicat des nourrissons, elles offrent une propreté immédiate et une fraîcheur agréable sans laisser de film collant.</p>
 <div class="product-card__footer">
 <span class="product-card__price">3000 FCFA</span>
-<button class="btn--add" data-id="7" data-image="images/optimisees/carich-lingettes-bebe_1200w.webp" data-nom="Carich Lingettes Nettoyantes pour Bébés 80pcs" data-prix="3000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="7" data-image="images/optimisees/carich-lingettes-bebe_1200w.webp" data-nom="Carich Lingettes Nettoyantes pour Bébés 80pcs" data-prix="3000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Carich Lingettes Nettoyantes pour Bébés 80pcs" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -569,7 +566,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Les capsules d&#x27;Aloès Nilrich YISHIKANG sont un complément alimentaire formulé à base d&#x27;extraits d&#x27;aloès, conçu pour favoriser le nettoyage intestinal, la détoxification de l&#x27;organisme et le bien-être digestif général.</p>
 <div class="product-card__footer">
 <span class="product-card__price">15000 FCFA</span>
-<button class="btn--add" data-id="8" data-image="images/optimisees/nilrich-capsules-aloes_1200w.webp" data-nom="Nilrich YISHIKANG Capsules d&#x27;Aloès" data-prix="15000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="8" data-image="images/optimisees/nilrich-capsules-aloes_1200w.webp" data-nom="Nilrich YISHIKANG Capsules d&#x27;Aloès" data-prix="15000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Nilrich YISHIKANG Capsules d&#x27;Aloès" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -583,7 +580,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Ce concentré d&#x27;oméga-3 marins, réputé pour sa haute biodisponibilité, est utilisé pour soutenir le système cardiovasculaire, le bien-être cérébral et le confort articulaire.</p>
 <div class="product-card__footer">
 <span class="product-card__price">25000 FCFA</span>
-<button class="btn--add" data-id="9" data-image="images/optimisees/nilrich-huile-poisson_1200w.webp" data-nom="Nilrich Gélules d&#x27;Huile de Poisson" data-prix="25000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="9" data-image="images/optimisees/nilrich-huile-poisson_1200w.webp" data-nom="Nilrich Gélules d&#x27;Huile de Poisson" data-prix="25000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Nilrich Gélules d&#x27;Huile de Poisson" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -597,7 +594,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le Nilrich au collagène et aux vitamines est un complément alimentaire conçu pour soutenir la santé de la peau, renforcer les articulations, et apporter un boost antioxydant global. Le collagène est une protéine structurelle indispensable à l&#x27;élasticité de la peau et à la solidité des tissus, dont la production naturelle diminue avec l&#x27;âge.</p>
 <div class="product-card__footer">
 <span class="product-card__price">15000 FCFA</span>
-<button class="btn--add" data-id="10" data-image="images/optimisees/nilrich-boisson-collagene-vitamines_1200w.webp" data-nom="Nilrich Boisson au collagène et aux vitamines" data-prix="15000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="10" data-image="images/optimisees/nilrich-boisson-collagene-vitamines_1200w.webp" data-nom="Nilrich Boisson au collagène et aux vitamines" data-prix="15000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Nilrich Boisson au collagène et aux vitamines" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -611,7 +608,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Les gélules associant β-carotène, myrtille et lutéine sont des compléments alimentaires principalement formulés pour le bien-être oculaire et la protection de la vue. Elles constituent un concentré d&#x27;antioxydants naturels, idéales pour les personnes souffrant de fatigue visuelle (notamment due aux écrans) ou souhaitant maintenir une bonne acuité visuelle, y compris la vision nocturne.</p>
 <div class="product-card__footer">
 <span class="product-card__price">25000 FCFA</span>
-<button class="btn--add" data-id="11" data-image="images/optimisees/nilrich-carotene-myrtille-luteine_1200w.webp" data-nom="Nilrich Gélules de β Carotène, Myrtille et Lutéine" data-prix="25000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="11" data-image="images/optimisees/nilrich-carotene-myrtille-luteine_1200w.webp" data-nom="Nilrich Gélules de β Carotène, Myrtille et Lutéine" data-prix="25000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Nilrich Gélules de β Carotène, Myrtille et Lutéine" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -625,7 +622,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le café au Ganoderma et au Cordyceps Nilrich est une boisson fonctionnelle associant du café de qualité supérieure à des extraits de deux champignons très prisés en médecine traditionnelle chinoise. Il est conçu pour stimuler l&#x27;énergie, renforcer les défenses immunitaires et aider l&#x27;organisme à gérer le stress.</p>
 <div class="product-card__footer">
 <span class="product-card__price">15000 FCFA</span>
-<button class="btn--add" data-id="12" data-image="images/optimisees/nilrich-cafe-ganoderma-cordyceps_1200w.webp" data-nom="Nilrich Café au Ganoderma et au cordyceps" data-prix="15000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="12" data-image="images/optimisees/nilrich-cafe-ganoderma-cordyceps_1200w.webp" data-nom="Nilrich Café au Ganoderma et au cordyceps" data-prix="15000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Nilrich Café au Ganoderma et au cordyceps" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -639,7 +636,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le dentifrice pour enfants YIBEILE à la saveur d&#x27;orange douce est spécialement conçu pour rendre le brossage ludique tout en assurant une hygiène bucco-dentaire douce. Il nettoie délicatement l&#x27;émail des dents de lait, élimine la plaque dentaire naissante, blanchit les dents en douceur et rafraîchit l&#x27;haleine.</p>
 <div class="product-card__footer">
 <span class="product-card__price">1800 FCFA</span>
-<button class="btn--add" data-id="13" data-image="images/optimisees/yibeile-dentifrice-orange_1200w.webp" data-nom="YIBEILE Dentifrice pour Enfants (Saveur Orange)" data-prix="1800" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="13" data-image="images/optimisees/yibeile-dentifrice-orange_1200w.webp" data-nom="YIBEILE Dentifrice pour Enfants (Saveur Orange)" data-prix="1800" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20YIBEILE Dentifrice pour Enfants (Saveur Orange)" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -653,7 +650,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le Nilrich Thé Noir à la Rose est une infusion délicate qui associe les arômes corsés du thé noir aux notes florales et apaisantes de la rose. Très prisé pour ses propriétés relaxantes et digestives, il offre une expérience de dégustation à la fois raffinée et bienfaisante pour le bien-être au quotidien.</p>
 <div class="product-card__footer">
 <span class="product-card__price">6000 FCFA</span>
-<button class="btn--add" data-id="14" data-image="images/optimisees/nilrich-the-noir-rose_1200w.webp" data-nom="Nilrich Thé Noir à la Rose" data-prix="6000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="14" data-image="images/optimisees/nilrich-the-noir-rose_1200w.webp" data-nom="Nilrich Thé Noir à la Rose" data-prix="6000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Nilrich Thé Noir à la Rose" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -667,7 +664,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le thé minceur Nilrich est un produit naturel formulé pour stimuler le métabolisme, favoriser la combustion des graisses et faciliter la digestion. Il agit comme un brûleur de graisse naturel et un détoxifiant, aidant à réduire l&#x27;accumulation de graisses (notamment au niveau du ventre), combattre les ballonnements et stabiliser le poids.</p>
 <div class="product-card__footer">
 <span class="product-card__price">10000 FCFA</span>
-<button class="btn--add" data-id="15" data-image="images/optimisees/nilrich-the-minceur_1200w.webp" data-nom="Nilrich Thé Minceur" data-prix="10000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="15" data-image="images/optimisees/nilrich-the-minceur_1200w.webp" data-nom="Nilrich Thé Minceur" data-prix="10000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Nilrich Thé Minceur" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -681,7 +678,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le liquide nettoyant pour toilettes iLiFE Advance est un puissant détergent conçu pour éliminer en profondeur les taches tenaces, le tartre et les résidus d&#x27;urine. Il désinfecte la cuvette tout en neutralisant les mauvaises odeurs.</p>
 <div class="product-card__footer">
 <span class="product-card__price">3500 FCFA</span>
-<button class="btn--add" data-id="16" data-image="images/optimisees/ilife-nettoyant-toilettes_1200w.webp" data-nom="iLiFE Liquide Nettoyant pour Toilettes" data-prix="3500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="16" data-image="images/optimisees/ilife-nettoyant-toilettes_1200w.webp" data-nom="iLiFE Liquide Nettoyant pour Toilettes" data-prix="3500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20iLiFE Liquide Nettoyant pour Toilettes" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -695,7 +692,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le liquide vaisselle iLiFE est un détergent doux à usage manuel. Formulé à base d&#x27;eau purifiée et d&#x27;agents nettoyants, il dégraisse efficacement tout en protégeant les mains de la sécheresse. Il s&#x27;utilise au quotidien pour nettoyer couverts, assiettes et ustensiles de cuisine.</p>
 <div class="product-card__footer">
 <span class="product-card__price">3000 FCFA</span>
-<button class="btn--add" data-id="17" data-image="images/optimisees/ilife-liquide-vaisselle_1200w.webp" data-nom="iLiFE Liquide Vaisselle" data-prix="3000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="17" data-image="images/optimisees/ilife-liquide-vaisselle_1200w.webp" data-nom="iLiFE Liquide Vaisselle" data-prix="3000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20iLiFE Liquide Vaisselle" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -709,7 +706,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le savon bactériostatique iLiFE pour le linge est un détergent désinfectant formulé pour éliminer les bactéries, empêcher la prolifération des odeurs et assainir les textiles. Il est conçu pour pénétrer les fibres en profondeur tout en respectant les couleurs et les tissus.</p>
 <div class="product-card__footer">
 <span class="product-card__price">1200 FCFA</span>
-<button class="btn--add" data-id="18" data-image="images/optimisees/ilife-savon-linge-bacteriostatique_1200w.webp" data-nom="iLiFE Savon Bactériostatique pour le Linge" data-prix="1200" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="18" data-image="images/optimisees/ilife-savon-linge-bacteriostatique_1200w.webp" data-nom="iLiFE Savon Bactériostatique pour le Linge" data-prix="1200" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20iLiFE Savon Bactériostatique pour le Linge" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -723,7 +720,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le parfum SEALUXE Meet By Chance (Aurora) est une fragrance raffinée et élégante, idéale pour les professionnels et les amateurs de parfums de luxe. Avec son sillage délicat et moderne, il offre une signature olfactive sophistiquée qui s&#x27;adapte aussi bien au quotidien qu&#x27;aux événements plus formels.</p>
 <div class="product-card__footer">
 <span class="product-card__price">10000 FCFA</span>
-<button class="btn--add" data-id="19" data-image="images/optimisees/sealuxe-parfum-aurora_1200w.webp" data-nom="SEALUXE 50ml Parfum Meet By Chance (Aurora)" data-prix="10000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="19" data-image="images/optimisees/sealuxe-parfum-aurora_1200w.webp" data-nom="SEALUXE 50ml Parfum Meet By Chance (Aurora)" data-prix="10000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20SEALUXE 50ml Parfum Meet By Chance (Aurora)" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -737,7 +734,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">La poudre de spores de Ganoderma lucidum (Reishi) de Nilrich est un complément alimentaire naturel tiré des semences du champignon. Réputée pour ses propriétés adaptogènes, cette poudre concentrée est utilisée pour renforcer le système immunitaire, aider à gérer le stress, protéger le foie et améliorer la vitalité générale.</p>
 <div class="product-card__footer">
 <span class="product-card__price">45000 FCFA</span>
-<button class="btn--add" data-id="20" data-image="images/optimisees/nilrich-ganoderma-poudre_1200w.webp" data-nom="Nilrich Poudre de spores de Ganoderma Lucidum" data-prix="45000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="20" data-image="images/optimisees/nilrich-ganoderma-poudre_1200w.webp" data-nom="Nilrich Poudre de spores de Ganoderma Lucidum" data-prix="45000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Nilrich Poudre de spores de Ganoderma Lucidum" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -751,7 +748,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Les capsules de Coenzyme Q10 Nilrich sont un complément alimentaire formulé pour soutenir la production d&#x27;énergie cellulaire et renforcer le système immunitaire. Il s&#x27;agit d&#x27;un antioxydant qui imite les vitamines et aide à lutter contre le stress oxydatif dans l&#x27;organisme.</p>
 <div class="product-card__footer">
 <span class="product-card__price">25000 FCFA</span>
-<button class="btn--add" data-id="21" data-image="images/optimisees/nilrich-coenzyme-q10_1200w.webp" data-nom="Nilrich Capsules de Coenzyme Q10" data-prix="25000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="21" data-image="images/optimisees/nilrich-coenzyme-q10_1200w.webp" data-nom="Nilrich Capsules de Coenzyme Q10" data-prix="25000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Nilrich Capsules de Coenzyme Q10" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -765,7 +762,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le SEALUXE Parfum Star est une fragrance florale élégante et douce, conçue pour offrir une fraîcheur quotidienne et une longue tenue allant de 6 à 8 heures. Idéal pour toutes les occasions, ce parfum se distingue par son bouquet olfactif raffiné.</p>
 <div class="product-card__footer">
 <span class="product-card__price">10000 FCFA</span>
-<button class="btn--add" data-id="22" data-image="images/optimisees/sealuxe-parfum-star_1200w.webp" data-nom="SEALUXE Parfum Star" data-prix="10000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="22" data-image="images/optimisees/sealuxe-parfum-star_1200w.webp" data-nom="SEALUXE Parfum Star" data-prix="10000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20SEALUXE Parfum Star" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -779,7 +776,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le SEALUXE 50ml Parfum Meet By Chance (Charm) est une eau de parfum florale et boisée conçue pour les femmes. Ce parfum élégant et délicat est idéal pour le quotidien ou les occasions spéciales, offrant une signature olfactive à la fois fraîche, florale et chaleureuse.</p>
 <div class="product-card__footer">
 <span class="product-card__price">10000 FCFA</span>
-<button class="btn--add" data-id="23" data-image="images/optimisees/sealuxe-parfum-charm_1200w.webp" data-nom="SEALUXE 50ml Parfum Meet By Chance (Charm)" data-prix="10000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="23" data-image="images/optimisees/sealuxe-parfum-charm_1200w.webp" data-nom="SEALUXE 50ml Parfum Meet By Chance (Charm)" data-prix="10000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20SEALUXE 50ml Parfum Meet By Chance (Charm)" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -793,7 +790,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le détergent multi-actions iLife est une lessive concentrée et écologique conçue pour le lavage à la main et en machine. Elle élimine efficacement les taches, protège les couleurs et préserve la douceur du linge grâce à son pH neutre.</p>
 <div class="product-card__footer">
 <span class="product-card__price">3000 FCFA</span>
-<button class="btn--add" data-id="24" data-image="images/optimisees/ilife-detergent-lessive_1200w.webp" data-nom="iLiFE Détergent pour la Lessive" data-prix="3000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="24" data-image="images/optimisees/ilife-detergent-lessive_1200w.webp" data-nom="iLiFE Détergent pour la Lessive" data-prix="3000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20iLiFE Détergent pour la Lessive" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -807,7 +804,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">L&#x27;iLiFE Crème pour le Visage SOD (Superoxide Dismutase) est un soin antioxydant et hydratant conçu pour protéger l&#x27;épiderme, unifier le teint et atténuer les imperfections (taches, cicatrices, acné). Non blanchissante, elle nourrit la peau tout en favorisant son élasticité sans laisser de film gras.</p>
 <div class="product-card__footer">
 <span class="product-card__price">2500 FCFA</span>
-<button class="btn--add" data-id="25" data-image="images/optimisees/ilife-creme-sod_1200w.webp" data-nom="iLiFE Crème pour le Visage SOD" data-prix="2500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="25" data-image="images/optimisees/ilife-creme-sod_1200w.webp" data-nom="iLiFE Crème pour le Visage SOD" data-prix="2500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20iLiFE Crème pour le Visage SOD" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -821,7 +818,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">L&#x27;iLiFE Gel d&#x27;Aloë Vera est un soin multi-usage conçu pour hydrater, apaiser et revitaliser la peau et les cheveux. Il offre une texture fraîche et non grasse qui convient à toute la famille.</p>
 <div class="product-card__footer">
 <span class="product-card__price">5000 FCFA</span>
-<button class="btn--add" data-id="26" data-image="images/optimisees/ilife-aloe-vera-50g_1200w.webp" data-nom="iLiFE Gel d&#x27;aloë vera (50g)" data-prix="5000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="26" data-image="images/optimisees/ilife-aloe-vera-50g_1200w.webp" data-nom="iLiFE Gel d&#x27;aloë vera (50g)" data-prix="5000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20iLiFE Gel d&#x27;aloë vera (50g)" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -835,7 +832,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le protège-slip iLiFE est une protection hygiénique fine et quotidienne conçue pour absorber l&#x27;humidité et les pertes légères. Il est doté d&#x27;une puce anionique (ions négatifs) pour ses propriétés antibactériennes et de régulation des odeurs.</p>
 <div class="product-card__footer">
 <span class="product-card__price">5000 FCFA</span>
-<button class="btn--add" data-id="27" data-image="images/optimisees/ilife-protege-slip_1200w.webp" data-nom="iLiFE Protège-Slip" data-prix="5000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="27" data-image="images/optimisees/ilife-protege-slip_1200w.webp" data-nom="iLiFE Protège-Slip" data-prix="5000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20iLiFE Protège-Slip" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -849,7 +846,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Les serviettes hygiéniques de nuit iLiFE sont des protections périodiques spécialement conçues pour offrir une absorption maximale et prévenir les fuites pendant le sommeil. Elles se caractérisent par leur forme allongée, leurs ailettes de maintien et leur technologie à puce anionique.</p>
 <div class="product-card__footer">
 <span class="product-card__price">2500 FCFA</span>
-<button class="btn--add" data-id="28" data-image="images/optimisees/ilife-serviettes-nuit_1200w.webp" data-nom="iLiFE Serviettes Hygieniques de Nuit" data-prix="2500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="28" data-image="images/optimisees/ilife-serviettes-nuit_1200w.webp" data-nom="iLiFE Serviettes Hygieniques de Nuit" data-prix="2500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20iLiFE Serviettes Hygieniques de Nuit" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -863,7 +860,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">La glycérine est un actif humectant puissant. Les soins iLiFE à la glycérine sont conçus pour attirer l&#x27;humidité, réparer la barrière cutanée et hydrater en profondeur les peaux sèches et déshydratées, sans obstruer les pores.</p>
 <div class="product-card__footer">
 <span class="product-card__price">2500 FCFA</span>
-<button class="btn--add" data-id="29" data-image="images/optimisees/ilife-glycerine-peau_1200w.webp" data-nom="iLiFE Glycérine pour Soins de la Peau" data-prix="2500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="29" data-image="images/optimisees/ilife-glycerine-peau_1200w.webp" data-nom="iLiFE Glycérine pour Soins de la Peau" data-prix="2500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20iLiFE Glycérine pour Soins de la Peau" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -877,7 +874,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le dentifrice naturel aux algues iLiFE est un soin bucco-dentaire conçu pour protéger les gencives et rafraîchir l&#x27;haleine. Sans fluor et anti-inflammatoire, il nettoie en douceur et convient à tous les âges en protégeant l&#x27;émail.</p>
 <div class="product-card__footer">
 <span class="product-card__price">3500 FCFA</span>
-<button class="btn--add" data-id="30" data-image="images/optimisees/ilife-dentifrice-algues_1200w.webp" data-nom="iLiFE Dentifrice Naturel aux Algues" data-prix="3500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="30" data-image="images/optimisees/ilife-dentifrice-algues_1200w.webp" data-nom="iLiFE Dentifrice Naturel aux Algues" data-prix="3500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20iLiFE Dentifrice Naturel aux Algues" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -891,7 +888,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le dentifrice Carich Algues Fraîches sans Fluor se définit comme un soin bucco-dentaire naturel axé sur la purification et la prévention de la fluorose. Ce gel de soin nettoie la cavité buccale en douceur grâce aux bienfaits des plantes marines. Conçu pour toute la famille, il convient particulièrement aux personnes sensibles et aux enfants pour éviter une ingestion excessive de fluor. Il aide à purifier la bouche, élimine les impuretés et rafraîchit intensément l&#x27;haleine.</p>
 <div class="product-card__footer">
 <span class="product-card__price">3500 FCFA</span>
-<button class="btn--add" data-id="31" data-image="images/optimisees/carich-dentifrice-sans-fluor-algues_1200w.webp" data-nom="Carich Dentifrice sans Fluor Algues Fraîches" data-prix="3500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="31" data-image="images/optimisees/carich-dentifrice-sans-fluor-algues_1200w.webp" data-nom="Carich Dentifrice sans Fluor Algues Fraîches" data-prix="3500" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Carich Dentifrice sans Fluor Algues Fraîches" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -905,7 +902,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le gel douche Greenleaf à la Fleur de Cerisier est un soin lavant qui nettoie la peau en douceur tout en l&#x27;enveloppant d&#x27;un parfum floral relaxant. Il préserve l&#x27;hydratation naturelle de l&#x27;épiderme, laissant la peau douce, souple et subtilement parfumée.</p>
 <div class="product-card__footer">
 <span class="product-card__price">7000 FCFA</span>
-<button class="btn--add" data-id="32" data-image="images/optimisees/greenleaf-gel-douche-fleur-cerisier_1200w.webp" data-nom="Greenleaf Gel Douche à la Fleur de Cerisier" data-prix="7000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="32" data-image="images/optimisees/greenleaf-gel-douche-fleur-cerisier_1200w.webp" data-nom="Greenleaf Gel Douche à la Fleur de Cerisier" data-prix="7000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Greenleaf Gel Douche à la Fleur de Cerisier" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -919,7 +916,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Le Gel Douche Frais &amp; Mentholé Greenleaf est un nettoyant corporel vivifiant conçu pour tonifier et revitaliser la peau. Enrichi en extraits naturels et en agents hydratants, il procure une sensation de fraîcheur intense et laisse le corps propre, doux et délicatement parfumé.</p>
 <div class="product-card__footer">
 <span class="product-card__price">7000 FCFA</span>
-<button class="btn--add" data-id="33" data-image="images/optimisees/greenleaf-gel-douche-frais-menthole_1200w.webp" data-nom="Greenleaf Gel Douche Frais &amp; Mentholé" data-prix="7000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="33" data-image="images/optimisees/greenleaf-gel-douche-frais-menthole_1200w.webp" data-nom="Greenleaf Gel Douche Frais &amp; Mentholé" data-prix="7000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Greenleaf Gel Douche Frais &amp; Mentholé" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -933,7 +930,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <p class="product-card__desc">Les gélules d&#x27;Huile de Krill Nilrich sont un complément alimentaire extrait de petits crustacés de l&#x27;Antarctique. Ce concentré d&#x27;oméga-3 marins, réputé pour sa haute biodisponibilité, est utilisé pour soutenir le système cardiovasculaire, le bien-être cérébral et le confort articulaire.</p>
 <div class="product-card__footer">
 <span class="product-card__price">35000 FCFA</span>
-<button class="btn--add" data-id="34" data-image="images/optimisees/nilrich-krill-antarctique_1200w.webp" data-nom="Nilrich Gélules d&#x27;Huile de Krill de l&#x27;Antarctique" data-prix="35000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button>
+<button class="btn--add" data-id="34" data-image="images/optimisees/nilrich-krill-antarctique_1200w.webp" data-nom="Nilrich Gélules d&#x27;Huile de Krill de l&#x27;Antarctique" data-prix="35000" aria-label="Ajouter au panier"><i class="fas fa-cart-plus"></i></button><a href="https://wa.me/2250150832326?text=Bonjour%20EM%27VIE%20SHOP%2C%20je%20veux%20commander%20%3A%20Nilrich Gélules d&#x27;Huile de Krill de l&#x27;Antarctique" target="_blank" rel="noopener" class="btn--wa" aria-label="Commander sur WhatsApp" style="background:var(--whatsapp);color:white;border:none;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;margin-left:0.4rem;font-size:0.9rem;transition:transform 0.2s;"><i class="fab fa-whatsapp"></i></a>
 </div>
 </div>
 </article>
@@ -1029,7 +1026,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
 </div>
 <div class="faq-answer">
-<p>Oui, garantie satisfait ou rembourse sous 7 jours pour les produits non ouverts et dans leur emballage d'origine. En cas de produit defaillant ou endommage, contactez-nous immediatement via WhatsApp au 07 78 35 89 69 avec une photo pour organiser un echange ou remboursement.</p>
+<p>Oui, garantie satisfait ou rembourse sous 7 jours pour les produits non ouverts et dans leur emballage d'origine. En cas de produit defaillant ou endommage, contactez-nous immediatement via WhatsApp au 01 50 83 23 26 avec une photo pour organiser un echange ou remboursement.</p>
 </div>
 </div>
 <div class="faq-item">
@@ -1069,10 +1066,8 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 </div>
 <p>Votre destination privilegiee pour decouvrir une selection soigneusement choisie de produits naturels qui favorisent votre equilibre au quotidien. Livraison rapide a Abidjan et dans toute la Cote d'Ivoire.</p>
 <div class="footer-social">
-<a href="https://wa.me/2250778358969" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-<a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-<a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-<a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+<a href="https://wa.me/2250150832326" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="https://www.facebook.com/share/1EXkrCg52x/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
 </div>
 </div>
 <div>
@@ -1097,8 +1092,8 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <h4>Contact</h4>
 <ul>
 <li><i class="fas fa-map-marker-alt"></i> Abidjan, Cote d'Ivoire</li>
-<li><i class="fas fa-phone"></i> +225 07 78 35 89 69</li>
-<li><i class="fas fa-envelope"></i> contact@emvie.shop</li>
+<li><i class="fas fa-phone"></i> +225 01 50 83 23 26</li>
+<li><i class="fas fa-envelope"></i> emvieshop@gmail.com</li>
 <li><i class="fas fa-clock"></i> Lun-Sam : 8h - 19h</li>
 </ul>
 </div>
@@ -1110,24 +1105,22 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 <a href="https://eperformance.pro" target="_blank" rel="noopener"><span class="ep-mark">eP</span> Concu par ePerformance</a>
 </div>
 </div>
+<div style="text-align:center;padding:1rem 0;font-size:0.9rem;border-top:1px solid var(--border,rgba(255,255,255,0.1));"><a href="https://www.facebook.com/share/1EXkrCg52x/?mibextid=wwXIfr" target="_blank" rel="noopener" style="color:var(--or, #D4AF37);text-decoration:none;font-weight:600;"><i class="fa-brands fa-facebook-f"></i> Suivez-nous sur Facebook</a></div>
 </footer>
 
 <!-- MOBILE NAV BOTTOM -->
 <nav class="mobile-nav">
 <a class="mobile-nav-item" href="index.html"><i class="fas fa-home"></i> Accueil</a>
-<a class="mobile-nav-item active" href="produits.html"><i class="fas fa-th"></i> Produits</a>
+<a class="mobile-nav-item active" href="produits.html"><i class="fas fa-store"></i> Boutique</a>
 <a class="mobile-nav-item" href="opportunite.html"><i class="fas fa-gem"></i> Business</a>
 <a class="mobile-nav-item" href="panier.html"><i class="fas fa-shopping-bag"></i> Panier</a>
+<a class="mobile-nav-item" href="contact.html"><i class="fas fa-phone"></i> Contact</a>
 </nav>
 
 <!-- TOAST -->
 <div class="toast" id="toast">Produit ajoute au panier</div>
 
 <!-- CHAT WHATSAPP -->
-<a class="chime-chat" href="https://wa.me/2250778358969?text=Bonjour%20EM%27VIE%20SHOP%2C%20j%27ai%20une%20question%20sur%20vos%20produits." target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
-
 <script>
 // PANIER (localStorage)
 (function(){
@@ -1218,26 +1211,7 @@ if(icon)icon.className='fas fa-bars';
 }
 })();
 
-// PARALLAX 3D HERO
-(function(){
-'use strict';
-if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-var hero=document.querySelector('.hero');
-var heroBg=document.querySelector('.hero__bg');
-var heroContent=document.querySelector('[data-parallax-content]');
-if(!hero||!heroBg)return;
-hero.addEventListener('mousemove',function(e){
-var rect=hero.getBoundingClientRect();
-var x=(e.clientX-rect.left)/rect.width-0.5;
-var y=(e.clientY-rect.top)/rect.height-0.5;
-heroBg.style.transform='scale(1.1) translate('+(x*30)+'px,'+(y*30)+'px)';
-if(heroContent)heroContent.style.transform='translate('+(x*-15)+'px,'+(y*-15)+'px)';
-});
-hero.addEventListener('mouseleave',function(){
-heroBg.style.transform='scale(1.1) translate(0,0)';
-if(heroContent)heroContent.style.transform='translate(0,0)';
-});
-})();
+// PARALLAX 3D HERO — désactivé (cause bug dérive page)
 
 // STATS COUNT-UP
 (function(){
@@ -1362,24 +1336,955 @@ if(closeBtn){closeBtn.addEventListener('click',function(){floating.classList.rem
 };
 if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',window.initToolbarFloating)}else{window.initToolbarFloating()}
 
-// CURSOR CUSTOM
-(function(){
-'use strict';
-if(window.matchMedia('(max-width: 768px)').matches)return;
-if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-if(!window.matchMedia('(pointer: fine)').matches)return;
-var cursor=document.createElement('div');
-cursor.className='chime-cursor';
-document.body.appendChild(cursor);
-var cx=0,cy=0,tx=0,ty=0;
-document.addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY});
-function loop(){cx+=(tx-cx)*0.2;cy+=(ty-cy)*0.2;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(loop)}
-loop();
-document.querySelectorAll('a,button,.product-card,.filter-btn,.btn--add,.chime-chat').forEach(function(el){
-el.addEventListener('mouseenter',function(){cursor.classList.add('hover')});
-el.addEventListener('mouseleave',function(){cursor.classList.remove('hover')});
-});
+// CURSOR CUSTOM — désactivé (cause bug dérive page)
+</script>
+
+<script>
+/**
+ * chatbot.js — Widget IA ePerformance v6.0 "Intercom-style + Chime Protocol"
+ *
+ * TEMPLATE SOURCE — À copier dans agent-ia-web/templates/_shared/chatbot.js
+ *
+ * Style : Intercom (launcher rond, panel glassmorphism, messages modernes)
+ * + Chime Protocol v2 (dark + gold + glassmorphism + Cormorant Garamond)
+ *
+ * Fonctionnalités :
+ *   - Launcher rond avec avatar IA + pulse doré
+ *   - Greeting teaser après 30s (bulle d'accroche)
+ *   - Auto-open récurrence sans insistance (jusqu'au 1er clic)
+ *   - Sound on par défaut (mutable via bouton)
+ *   - Identity form (nom + téléphone) avec validation
+ *   - Messages bubbles style Intercom (pas de queues WhatsApp)
+ *   - Quick replies (boutons cliquables)
+ *   - Typing indicator (3 dots animés)
+ *   - WhatsApp escalation (si l'IA sait pas)
+ *   - Date separators ("Aujourd'hui")
+ *   - LocalStorage : conversation persistante
+ *   - Mobile bottom-sheet (100dvh + safe-area)
+ *   - Desktop panel (384px, bas-droite, glassmorphism)
+ *   - Read receipts (coche dorée)
+ *   - Accessibility : ARIA, clavier, focus trap
+ *
+ * API backend (compatibilité chatbot.php v5.2) :
+ *   POST {api_base}/chatbot.php
+ *   Body : { site_id, message, visitor_name, visitor_phone, conversation_id, conversation_history }
+ *   Response : { reply, show_whatsapp, whatsapp_number, lead_captured, order_placed }
+ *
+ * Placeholders (remplacés par artisan.py) :
+ *   site_emvieshop      → ID du site (ex: site_bien_etre_nature)
+ *   Astrid      → Prénom de l'IA (ex: Awa)
+ *   images/optimisees/logo_1200w.webp    → URL photo avatar (vide = initiales)
+ *   Assistante de EM\'VIE SHOP      → Rôle (ex: Conseillère)
+ *   +2250150832326     → Numéro WhatsApp du client (ex: +2250709345678)
+ *   https://api.eperformance.pro     → URL API (https://api.eperformance.pro)
+ *   decouverte        → Niveau d'offre (decouverte/professionnel/croissance)
+ *   +225    → Indicatif pays (ex: +225)
+ */
+
+(function() {
+  'use strict';
+
+  // ============================================================
+  // CONFIG (placeholders remplacés par artisan.py)
+  // ============================================================
+  var CONFIG = {
+    site_id: 'site_emvieshop',
+    ia_name: 'Astrid',
+    ia_avatar: 'images/optimisees/logo_1200w.webp',
+    ia_role: 'Assistante de EM\'VIE SHOP',
+    whatsapp: '+2250150832326',
+    api_base: 'https://api.eperformance.pro',
+    offre: 'decouverte',
+    indicatif: '+225'
+  };
+
+  // ============================================================
+  // CHIME PROTOCOL — Palette & tokens
+  // ============================================================
+  var CHIME = {
+    // Dark + Gold (Chime Protocol v2)
+    bg: '#0A0B0F',
+    bg2: '#101014',
+    card: 'rgba(20, 20, 26, 0.85)',
+    border: 'rgba(201, 169, 110, 0.18)',
+    borderStrong: 'rgba(201, 169, 110, 0.35)',
+    text: '#EDEAE3',
+    textMuted: '#7A7A85',
+    textSoft: '#B0AAA0',
+    gold: '#C9A96E',
+    goldLight: '#E2C07A',
+    goldGradient: 'linear-gradient(135deg, #C9A96E 0%, #E2C07A 50%, #C9A96E 100%)',
+    green: '#25D366',
+    greenGlow: 'rgba(37, 211, 102, 0.5)',
+    red: '#FF3B30',
+    shadowGold: '0 8px 32px rgba(201, 169, 110, 0.15)',
+    shadowLg: '0 20px 60px rgba(0, 0, 0, 0.6)',
+    shadowXl: '0 30px 80px rgba(0, 0, 0, 0.7)'
+  };
+
+  // ============================================================
+  // STATE
+  // ============================================================
+  var state = {
+    isOpen: false,
+    isMinimized: false,
+    soundEnabled: true,
+    hasInteracted: false, // true dès que l'utilisateur clique (stop auto-open)
+    visitorName: localStorage.getItem('ec_visitor_name') || '',
+    visitorPhone: localStorage.getItem('ec_visitor_phone') || '',
+    conversationId: localStorage.getItem('ec_conv_id') || genUUID(),
+    history: JSON.parse(localStorage.getItem('ec_history') || '[]'),
+    waitingIdentification: false,
+    isTyping: false,
+    teaserShown: false,
+    teaserCount: 0,        // nombre de teasers déjà affichés (max 5)
+    teaserTimers: []       // timers des teasers programmés (pour nettoyage)
+  };
+
+  // ============================================================
+  // PROACTIVE TEASERS — messages & délais (max 5)
+  // ============================================================
+  var TEASER_MESSAGES = [
+    '👋 Bienvenue sur EM\'VIE SHOP ! Je suis Astrid, votre conseillère.',
+    'Bienvenue ! Une question sur nos produits ? 💬',
+    "Besoin d'aide pour choisir ? Je suis là pour vous guider !",
+    'Livraison 24-48h à Abidjan 🚚 — Commandez maintenant !',
+    'Profitez de -10% sur votre première commande ! Demandez le code 🎁',
+    "Je remarque que vous hésitez 😊 Laissez-moi vous aider !"
+  ];
+  var TEASER_DELAYS = [0, 10000, 30000, 60000, 90000, 120000]; // immediat, 10s, 30s, 60s, 90s, 120s
+  var MAX_TEASERS = 6;
+
+  if (!localStorage.getItem('ec_conv_id')) {
+    localStorage.setItem('ec_conv_id', state.conversationId);
+  }
+  if (localStorage.getItem('ec_interacted') === '1') {
+    state.hasInteracted = true;
+  }
+
+  // ============================================================
+  // HELPERS
+  // ============================================================
+  function genUUID() {
+    return 'conv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+  }
+  function initials(name) {
+    return (name || 'IA').trim().substring(0, 2).toUpperCase();
+  }
+  function nowTime() {
+    var d = new Date();
+    return d.getHours().toString().padStart(2, '0') + ':' + d.getMinutes().toString().padStart(2, '0');
+  }
+  function greetingByHour() {
+    var h = new Date().getHours();
+    if (h < 11) return 'Bonjour';
+    if (h < 18) return 'Bon après-midi';
+    return 'Bonsoir';
+  }
+  function hasProfile() {
+    return !!(state.visitorName && state.visitorPhone);
+  }
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function(c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  // ============================================================
+  // SOUND (beep discret via Web Audio API)
+  // ============================================================
+  var audioCtx = null;
+  function playBeep() {
+    if (!state.soundEnabled) return;
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      var osc = audioCtx.createOscillator();
+      var gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.frequency.value = 880;
+      osc.type = 'sine';
+      gain.gain.setValueAtTime(0, audioCtx.currentTime);
+      gain.gain.linearRampToValueAtTime(0.08, audioCtx.currentTime + 0.01);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.2);
+      osc.start(audioCtx.currentTime);
+      osc.stop(audioCtx.currentTime + 0.2);
+    } catch (e) {}
+  }
+
+  // ============================================================
+  // WIDGET CREATION
+  // ============================================================
+  function createWidget() {
+    if (document.getElementById('eperf-chatbot')) return;
+
+    var container = document.createElement('div');
+    container.id = 'eperf-chatbot';
+    container.innerHTML = buildCSS() + buildHTML();
+    document.body.appendChild(container);
+
+    bindEvents();
+    restoreHistory();
+    // Préparer le form d'identité SANS ouvrir le panel
+    if (!hasProfile()) {
+      showIdentityForm();
+    } else {
+      showChat();
+    }
+    scheduleAutoOpen();
+  }
+
+  // ============================================================
+  // CSS — Chime Protocol v2 + Intercom style
+  // ============================================================
+  function buildCSS() {
+    return '<style>' +
+      '#eperf-chatbot{position:fixed;z-index:2147483000;font-family:\'DM Sans\',-apple-system,BlinkMacSystemFont,sans-serif}' +
+      '#eperf-chatbot *{box-sizing:border-box;margin:0;padding:0}' +
+
+      /* ===== LAUNCHER (bulle ronde) ===== */
+      '#eperf-chatbot .ec-launcher{position:fixed;right:max(20px,env(safe-area-inset-right,0px));' +
+      'bottom:calc(24px + env(safe-area-inset-bottom,0px));' +
+      'width:60px;height:60px;border-radius:50%;cursor:pointer;' +
+      'background:' + CHIME.goldGradient + ';' +
+      'box-shadow:0 8px 24px rgba(201,169,110,0.4),0 4px 12px rgba(0,0,0,0.3);' +
+      'display:flex;align-items:center;justify-content:center;' +
+      'border:none;color:#0A0B0F;font-size:24px;font-weight:700;' +
+      'transition:transform .3s cubic-bezier(.34,1.56,.64,1);' +
+      'z-index:2147483001;animation:ec-pulse 2.5s ease-in-out infinite}' +
+      '@keyframes ec-pulse{' +
+      '0%,100%{box-shadow:0 8px 24px rgba(201,169,110,0.4),0 4px 12px rgba(0,0,0,0.3),0 0 0 0 rgba(201,169,110,0.5)}' +
+      '50%{box-shadow:0 8px 24px rgba(201,169,110,0.4),0 4px 12px rgba(0,0,0,0.3),0 0 0 16px rgba(201,169,110,0)}' +
+      '}' +
+      '#eperf-chatbot .ec-launcher:hover{transform:scale(1.08)}' +
+      '#eperf-chatbot .ec-launcher.ec-open{background:' + CHIME.bg2 + ';color:' + CHIME.gold + ';animation:none}' +
+      '#eperf-chatbot .ec-launcher .ec-lavatar{width:100%;height:100%;border-radius:50%;object-fit:cover}' +
+      '#eperf-chatbot .ec-launcher .ec-lbadge{position:absolute;top:-4px;right:-4px;min-width:22px;height:22px;' +
+      'border-radius:11px;background:' + CHIME.red + ';border:3px solid ' + CHIME.bg + ';' +
+      'color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 5px}' +
+      '#eperf-chatbot .ec-launcher .ec-lclose{display:none;font-size:22px;line-height:1}' +
+      '#eperf-chatbot .ec-launcher.ec-open .ec-lglyph{display:none}' +
+      '#eperf-chatbot .ec-launcher.ec-open .ec-lclose{display:block}' +
+      '#eperf-chatbot .ec-launcher.ec-open .ec-lbadge{display:none}' +
+
+      /* ===== TEASER (bulle d'accroche) ===== */
+      '#eperf-chatbot .ec-teaser{position:fixed;right:max(20px,env(safe-area-inset-right,0px));' +
+      'bottom:calc(96px + env(safe-area-inset-bottom,0px));max-width:280px;' +
+      'background:' + CHIME.card + ';backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);' +
+      'border:1px solid ' + CHIME.borderStrong + ';border-radius:16px 16px 4px 16px;' +
+      'padding:14px 18px;cursor:pointer;color:' + CHIME.text + ';' +
+      'box-shadow:' + CHIME.shadowLg + ';opacity:0;transform:translateY(10px) scale(0.95);' +
+      'transition:all .4s cubic-bezier(.34,1.56,.64,1);pointer-events:none;z-index:2147482000}' +
+      '#eperf-chatbot .ec-teaser.show{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}' +
+      '#eperf-chatbot .ec-teaser b{display:block;font-size:14px;font-weight:600;margin-bottom:3px;color:' + CHIME.gold + '}' +
+      '#eperf-chatbot .ec-teaser span{font-size:13px;color:' + CHIME.textSoft + ';line-height:1.4}' +
+      '#eperf-chatbot .ec-teaser .ec-tclose{position:absolute;top:6px;right:8px;width:18px;height:18px;' +
+      'border-radius:50%;background:rgba(255,255,255,0.1);color:' + CHIME.textMuted + ';' +
+      'font-size:11px;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none}' +
+      '#eperf-chatbot .ec-teaser{position:relative;overflow:hidden}' +
+      '#eperf-chatbot .ec-teaser .ec-tbar{position:absolute;left:0;bottom:0;height:3px;width:100%;' +
+      'background:linear-gradient(90deg,' + CHIME.gold + ' 0%,' + CHIME.goldLight + ' 100%);' +
+      'border-radius:0 0 4px 4px;transform-origin:left center;opacity:0.9;pointer-events:none;' +
+      'animation:ec-tbar 8s linear forwards}' +
+      '@keyframes ec-tbar{from{transform:scaleX(1)}to{transform:scaleX(0)}}' +
+
+      /* ===== PANEL (fenêtre chat) — DESKTOP ===== */
+      '#eperf-chatbot .ec-panel{position:fixed;display:none;flex-direction:column;overflow:hidden;' +
+      'width:384px;max-width:calc(100vw - 32px);' +
+      'height:min(640px,calc(100dvh - 120px));max-height:calc(100dvh - 120px);' +
+      'right:max(20px,env(safe-area-inset-right,0px));bottom:calc(96px + env(safe-area-inset-bottom,0px));' +
+      'border-radius:20px;background:' + CHIME.bg + ';' +
+      'border:1px solid ' + CHIME.border + ';' +
+      'box-shadow:' + CHIME.shadowXl + ';' +
+      'backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);' +
+      'z-index:2147483000;transform-origin:bottom right}' +
+      '#eperf-chatbot .ec-panel.open{display:flex;animation:ec-pop .3s cubic-bezier(.34,1.56,.64,1)}' +
+      '@keyframes ec-pop{from{opacity:0;transform:translateY(20px) scale(0.95)}to{opacity:1;transform:none}}' +
+
+      /* ===== HEADER ===== */
+      '#eperf-chatbot .ec-header{display:flex;align-items:center;gap:12px;padding:16px 18px;' +
+      'background:linear-gradient(135deg,' + CHIME.bg2 + ' 0%,' + CHIME.bg + ' 100%);' +
+      'border-bottom:1px solid ' + CHIME.border + ';flex-shrink:0}' +
+      '#eperf-chatbot .ec-havatar{width:42px;height:42px;border-radius:50%;flex-shrink:0;overflow:hidden;' +
+      'background:' + CHIME.goldGradient + ';display:flex;align-items:center;justify-content:center;' +
+      'color:#0A0B0F;font-size:15px;font-weight:700;border:2px solid ' + CHIME.borderStrong + '}' +
+      '#eperf-chatbot .ec-havatar img{width:100%;height:100%;object-fit:cover}' +
+      '#eperf-chatbot .ec-hinfo{flex:1;min-width:0}' +
+      '#eperf-chatbot .ec-hname{font-size:15px;font-weight:600;color:' + CHIME.text + ';' +
+      'white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.2}' +
+      '#eperf-chatbot .ec-hstatus{font-size:12px;color:' + CHIME.textSoft + ';margin-top:3px;' +
+      'display:flex;align-items:center;gap:6px}' +
+      '#eperf-chatbot .ec-hstatus::before{content:"";display:inline-block;width:7px;height:7px;' +
+      'border-radius:50%;background:' + CHIME.green + ';' +
+      'box-shadow:0 0 8px ' + CHIME.greenGlow + ';animation:ec-blink 2s infinite}' +
+      '@keyframes ec-blink{0%,100%{opacity:1}50%{opacity:.4}}' +
+      '#eperf-chatbot .ec-hactions{display:flex;gap:6px;flex-shrink:0}' +
+      '#eperf-chatbot .ec-hbtn{width:36px;height:36px;border-radius:10px;border:1px solid ' + CHIME.border + ';' +
+      'background:rgba(255,255,255,0.04);color:' + CHIME.textSoft + ';cursor:pointer;' +
+      'display:flex;align-items:center;justify-content:center;font-size:14px;' +
+      'transition:all .2s}' +
+      '#eperf-chatbot .ec-hbtn:hover{background:rgba(201,169,110,0.1);color:' + CHIME.gold + ';' +
+      'border-color:' + CHIME.borderStrong + '}' +
+      '#eperf-chatbot .ec-hbtn.active{color:' + CHIME.gold + ';background:rgba(201,169,110,0.12)}' +
+
+      /* ===== BODY (messages) ===== */
+      '#eperf-chatbot .ec-body{flex:1;min-height:0;position:relative;display:flex;flex-direction:column;' +
+      'background:' + CHIME.bg + ';overflow:hidden}' +
+
+      /* Encryption notice */
+      '#eperf-chatbot .ec-encrypt{margin:10px auto 4px;padding:6px 14px;background:rgba(201,169,110,0.06);' +
+      'border:1px solid ' + CHIME.border + ';border-radius:8px;font-size:11px;color:' + CHIME.textMuted + ';' +
+      'text-align:center;max-width:90%}' +
+
+      /* Date separator */
+      '#eperf-chatbot .ec-date{align-self:center;margin:8px auto 4px;padding:5px 12px;' +
+      'background:rgba(255,255,255,0.05);border:1px solid ' + CHIME.border + ';' +
+      'border-radius:8px;font-size:11px;color:' + CHIME.textMuted + ';text-transform:uppercase;letter-spacing:0.5px}' +
+
+      /* Messages scrollable zone */
+      '#eperf-chatbot .ec-messages{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;' +
+      'padding:8px 16px 16px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}' +
+      '#eperf-chatbot .ec-messages::-webkit-scrollbar{width:6px}' +
+      '#eperf-chatbot .ec-messages::-webkit-scrollbar-track{background:transparent}' +
+      '#eperf-chatbot .ec-messages::-webkit-scrollbar-thumb{background:' + CHIME.border + ';border-radius:3px}' +
+      '#eperf-chatbot .ec-messages::-webkit-scrollbar-thumb:hover{background:' + CHIME.borderStrong + '}' +
+
+      /* Message bubble (Intercom style — pas de queues) */
+      '#eperf-chatbot .ec-msg{max-width:80%;padding:10px 14px;border-radius:14px;font-size:14px;' +
+      'line-height:1.5;word-wrap:break-word;white-space:pre-wrap;animation:ec-msg-in .25s ease-out}' +
+      '@keyframes ec-msg-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}' +
+      '#eperf-chatbot .ec-msg.in{align-self:flex-start;background:rgba(255,255,255,0.06);' +
+      'border:1px solid ' + CHIME.border + ';color:' + CHIME.text + ';border-bottom-left-radius:4px}' +
+      '#eperf-chatbot .ec-msg.out{align-self:flex-end;background:' + CHIME.goldGradient + ';' +
+      'color:#0A0B0F;font-weight:500;border-bottom-right-radius:4px}' +
+      '#eperf-chatbot .ec-msg-meta{font-size:10px;color:' + CHIME.textMuted + ';' +
+      'margin-top:4px;display:flex;align-items:center;gap:3px;justify-content:flex-end}' +
+      '#eperf-chatbot .ec-msg.in .ec-msg-meta{justify-content:flex-start}' +
+      '#eperf-chatbot .ec-ticks{color:' + CHIME.gold + '}' +
+
+      /* Quick replies */
+      '#eperf-chatbot .ec-quick{display:flex;flex-direction:column;gap:6px;margin:4px 0;' +
+      'padding:0 16px 8px}' +
+      '#eperf-chatbot .ec-quick button{padding:11px 14px;border-radius:10px;' +
+      'background:rgba(201,169,110,0.08);border:1px solid ' + CHIME.borderStrong + ';' +
+      'color:' + CHIME.gold + ';font-size:13px;font-weight:500;font-family:inherit;cursor:pointer;' +
+      'transition:all .2s;text-align:left;min-height:44px}' +
+      '#eperf-chatbot .ec-quick button:hover{background:rgba(201,169,110,0.15);transform:translateX(2px)}' +
+
+      /* WhatsApp escalation button */
+      '#eperf-chatbot .ec-wa{display:inline-flex;align-items:center;gap:8px;margin:6px 0 0;' +
+      'padding:11px 18px;background:' + CHIME.green + ';color:#fff !important;' +
+      'border-radius:24px;text-decoration:none;font-weight:600;font-size:13px;' +
+      'align-self:flex-start;min-height:44px;box-shadow:0 4px 12px ' + CHIME.greenGlow + '}' +
+      '#eperf-chatbot .ec-wa:hover{transform:translateY(-1px);filter:brightness(1.1)}' +
+
+      /* Typing indicator */
+      '#eperf-chatbot .ec-typing{align-self:flex-start;display:flex;gap:4px;padding:14px 16px;' +
+      'background:rgba(255,255,255,0.06);border:1px solid ' + CHIME.border + ';' +
+      'border-radius:14px;border-bottom-left-radius:4px}' +
+      '#eperf-chatbot .ec-typing i{width:7px;height:7px;border-radius:50%;background:' + CHIME.gold + ';' +
+      'animation:ec-typing-bounce 1.2s infinite}' +
+      '#eperf-chatbot .ec-typing i:nth-child(2){animation-delay:.15s}' +
+      '#eperf-chatbot .ec-typing i:nth-child(3){animation-delay:.3s}' +
+      '@keyframes ec-typing-bounce{0%,60%,100%{transform:translateY(0);opacity:.4}' +
+      '30%{transform:translateY(-5px);opacity:1}}' +
+
+      /* ===== INPUT AREA ===== */
+      '#eperf-chatbot .ec-input-area{display:flex;align-items:flex-end;gap:8px;padding:12px 14px;' +
+      'padding-bottom:calc(12px + env(safe-area-inset-bottom,0px));' +
+      'background:' + CHIME.bg2 + ';border-top:1px solid ' + CHIME.border + ';flex-shrink:0}' +
+      '#eperf-chatbot .ec-input-wrap{flex:1;display:flex;align-items:flex-end;' +
+      'background:rgba(255,255,255,0.04);border:1px solid ' + CHIME.border + ';' +
+      'border-radius:14px;padding:8px 12px;min-height:44px;transition:border-color .2s}' +
+      '#eperf-chatbot .ec-input-wrap:focus-within{border-color:' + CHIME.borderStrong + '}' +
+      '#eperf-chatbot .ec-input{flex:1;min-width:0;border:none;outline:none;background:transparent;' +
+      'color:' + CHIME.text + ';font-size:14px;font-family:inherit;line-height:1.4;resize:none;' +
+      'max-height:120px;padding:4px 0}' +
+      '#eperf-chatbot .ec-input::placeholder{color:' + CHIME.textMuted + '}' +
+      '#eperf-chatbot .ec-send{width:44px;height:44px;min-width:44px;min-height:44px;' +
+      'border-radius:12px;border:none;cursor:pointer;flex-shrink:0;' +
+      'background:' + CHIME.goldGradient + ';color:#0A0B0F;font-size:16px;' +
+      'display:flex;align-items:center;justify-content:center;' +
+      'transition:transform .2s,filter .2s;box-shadow:0 4px 12px rgba(201,169,110,0.3)}' +
+      '#eperf-chatbot .ec-send:hover{transform:scale(1.05);filter:brightness(1.1)}' +
+      '#eperf-chatbot .ec-send:disabled{opacity:0.4;cursor:not-allowed;transform:none}' +
+
+      /* ===== IDENTITY FORM ===== */
+      '#eperf-chatbot .ec-form{flex:1;overflow-y:auto;padding:32px 24px 24px;display:flex;flex-direction:column;' +
+      'gap:14px;background:' + CHIME.bg + ';align-items:center}' +
+      '#eperf-chatbot .ec-form-avatar{width:72px;height:72px;border-radius:50%;margin-bottom:8px;' +
+      'overflow:hidden;background:' + CHIME.goldGradient + ';' +
+      'display:flex;align-items:center;justify-content:center;color:#0A0B0F;font-size:26px;font-weight:700;' +
+      'border:3px solid ' + CHIME.borderStrong + ';box-shadow:0 8px 24px rgba(201,169,110,0.2)}' +
+      '#eperf-chatbot .ec-form-avatar img{width:100%;height:100%;object-fit:cover}' +
+      '#eperf-chatbot .ec-form-title{font-family:\'Cormorant Garamond\',Georgia,serif;font-size:22px;' +
+      'font-weight:600;color:' + CHIME.text + ';text-align:center;line-height:1.3}' +
+      '#eperf-chatbot .ec-form-sub{font-size:13px;color:' + CHIME.textSoft + ';text-align:center;' +
+      'line-height:1.5;margin-bottom:8px;max-width:280px}' +
+      '#eperf-chatbot .ec-field{width:100%;max-width:300px}' +
+      '#eperf-chatbot .ec-field label{display:block;font-size:12px;color:' + CHIME.textMuted + ';' +
+      'margin-bottom:5px;font-weight:500;text-transform:uppercase;letter-spacing:0.5px}' +
+      '#eperf-chatbot .ec-field input{width:100%;padding:13px 16px;border-radius:12px;' +
+      'border:1px solid ' + CHIME.border + ';background:rgba(255,255,255,0.04);' +
+      'color:' + CHIME.text + ';font-size:14px;font-family:inherit;outline:none;' +
+      'transition:border-color .2s,box-shadow .2s;min-height:48px}' +
+      '#eperf-chatbot .ec-field input:focus{border-color:' + CHIME.gold + ';' +
+      'box-shadow:0 0 0 3px rgba(201,169,110,0.12)}' +
+      '#eperf-chatbot .ec-field input::placeholder{color:' + CHIME.textMuted + '}' +
+      '#eperf-chatbot .ec-field.error input{border-color:' + CHIME.red + '}' +
+      '#eperf-chatbot .ec-field .ec-err{display:none;font-size:11px;color:' + CHIME.red + ';margin-top:4px}' +
+      '#eperf-chatbot .ec-field.error .ec-err{display:block}' +
+      '#eperf-chatbot .ec-submit{width:100%;max-width:300px;padding:14px;border:none;border-radius:12px;' +
+      'cursor:pointer;background:' + CHIME.goldGradient + ';color:#0A0B0F;font-size:15px;font-weight:600;' +
+      'font-family:inherit;transition:transform .2s,filter .2s;min-height:48px;' +
+      'margin-top:4px;box-shadow:0 4px 12px rgba(201,169,110,0.3)}' +
+      '#eperf-chatbot .ec-submit:hover{transform:translateY(-1px);filter:brightness(1.05)}' +
+      '#eperf-chatbot .ec-form-note{font-size:11px;color:' + CHIME.textMuted + ';text-align:center;' +
+      'margin-top:8px;line-height:1.5;max-width:280px}' +
+
+      /* ===== MOBILE (≤768px) — BOTTOM SHEET FULL SCREEN ===== */
+      '@media (max-width:768px){' +
+      '#eperf-chatbot .ec-launcher{right:max(14px,env(safe-area-inset-right,0px));' +
+      'bottom:calc(75px + env(safe-area-inset-bottom,0px));width:56px;height:56px;font-size:22px}' +
+      '#eperf-chatbot .ec-teaser{right:max(14px,env(safe-area-inset-right,0px));' +
+      'bottom:calc(140px + env(safe-area-inset-bottom,0px));max-width:calc(100vw - 60px)}' +
+      '#eperf-chatbot .ec-panel{left:0;right:0;bottom:0;top:auto;width:100%;max-width:100%;' +
+      'height:100dvh;max-height:100dvh;border-radius:0;transform-origin:bottom;' +
+      'border-left:none;border-right:none;border-bottom:none}' +
+      '#eperf-chatbot .ec-panel.open{animation:ec-sheet .35s cubic-bezier(.3,1.1,.6,1)}' +
+      '@keyframes ec-sheet{from{transform:translateY(100%)}to{transform:none}}' +
+      '#eperf-chatbot .ec-msg{max-width:85%}' +
+      '#eperf-chatbot .ec-messages{padding:8px 14px 14px}' +
+      '#eperf-chatbot .ec-form{padding:24px 18px 18px}' +
+      '}' +
+
+      /* ===== ACCESSIBILITY ===== */
+      '@media (prefers-reduced-motion:reduce){' +
+      '#eperf-chatbot,#eperf-chatbot *{animation-duration:.01ms!important;' +
+      'transition-duration:.01ms!important;scroll-behavior:auto}}' +
+      '#eperf-chatbot :focus-visible{outline:2px solid ' + CHIME.gold + ';outline-offset:2px;border-radius:4px}' +
+
+      '</style>';
+  }
+
+  // ============================================================
+  // HTML STRUCTURE
+  // ============================================================
+  function buildHTML() {
+    var avatarHTML = CONFIG.ia_avatar
+      ? '<img class="ec-lavatar" src="' + escapeHtml(CONFIG.ia_avatar) + '" alt="">'
+      : '<span class="ec-lglyph">' + escapeHtml(initials(CONFIG.ia_name)) + '</span>';
+
+    return '' +
+      // Launcher
+      '<div class="ec-launcher" id="ec-launcher" role="button" tabindex="0" ' +
+      'aria-label="Ouvrir le chat avec ' + escapeHtml(CONFIG.ia_name) + '">' +
+      avatarHTML +
+      '<span class="ec-lclose" aria-hidden="true">✕</span>' +
+      '<span class="ec-lbadge" id="ec-lbadge" style="display:none">1</span>' +
+      '</div>' +
+
+      // Teaser
+      '<div class="ec-teaser" id="ec-teaser" role="status">' +
+      '<button class="ec-tclose" id="ec-tclose" aria-label="Fermer">✕</button>' +
+      '<b>' + escapeHtml(CONFIG.ia_name) + ' · ' + escapeHtml(CONFIG.ia_role) + '</b>' +
+      '<span id="ec-teaser-msg">Une question ? Je réponds en quelques secondes 💬</span>' +
+      '<div class="ec-tbar" id="ec-tbar"></div>' +
+      '</div>' +
+
+      // Panel
+      '<div class="ec-panel" id="ec-panel" role="dialog" aria-label="Chat avec ' + escapeHtml(CONFIG.ia_name) + '">' +
+      '<header class="ec-header">' +
+      '<div class="ec-havatar" id="ec-havatar">' + (CONFIG.ia_avatar ? '<img src="' + CONFIG.ia_avatar + '" alt="" style="width:100%;height:100%;object-fit:cover">' : escapeHtml(initials(CONFIG.ia_name))) + '</div>' +
+      '<div class="ec-hinfo">' +
+      '<div class="ec-hname">' + escapeHtml(CONFIG.ia_name) + '</div>' +
+      '<div class="ec-hstatus">En ligne</div>' +
+      '</div>' +
+      '<div class="ec-hactions">' +
+      '<button class="ec-hbtn" id="ec-sound" aria-label="Activer le son" title="Son">' +
+      '<i class="ec-sound-on">🔊</i><i class="ec-sound-off" style="display:none">🔇</i></button>' +
+      '<button class="ec-hbtn" id="ec-minimize" aria-label="Réduire" title="Réduire">—</button>' +
+      '<button class="ec-hbtn" id="ec-close" aria-label="Fermer" title="Fermer">✕</button>' +
+      '</div>' +
+      '</header>' +
+      '<div class="ec-body">' +
+      '<div class="ec-encrypt">🔒 Vos échanges sont privés et chiffrés</div>' +
+      '<div class="ec-messages" id="ec-messages" aria-live="polite"></div>' +
+      '<div class="ec-quick" id="ec-quick"></div>' +
+      '<div class="ec-input-area" id="ec-input-area">' +
+      '<div class="ec-input-wrap">' +
+      '<textarea class="ec-input" id="ec-input" placeholder="Écrivez votre message..." ' +
+      'aria-label="Votre message" rows="1" autocomplete="off"></textarea>' +
+      '</div>' +
+      '<button class="ec-send" id="ec-send" aria-label="Envoyer">➤</button>' +
+      '</div>' +
+      '<div id="ec-formhost"></div>' +
+      '</div>' +
+      '</div>';
+  }
+
+  // ============================================================
+  // EVENTS
+  // ============================================================
+  function bindEvents() {
+    var launcher = document.getElementById('ec-launcher');
+    var teaser = document.getElementById('ec-teaser');
+    var tclose = document.getElementById('ec-tclose');
+    var closeBtn = document.getElementById('ec-close');
+    var minimizeBtn = document.getElementById('ec-minimize');
+    var soundBtn = document.getElementById('ec-sound');
+    var sendBtn = document.getElementById('ec-send');
+    var input = document.getElementById('ec-input');
+
+    launcher.addEventListener('click', function() { markInteracted(); toggleChat(); });
+    launcher.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); markInteracted(); toggleChat(); }
+    });
+
+    teaser.addEventListener('click', function() { markInteracted(); openChat(); hideTeaser(); });
+    // Fermer le teaser avec la croix : on masque SANS marquer comme interagi
+    // (les teasers suivants peuvent donc continuer à s'afficher, jusqu'à MAX_TEASERS)
+    tclose.addEventListener('click', function(e) {
+      e.stopPropagation();
+      hideTeaser();
+    });
+
+    closeBtn.addEventListener('click', function() { closeChat(); });
+    minimizeBtn.addEventListener('click', function() { closeChat(); });
+    soundBtn.addEventListener('click', function() { toggleSound(); });
+
+    sendBtn.addEventListener('click', sendMessage);
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+    });
+    input.addEventListener('input', function() {
+      input.style.height = 'auto';
+      input.style.height = Math.min(input.scrollHeight, 120) + 'px';
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && state.isOpen) closeChat();
+    });
+  }
+
+  // ============================================================
+  // AUTO-OPEN — teasers proactifs multiples (10s, 30s, 60s, 90s, 120s)
+  // ============================================================
+  function scheduleAutoOpen() {
+    if (state.hasInteracted) return;
+
+    TEASER_DELAYS.forEach(function(delay, i) {
+      function showThisTeaser() {
+        if (state.hasInteracted) return;
+        if (state.isOpen) return;
+        if (state.teaserCount >= MAX_TEASERS) return;
+        var msg = TEASER_MESSAGES[i] || TEASER_MESSAGES[TEASER_MESSAGES.length - 1];
+        showTeaser(msg);
+      }
+      if (delay === 0) {
+        // Déclenchement immédiat (après que le DOM soit prêt)
+        setTimeout(showThisTeaser, 100);
+      } else {
+        var t = setTimeout(showThisTeaser, delay);
+        state.teaserTimers.push(t);
+      }
+    });
+  }
+
+  function cancelScheduledTeasers() {
+    if (state.teaserTimers && state.teaserTimers.length) {
+      state.teaserTimers.forEach(function(t) { clearTimeout(t); });
+      state.teaserTimers = [];
+    }
+  }
+
+  function markInteracted() {
+    if (state.hasInteracted) return;
+    state.hasInteracted = true;
+    localStorage.setItem('ec_interacted', '1');
+    cancelScheduledTeasers();
+    hideTeaser();
+  }
+
+  // ============================================================
+  // TEASER (notification proactive avec barre de décompte)
+  // ============================================================
+  function showTeaser(msg) {
+    // Ne pas spammer : max MAX_TEASERS teasers par session
+    if (state.teaserCount >= MAX_TEASERS) return;
+    if (state.hasInteracted) return;
+    if (state.isOpen) return;
+
+    state.teaserCount++;
+    state.teaserShown = true;
+
+    var teaser = document.getElementById('ec-teaser');
+    if (!teaser) return;
+
+    // Met à jour le message si fourni
+    if (msg) {
+      var msgEl = teaser.querySelector('#ec-teaser-msg') || teaser.querySelector('span');
+      if (msgEl) msgEl.textContent = msg;
+    }
+
+    // Reset de la barre de décompte (8s)
+    var bar = document.getElementById('ec-tbar');
+    if (bar) {
+      bar.style.animation = 'none';
+      // Reflow pour forcer le reset de l'animation
+      void bar.offsetWidth;
+      bar.style.animation = 'ec-tbar 8s linear forwards';
+    }
+
+    teaser.classList.add('show');
+
+    // Auto-hide après 8s si pas cliqué
+    setTimeout(function() {
+      if (!state.hasInteracted) hideTeaser();
+    }, 8000);
+  }
+
+  function hideTeaser() {
+    var teaser = document.getElementById('ec-teaser');
+    if (teaser) teaser.classList.remove('show');
+  }
+
+  // ============================================================
+  // TOGGLE CHAT
+  // ============================================================
+  function toggleChat() {
+    if (state.isOpen) closeChat();
+    else openChat();
+  }
+
+  function openChat() {
+    state.isOpen = true;
+    state.isMinimized = false;
+    var panel = document.getElementById('ec-panel');
+    var launcher = document.getElementById('ec-launcher');
+    var badge = document.getElementById('ec-lbadge');
+    if (panel) panel.classList.add('open');
+    if (launcher) launcher.classList.add('ec-open');
+    if (badge) badge.style.display = 'none';
+    hideTeaser();
+    // Afficher le form d'identité si pas de profil
+    if (!hasProfile()) {
+      showIdentityForm();
+    } else {
+      hideForm();
+      setTimeout(function() {
+        var inp = document.getElementById('ec-input');
+        if (inp) inp.focus();
+      }, 300);
+    }
+  }
+
+  function closeChat() {
+    state.isOpen = false;
+    var panel = document.getElementById('ec-panel');
+    var launcher = document.getElementById('ec-launcher');
+    if (panel) panel.classList.remove('open');
+    if (launcher) launcher.classList.remove('ec-open');
+  }
+
+  // ============================================================
+  // SOUND TOGGLE
+  // ============================================================
+  function toggleSound() {
+    state.soundEnabled = !state.soundEnabled;
+    var btn = document.getElementById('ec-sound');
+    var onIcon = btn.querySelector('.ec-sound-on');
+    var offIcon = btn.querySelector('.ec-sound-off');
+    if (state.soundEnabled) {
+      btn.classList.add('active');
+      if (onIcon) onIcon.style.display = '';
+      if (offIcon) offIcon.style.display = 'none';
+      btn.setAttribute('aria-label', 'Couper le son');
+    } else {
+      btn.classList.remove('active');
+      if (onIcon) onIcon.style.display = 'none';
+      if (offIcon) offIcon.style.display = '';
+      btn.setAttribute('aria-label', 'Activer le son');
+    }
+    localStorage.setItem('ec_sound', state.soundEnabled ? '1' : '0');
+  }
+
+  // ============================================================
+  // IDENTITY FORM
+  // ============================================================
+  function showIdentityForm() {
+    var host = document.getElementById('ec-formhost');
+    var inputArea = document.getElementById('ec-input-area');
+    var quick = document.getElementById('ec-quick');
+    if (!host) return;
+
+    inputArea.style.display = 'none';
+    if (quick) quick.style.display = 'none';
+    host.style.display = 'block';
+
+    var avatarHTML = CONFIG.ia_avatar
+      ? '<img src="' + escapeHtml(CONFIG.ia_avatar) + '">'
+      : escapeHtml(initials(CONFIG.ia_name));
+
+    host.innerHTML =
+      '<div class="ec-form">' +
+      '<div class="ec-form-avatar">' + avatarHTML + '</div>' +
+      '<div class="ec-form-title">Bienvenue 👋</div>' +
+      '<div class="ec-form-sub">Je suis ' + escapeHtml(CONFIG.ia_name) + ', ' + escapeHtml(CONFIG.ia_role) + '. ' +
+      'Pour vous répondre personnellement, indiquez votre nom et votre numéro :</div>' +
+      '<div class="ec-field"><label for="ec-fname">Votre nom</label>' +
+      '<input type="text" id="ec-fname" placeholder="Ex : Stéphane" autocomplete="name"></div>' +
+      '<div class="ec-field"><label for="ec-fphone">Votre numéro de téléphone</label>' +
+      '<input type="tel" id="ec-fphone" placeholder="' + escapeHtml(CONFIG.indicatif) + ' ..." autocomplete="tel"></div>' +
+      '<button class="ec-submit" id="ec-fsubmit">Commencer la conversation</button>' +
+      '<div class="ec-form-note">Vos informations restent confidentielles et ne sont jamais partagées.</div>' +
+      '</div>';
+
+    document.getElementById('ec-fsubmit').addEventListener('click', submitIdentity);
+
+    // Enter to submit
+    document.getElementById('ec-fphone').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') { e.preventDefault(); submitIdentity(); }
+    });
+  }
+
+  function submitIdentity() {
+    var nameInput = document.getElementById('ec-fname');
+    var phoneInput = document.getElementById('ec-fphone');
+    var name = nameInput.value.trim();
+    var phone = phoneInput.value.trim();
+
+    // Validation
+    var nameField = nameInput.closest('.ec-field');
+    var phoneField = phoneInput.closest('.ec-field');
+    nameField.classList.remove('error');
+    phoneField.classList.remove('error');
+
+    if (name.length < 2) {
+      nameField.classList.add('error');
+      nameInput.focus();
+      return;
+    }
+    var digits = phone.replace(/[^0-9]/g, '');
+    if (digits.length < 8) {
+      phoneField.classList.add('error');
+      phoneInput.focus();
+      return;
+    }
+
+    state.visitorName = name;
+    state.visitorPhone = phone;
+    localStorage.setItem('ec_visitor_name', name);
+    localStorage.setItem('ec_visitor_phone', phone);
+
+    // Hide form, show chat
+    var host = document.getElementById('ec-formhost');
+    var inputArea = document.getElementById('ec-input-area');
+    host.style.display = 'none';
+    host.innerHTML = '';
+    inputArea.style.display = '';
+
+    // Greet
+    greet();
+  }
+
+  function hideForm() {
+    var host = document.getElementById('ec-formhost');
+    var inputArea = document.getElementById('ec-input-area');
+    var quick = document.getElementById('ec-quick');
+    if (host) { host.style.display = 'none'; host.innerHTML = ''; }
+    if (inputArea) inputArea.style.display = '';
+    if (quick) quick.style.display = '';
+  }
+
+  // ============================================================
+  // MESSAGES
+  // ============================================================
+  function greet() {
+    var greeting = greetingByHour();
+    var msg = greeting + ' ' + state.visitorName + ' ! Je suis ' + CONFIG.ia_name + ', ' + CONFIG.ia_role + '. Comment puis-je vous aider aujourd\'hui ?';
+    addIncoming(msg);
+  }
+
+  function addIncoming(text, showWhatsApp) {
+    hideTyping();
+    var messages = document.getElementById('ec-messages');
+    var div = document.createElement('div');
+    div.className = 'ec-msg in';
+    div.innerHTML = escapeHtml(text) +
+      '<div class="ec-msg-meta">' + nowTime() + '</div>';
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+
+    // Save to history
+    state.history.push({ role: 'assistant', content: text, time: nowTime() });
+    saveHistory();
+
+    // WhatsApp escalation
+    if (showWhatsApp) {
+      var wa = document.createElement('a');
+      wa.className = 'ec-wa';
+      wa.href = 'https://wa.me/' + CONFIG.whatsapp.replace(/[^0-9]/g, '') +
+        '?text=' + encodeURIComponent('Bonjour, je viens du site et j\'aimerais des informations');
+      wa.target = '_blank';
+      wa.rel = 'noopener';
+      wa.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">' +
+        '<path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38C8.42 21.5 10.15 22 12 22c5.46 0 9.91-4.45 9.91-9.91C22 6.45 17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31c-.82-1.3-1.25-2.82-1.25-4.38 0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42 1.56 1.56 2.42 3.63 2.42 5.82.01 4.54-3.69 8.24-8.24 8.24z"/></svg>' +
+        ' WhatsApp';
+      messages.appendChild(wa);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    // Sound + badge si fermé
+    playBeep();
+    if (!state.isOpen) {
+      var badge = document.getElementById('ec-lbadge');
+      if (badge) badge.style.display = 'flex';
+    }
+  }
+
+  function addOutgoing(text) {
+    var messages = document.getElementById('ec-messages');
+    var div = document.createElement('div');
+    div.className = 'ec-msg out';
+    div.innerHTML = escapeHtml(text) +
+      '<div class="ec-msg-meta">' + nowTime() + ' <span class="ec-ticks">✓✓</span></div>';
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+
+    state.history.push({ role: 'user', content: text, time: nowTime() });
+    saveHistory();
+  }
+
+  function showTyping() {
+    hideTyping();
+    var messages = document.getElementById('ec-messages');
+    var div = document.createElement('div');
+    div.className = 'ec-typing';
+    div.id = 'ec-typing-indicator';
+    div.innerHTML = '<i></i><i></i><i></i>';
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+    state.isTyping = true;
+  }
+
+  function hideTyping() {
+    var t = document.getElementById('ec-typing-indicator');
+    if (t) t.remove();
+    state.isTyping = false;
+  }
+
+  function renderQuickReplies(suggestions) {
+    var quick = document.getElementById('ec-quick');
+    quick.innerHTML = '';
+    if (!suggestions || !suggestions.length) return;
+    suggestions.forEach(function(s) {
+      var btn = document.createElement('button');
+      btn.textContent = s;
+      btn.addEventListener('click', function() {
+        quick.innerHTML = '';
+        document.getElementById('ec-input').value = s;
+        sendMessage();
+      });
+      quick.appendChild(btn);
+    });
+  }
+
+  // ============================================================
+  // SEND MESSAGE
+  // ============================================================
+  function sendMessage() {
+    var input = document.getElementById('ec-input');
+    var text = input.value.trim();
+    if (!text || state.isTyping) return;
+
+    if (!hasProfile()) {
+      showIdentityForm();
+      return;
+    }
+
+    addOutgoing(text);
+    input.value = '';
+    input.style.height = 'auto';
+
+    showTyping();
+    sendToAPI(text);
+  }
+
+  // ============================================================
+  // API CALL
+  // ============================================================
+  function sendToAPI(message) {
+    var payload = {
+      site_id: CONFIG.site_id,
+      message: message,
+      visitor_name: state.visitorName,
+      visitor_phone: state.visitorPhone,
+      conversation_id: state.conversationId,
+      conversation_history: state.history.slice(-10).map(function(m) {
+        return { role: m.role, content: m.content };
+      })
+    };
+
+    fetch(CONFIG.api_base + '/chatbot.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      addIncoming(data.reply || 'Désolé, je n\'ai pas compris.', data.show_whatsapp);
+
+      // Quick replies si offre professionnel ou croissance
+      if ((CONFIG.offre === 'professionnel' || CONFIG.offre === 'croissance') && data.suggestions) {
+        renderQuickReplies(data.suggestions);
+      }
+    })
+    .catch(function(err) {
+      addIncoming('Je suis désolé, une erreur est survenue. Vous pouvez nous contacter directement sur WhatsApp.', true);
+    });
+  }
+
+  // ============================================================
+  // HISTORY PERSISTENCE
+  // ============================================================
+  function saveHistory() {
+    localStorage.setItem('ec_history', JSON.stringify(state.history.slice(-30)));
+  }
+
+  function restoreHistory() {
+    if (!state.history.length) return;
+    var messages = document.getElementById('ec-messages');
+    state.history.forEach(function(m) {
+      var div = document.createElement('div');
+      div.className = 'ec-msg ' + (m.role === 'user' ? 'out' : 'in');
+      var meta = '<div class="ec-msg-meta">' + (m.time || nowTime());
+      if (m.role === 'user') meta += ' <span class="ec-ticks">✓✓</span>';
+      meta += '</div>';
+      div.innerHTML = escapeHtml(m.content) + meta;
+      messages.appendChild(div);
+    });
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  // ============================================================
+  // INIT
+  // ============================================================
+  function init() {
+    // Restore sound preference
+    if (localStorage.getItem('ec_sound') === '0') {
+      state.soundEnabled = false;
+    }
+    createWidget();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
+
 </script>
 </body>
 </html>
