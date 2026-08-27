@@ -683,21 +683,61 @@ document.getElementById('submit-btn').addEventListener('click', function(e) {
   btn.disabled = true;
   btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
 
+  // Notification de la commande au serveur ePerformance (e-mail au marchand)
+  // Format officiel notify.php : form_type + data (template mlm « Produit commandé »)
+  var firstItem = cart.length ? (cart[0].nom || 'Produit') + (cart.length > 1 ? ' (+' + (cart.length - 1) + ' autre' + (cart.length > 2 ? 's' : '') + ')' : '') : '';
+  var notifPayload = {
+    site_id: 'emvie.shop',
+    form_token: 'tok_2e2818af2bc2eb2e45ee792131603006',
+    form_type: 'commande',
+    data: {
+      nom: name,
+      telephone: phone,
+      email: '',
+      ville: address,
+      message: msg,
+      produit_nom: firstItem,
+      produit_total: formatPrice(total),
+      paiement_method: payment ? payment.value : 'cash',
+      reference: orderRef
+    },
+    meta: {
+      url: window.location.href,
+      referrer: document.referrer || '',
+      ts: new Date().toISOString()
+    }
+  };
+
   fetch('https://api.eperformance.pro/notifications/notify.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ site_id: 'emvie.shop', form_token: 'tok_emvieshop_2026', type_site: 'commande', recipient: 'emvieshop@gmail.com', nom: name, telephone: phone, message: msg, source_url: window.location.href })
+    body: JSON.stringify(notifPayload),
+    keepalive: true
   }).then(function(r) {
-    showSuccess(orderRef);
+    // Le marchand est notifié (e-mail) → confirmation normale
+    showSuccess(orderRef, true);
   }).catch(function(err) {
-    showSuccess(orderRef);
+    // Réseau indisponible : on montre quand même le succès au client,
+    // mais avec le bouton WhatsApp mis en avant pour garantir la commande
+    showSuccess(orderRef, false);
   });
 
-  function showSuccess(ref) {
+  function showSuccess(ref, delivered) {
     localStorage.removeItem('emvie_cart');
     document.getElementById('checkout-form-wrap').style.display = 'none';
     document.getElementById('checkout-success').style.display = 'block';
     document.getElementById('order-ref').textContent = ref;
+    // WhatsApp pré-rempli avec le récapitulatif (repli si la notification échoue)
+    var waLink = document.querySelector('#checkout-success .btn-wa');
+    if (waLink) {
+      waLink.href = 'https://wa.me/2250150832326?text=' + encodeURIComponent(msg);
+    }
+    if (delivered === false) {
+      var p = document.querySelector('#checkout-success p');
+      if (p) {
+        p.innerHTML = 'Merci ! Pour garantir le traitement immédiat de votre commande <strong>' + ref + '</strong>, envoyez le récapitulatif via le bouton WhatsApp ci-dessous. Notre équipe vous confirme la livraison sous 1 heure (heures ouvrables).';
+      }
+    }
     var badge = document.getElementById('cart-count-header');
     if (badge) { badge.textContent = '0'; badge.style.display = 'none'; }
     window.scrollTo({ top: 0, behavior: 'smooth' });
